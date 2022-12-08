@@ -1,0 +1,166 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app {
+  position: relative;
+  display: flex;
+  background-color: #282c34;
+  color: white;
+  height: 100vh;
+}
+
+.aside {
+  position: sticky;
+  flex: 1 0 100%;
+  max-width: 26rem;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.aside-total {
+  margin: 0 0 1.5rem;
+}
+
+.main {
+  padding: 1.5rem;
+  overflow-y: scroll;
+}
+
+.item-details {
+  overflow-y: auto;
+  flex: 1 0 100%;
+  max-width: 24rem;
+  padding: 1.5rem;
+  background: #0c0c0c;
+}
+
+.filter-bar-title {
+  margin: 0 0 1.5rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter {
+  padding: 0.375rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  color: #222;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card-title {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.card-image-wrap {
+  text-align: center;
+  user-select: none;
+}
+
+.card-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.card-cost {
+  margin: 1rem 0;
+  color: #efcb12;
+  font-weight: 500;
+  text-align: center;
+}
+
+.card-skills {
+  text-align: left;
+}
+
+.inventory {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+.inventory-cost {
+  color: #efcb12;
+}
+
+.inventory-item {
+  padding: 2px;
+  background: #0c0c0c;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.inventory-image {
+  width: 50px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.inventory-params {
+  margin-top: 1rem;
+}
+
+.inventory-skills {
+  margin-top: 1.5rem;
+}
+
+.thumbnail {
+  width: 40px;
+  height: 40px;
+}
+
+.param {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.param-name {
+  min-width: 2.5rem;
+  color: #558b6d;
+  text-align: right;
+}
+
+.skill {
+  padding: 0.25rem 0;
+}
+
+.skill-name {
+  color: #cdc2a4;
+}
+
+.skill-description {
+  line-height: 1.6;
+}
