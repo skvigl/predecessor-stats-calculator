@@ -36,7 +36,7 @@ export class HeroBuilds {
   }
 
   updateItems = (buildName: string, items: string[]) => {
-    console.log('updateItems', buildName, items)
+    // console.log('updateItems', buildName, items)
 
     if (!buildName) return
 

@@ -1,15 +1,18 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import _ from 'lodash'
 
+import './normalize.css'
 import './App.css'
-import { items, Item } from './items'
+
+import { Item } from './types'
+import { items } from './data/items'
 import { HeroBuilds } from './HeroBuilds'
+import { Filters } from './components/Filters'
+import { Items } from './components/Items/Items'
+import { BuildPanel } from './components/BuildPanel/BuildPanel'
 
 const tags = [...new Set(items.flatMap((item) => item.tags))].sort()
 const MAX_INVENTORY_SIZE = 6
-
-const getImageSrc = (name: string) =>
-  `/predecessor-stats-calculator/items/${name.split(' ').join('_')}.png`
 
 const heroBuilds = new HeroBuilds()
 heroBuilds.parseLS()
@@ -54,7 +57,7 @@ function App() {
     }
   }, [])
 
-  const handleFilterClick = (event: React.MouseEvent<HTMLElement>) => {
+  const handleFilterClick = (event: React.ChangeEvent<HTMLElement>) => {
     const newFilter = event.currentTarget.dataset.id
 
     if (!newFilter) return
@@ -135,20 +138,12 @@ function App() {
 
     if (!itemId) return
 
-    setInventory(_.filter(inventory, ({ name }) => name !== itemId))
-  }
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    event.preventDefault()
-
-    setBuildName(event.currentTarget.value)
-  }
-
-  const handleCreateBuild = () => {
-    if (!buildName) return
-
-    heroBuilds.create(buildName)
-    setBuilds(heroBuilds.getAll())
+    const newItems = _.filter(inventory, ({ name }) => name !== itemId)
+    setInventory(newItems)
+    heroBuilds.updateItems(
+      activeBuild,
+      newItems.map((x) => x.name),
+    )
   }
 
   const finalItems = useMemo(() => {
@@ -161,162 +156,28 @@ function App() {
     })
   }, [filters])
 
-  const invCost = inventory.reduce((acc, cur) => (acc += cur.cost ?? 0), 0)
-
-  const invStats = useMemo(() => {
-    return inventory.reduce<{ [key: string]: number }>((acc, cur) => {
-      if (!cur.stats) return acc
-
-      Object.entries(cur.stats).forEach(([key, value]) => {
-        if (!acc[key]) {
-          acc[key] = value
-          return
-        }
-
-        acc[key] += value
-      })
-
-      return acc
-    }, {})
-  }, [inventory])
-
-  const invSkills = useMemo(() => {
-    return inventory.flatMap((item) => {
-      return item.skills ? item.skills : []
-    })
-  }, [inventory])
-
   return (
     <div className="app">
       <aside className="aside">
-        <div>
-          {_.isEmpty(builds) && (
-            <div>
-              <input onChange={handleChange} value={buildName ?? ''} />
-              <button onClick={handleCreateBuild} disabled={!buildName}>
-                Create
-              </button>
-            </div>
-          )}
-          {_.keys(builds).map((name) => {
-            return <button key={name}>{name}</button>
-          })}
-        </div>
-
-        <h2 className="inventory-cost">Total: {invCost}</h2>
-        <div className="inventory">
-          {inventory.map((inv) => {
-            return (
-              <div
-                key={inv.name}
-                className="inventory-item"
-                onClick={handleItemClick}
-                onDoubleClick={handleInventoryItemDoubleClick}
-                data-id={inv.name}
-              >
-                <img className="inventory-image" src={getImageSrc(inv.name)} />
-              </div>
-            )
-          })}
-        </div>
-        <div className="inventory-params">
-          {Object.entries(invStats).map(([key, value]) => {
-            return (
-              <div key={key} className="param">
-                <span className="param-name">+{value}</span>
-                <span>{key}</span>
-              </div>
-            )
-          })}
-        </div>
-
-        <div className="inventory-skills">
-          {invSkills.map(({ name, description }) => {
-            return (
-              <div key={name} className="skill">
-                <span className="skill-name">{name}: </span>
-                <span className="skill-description">{description}</span>
-              </div>
-            )
-          })}
-        </div>
+        <Filters
+          tags={tags}
+          filters={filters}
+          onFilterSelect={handleFilterClick}
+        />
       </aside>
       <main className="main">
-        <div>
-          <h2 className="filter-bar-title">Filters</h2>
-          <div className="filters">
-            {tags.map((tag) => {
-              const isActive = filters.includes(tag)
-              return (
-                <button
-                  key={tag}
-                  data-id={tag}
-                  onClick={handleFilterClick}
-                  className="filter"
-                  style={{
-                    background: isActive ? '#9dbaf1' : 'white',
-                  }}
-                >
-                  {tag}
-                </button>
-              )
-            })}
-          </div>
-        </div>
-        <h2>Items({finalItems.length})</h2>
-        <div className="cards">
-          {finalItems.map((item) => {
-            return (
-              <div
-                key={item.name}
-                className="inventory-item"
-                onClick={handleItemClick}
-                onDoubleClick={handleItemDoubleClick}
-                data-id={item.name}
-              >
-                <img className="inventory-image" src={getImageSrc(item.name)} />
-              </div>
-            )
-          })}
-        </div>
+        <Items
+          items={finalItems}
+          onItemClick={handleItemDoubleClick}
+          onItemDoubleClick={handleItemDoubleClick}
+        />
       </main>
-      <div className="item-details">
-        {activeItem && (
-          <div key={activeItem.name} className="card" data-id={activeItem.name}>
-            <div className="card-image-wrap">
-              <img className="card-image" src={getImageSrc(activeItem.name)} />
-            </div>
-            <h3 className="card-title">{activeItem.name}</h3>
-
-            {activeItem.stats && (
-              <div className="card-params">
-                {Object.entries(activeItem.stats).map(([key, value]) => {
-                  return (
-                    <div key={key} className="param">
-                      <span className="param-name">+{value}</span>
-                      <span>{key}</span>
-                    </div>
-                  )
-                })}
-              </div>
-            )}
-
-            <div className="card-cost">{activeItem.cost}</div>
-
-            <div className="card-skills">
-              {activeItem.skills?.map((skill) => {
-                return (
-                  <div key={skill.name} className="skill">
-                    <span className="skill-name">{skill.name}: </span>
-                    <span className="skill-description">
-                      {skill.description}
-                    </span>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-        )}
+      <div className="build-panel">
+        <BuildPanel
+          inventory={inventory}
+          onItemClick={handleInventoryItemDoubleClick}
+          onItemDoubleClick={handleInventoryItemDoubleClick}
+        />
       </div>
     </div>
   )

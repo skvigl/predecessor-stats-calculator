@@ -1,0 +1,57 @@
+.items-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items-full {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-wrap {
+  padding: 0.5rem;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .card-wrap {
+    padding: 0.5rem;
+    width: 20%;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0.5rem;
+  background: #0c0c0c;
+}
+
+.card-params {
+  margin-top: 1rem;
+}
+
+.card-skills {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+  width: 24rem;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #282c34;
+}
+
+.card-skills-title {
+  margin-top: auto;
+  padding-top: 1rem;
+  color: #cdc2a4;
+  text-align: center;
+}
+
+.card-skills-title:hover + .card-skills {
+  display: block;
+}
