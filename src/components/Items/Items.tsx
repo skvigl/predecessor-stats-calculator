@@ -3,18 +3,14 @@ import React, { useState } from 'react'
 import './Items.css'
 import { Item } from '../../types'
 import { getImageSrc } from '../../utils'
+import { Thumbnail } from '../Thumbnail/Thumbnail'
 
 interface ItemsProps {
   items: Item[]
   onItemClick: (event: React.MouseEvent) => void
-  onItemDoubleClick: (event: React.MouseEvent) => void
 }
 
-export const Items: React.FC<ItemsProps> = ({
-  items,
-  onItemClick,
-  onItemDoubleClick,
-}) => {
+export const Items: React.FC<ItemsProps> = ({ items, onItemClick }) => {
   const [isCompactView, setIsCompactView] = useState(false)
 
   return (
@@ -34,23 +30,9 @@ export const Items: React.FC<ItemsProps> = ({
       </div>
 
       {isCompactView && (
-        <div className="cards">
-          {items.map((item) => {
-            return (
-              <div
-                key={item.name}
-                className="inventory-item"
-                onClick={onItemClick}
-                onDoubleClick={onItemDoubleClick}
-                data-id={item.name}
-              >
-                <img
-                  className="inventory-image"
-                  src={getImageSrc(item.name)}
-                  alt=""
-                />
-              </div>
-            )
+        <div className="items-thumbnails">
+          {items.map(({ name }) => {
+            return <Thumbnail key={name} name={name} onClick={onItemClick} />
           })}
         </div>
       )}
@@ -60,12 +42,7 @@ export const Items: React.FC<ItemsProps> = ({
           {items.map((item) => {
             return (
               <div key={item.name} className="card-wrap">
-                <div
-                  className="card"
-                  onClick={onItemClick}
-                  onDoubleClick={onItemDoubleClick}
-                  data-id={item.name}
-                >
+                <div className="card" onClick={onItemClick} data-id={item.name}>
                   <img className="" src={getImageSrc(item.name)} alt="" />
                   <div className="card-params">
                     {item.stats &&
@@ -78,19 +55,23 @@ export const Items: React.FC<ItemsProps> = ({
                         )
                       })}
                   </div>
-                  <div className="card-skills-title">Skills</div>
-                  <div className="card-skills">
-                    {item.skills?.map(({ name, description }) => {
-                      return (
-                        <div key={name} className="skill">
-                          <span className="skill-name">{name}: </span>
-                          <span className="skill-description">
-                            {description}
-                          </span>
-                        </div>
-                      )
-                    })}
-                  </div>
+                  {item.skills?.length && (
+                    <>
+                      <div className="card-skills-title">Skills</div>
+                      <div className="card-skills">
+                        {item.skills?.map(({ name, description }) => {
+                          return (
+                            <div key={name} className="skill">
+                              <span className="skill-name">{name}: </span>
+                              <span className="skill-description">
+                                {description}
+                              </span>
+                            </div>
+                          )
+                        })}
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             )

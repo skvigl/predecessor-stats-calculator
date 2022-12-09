@@ -2,17 +2,16 @@ import React, { useMemo } from 'react'
 
 import { Item } from '../../types'
 import { getImageSrc } from '../../utils'
+import { Thumbnail } from '../Thumbnail/Thumbnail'
 
 interface BuildPanelProps {
   inventory: Item[]
   onItemClick: (event: React.MouseEvent) => void
-  onItemDoubleClick: (event: React.MouseEvent) => void
 }
 
 export const BuildPanel: React.FC<BuildPanelProps> = ({
   inventory,
   onItemClick,
-  onItemDoubleClick,
 }) => {
   const invCost = inventory.reduce((acc, cur) => (acc += cur.cost ?? 0), 0)
 
@@ -43,22 +42,8 @@ export const BuildPanel: React.FC<BuildPanelProps> = ({
     <div>
       <h2 className="inventory-cost">Total: {invCost}</h2>
       <div className="inventory">
-        {inventory.map((inv) => {
-          return (
-            <div
-              key={inv.name}
-              className="inventory-item"
-              onClick={onItemClick}
-              onDoubleClick={onItemDoubleClick}
-              data-id={inv.name}
-            >
-              <img
-                className="inventory-image"
-                src={getImageSrc(inv.name)}
-                alt=""
-              />
-            </div>
-          )
+        {inventory.map(({ name }) => {
+          return <Thumbnail key={name} name={name} onClick={onItemClick} />
         })}
       </div>
       <div className="inventory-params">
@@ -73,9 +58,9 @@ export const BuildPanel: React.FC<BuildPanelProps> = ({
       </div>
 
       <div className="inventory-skills">
-        {invSkills.map(({ name, description }) => {
+        {invSkills.map(({ name, description }, i) => {
           return (
-            <div key={name} className="skill">
+            <div key={name + i} className="skill">
               <span className="skill-name">{name}: </span>
               <span className="skill-description">{description}</span>
             </div>

@@ -3,6 +3,12 @@
   justify-content: space-between;
 }
 
+.items-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+}
+
 .items-full {
   display: flex;
   flex-wrap: wrap;

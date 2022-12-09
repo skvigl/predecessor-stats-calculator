@@ -43,12 +43,6 @@
   margin: 0 0 1.5rem;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
 .card-title {
   margin: 1rem 0;
   text-align: center;
@@ -88,31 +82,12 @@
   color: #efcb12;
 }
 
-.inventory-item {
-  padding: 2px;
-  border-radius: 4px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.inventory-image {
-  width: 50px;
-  height: 40px;
-  object-fit: cover;
-  object-position: center top;
-}
-
 .inventory-params {
   margin-top: 1rem;
 }
 
 .inventory-skills {
   margin-top: 1.5rem;
-}
-
-.thumbnail {
-  width: 40px;
-  height: 40px;
 }
 
 .param {
