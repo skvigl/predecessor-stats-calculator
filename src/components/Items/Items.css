@@ -35,8 +35,13 @@
   background: #0c0c0c;
 }
 
+.card-title {
+  margin: 1rem 0;
+  text-align: center;
+}
+
 .card-params {
-  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card-skills {
@@ -53,9 +58,9 @@
 
 .card-skills-title {
   margin-top: auto;
-  padding-top: 1rem;
   color: #cdc2a4;
   text-align: center;
+  cursor: pointer;
 }
 
 .card-skills-title:hover + .card-skills {

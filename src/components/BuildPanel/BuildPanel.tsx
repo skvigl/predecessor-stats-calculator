@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 
+import './BuildPanel.css';
 import { Item } from '../../types'
-import { getImageSrc } from '../../utils'
 import { Thumbnail } from '../Thumbnail/Thumbnail'
 
 interface BuildPanelProps {
@@ -33,9 +33,13 @@ export const BuildPanel: React.FC<BuildPanelProps> = ({
   }, [inventory])
 
   const invSkills = useMemo(() => {
-    return inventory.flatMap((item) => {
-      return item.skills ? item.skills : []
-    })
+    return inventory.reduce((acc, item) => {
+      if (item.skills) {
+        acc.push(item.skills)
+      }
+
+      return acc
+    }, [])
   }, [inventory])
 
   return (
@@ -58,11 +62,17 @@ export const BuildPanel: React.FC<BuildPanelProps> = ({
       </div>
 
       <div className="inventory-skills">
-        {invSkills.map(({ name, description }, i) => {
+        {invSkills.map((itemSkills, i) => {
           return (
-            <div key={name + i} className="skill">
-              <span className="skill-name">{name}: </span>
-              <span className="skill-description">{description}</span>
+            <div key={i} className="inventory-skills-item">
+              {itemSkills.map(({ name, description }) => {
+                return (
+                  <div key={name + i} className="skill">
+                    <span className="skill-name">{name}: </span>
+                    <span className="skill-description">{description}</span>
+                  </div>
+                )
+              })}
             </div>
           )
         })}

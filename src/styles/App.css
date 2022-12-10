@@ -43,11 +43,6 @@
   margin: 0 0 1.5rem;
 }
 
-.card-title {
-  margin: 1rem 0;
-  text-align: center;
-}
-
 .card-image-wrap {
   text-align: center;
   user-select: none;
@@ -71,25 +66,6 @@
   text-align: left;
 }
 
-.inventory {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  cursor: pointer;
-}
-
-.inventory-cost {
-  color: #efcb12;
-}
-
-.inventory-params {
-  margin-top: 1rem;
-}
-
-.inventory-skills {
-  margin-top: 1.5rem;
-}
-
 .param {
   display: flex;
   gap: 0.5rem;
@@ -101,8 +77,8 @@
   text-align: right;
 }
 
-.skill {
-  padding: 0.25rem 0;
+.skill + .skill {
+  padding-top: 0.5rem;
 }
 
 .skill-name {

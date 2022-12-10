@@ -44,9 +44,10 @@ export const Items: React.FC<ItemsProps> = ({ items, onItemClick }) => {
               <div key={item.name} className="card-wrap">
                 <div className="card" onClick={onItemClick} data-id={item.name}>
                   <img className="" src={getImageSrc(item.name)} alt="" />
-                  <div className="card-params">
-                    {item.stats &&
-                      Object.entries(item.stats).map(([key, value]) => {
+                  <h4 className="card-title">{item.name}</h4>
+                  {item.stats && (
+                    <div className="card-params">
+                      {Object.entries(item.stats).map(([key, value]) => {
                         return (
                           <div key={key} className="param">
                             <span className="param-name">+{value}</span>
@@ -54,7 +55,8 @@ export const Items: React.FC<ItemsProps> = ({ items, onItemClick }) => {
                           </div>
                         )
                       })}
-                  </div>
+                    </div>
+                  )}
                   {item.skills?.length && (
                     <>
                       <div className="card-skills-title">Skills</div>
