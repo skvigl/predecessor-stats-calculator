@@ -2,11 +2,13 @@ import _ from 'lodash'
 
 import { Item } from '../../types'
 import { LocalStorageServce } from '../implementations/LocalStorageService'
+import { HeroBuildMapper } from './HeroBuildMapper'
 
 const lsService = new LocalStorageServce('predecessor-hero-builds')
+const heroBuildMapper = new HeroBuildMapper()
 
 interface IHeroBuilds {
-  [key: string]: Item[]
+  [key: string]: string[]
 }
 
 const MAX_INVENTORY_SIZE = 6
@@ -23,8 +25,7 @@ export class HeroBuildsService {
   }
 
   addItem = (buildName: string, item: Item) => {
-    const builds = this.parse(lsService.get())
-    const savedItems = builds[buildName] ?? []
+    const savedItems = this.getItems(buildName)
 
     if (_.find(savedItems, { name: item.name })) {
       return savedItems
@@ -42,14 +43,15 @@ export class HeroBuildsService {
 
       const newItems = [item, ...itemsWithoutCrest]
 
-      lsService.set({ [buildName]: newItems })
+      this.setItems(buildName, newItems)
+
       return newItems
     }
 
     if (isNewItemCrest) {
       const newItems = [item, ...savedItems]
 
-      lsService.set({ [buildName]: newItems })
+      this.setItems(buildName, newItems)
       return newItems
     }
 
@@ -62,16 +64,16 @@ export class HeroBuildsService {
     }
 
     const newItems = [...savedItems, item]
-    lsService.set({ [buildName]: newItems })
+    this.setItems(buildName, newItems)
 
     return newItems
   }
 
   removeItem = (buildName: string, itemId: string) => {
-    const builds = this.parse(lsService.get())
-    const newItems = _.filter(builds[buildName], ({ name }) => name !== itemId)
+    const saveItems = this.getItems(buildName)
+    const newItems = _.filter(saveItems, ({ name }) => name !== itemId)
 
-    lsService.set({ [buildName]: newItems })
+    this.setItems(buildName, newItems)
 
     return newItems
   }
@@ -79,7 +81,7 @@ export class HeroBuildsService {
   getItems = (buildName: string) => {
     const builds = this.parse(lsService.get())
 
-    return builds[buildName] ?? []
+    return heroBuildMapper.mapIdsToItems(builds[buildName])
   }
 
   setItems = (buildName: string, items: Item[]) => {
@@ -87,7 +89,7 @@ export class HeroBuildsService {
 
     const builds = this.parse(lsService.get())
 
-    builds[buildName] = items
+    builds[buildName] = heroBuildMapper.mapItemstoIds(items)
 
     lsService.set(builds)
   }
