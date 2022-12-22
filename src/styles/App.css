@@ -7,6 +7,10 @@
   display: none;
 }
 
+.main {
+  overflow-x: hidden;
+}
+
 .build-panel {
   padding: 1rem;
 }
@@ -28,7 +32,6 @@
 
   .main {
     flex: 1 1 auto;
-    padding: 1rem;
     overflow-y: auto;
   }
 
@@ -37,54 +40,4 @@
     flex: 1 0 100%;
     max-width: 24rem;
   }
-}
-
-.aside-total {
-  margin: 0 0 1.5rem;
-}
-
-.card-image-wrap {
-  text-align: center;
-  user-select: none;
-}
-
-.card-image {
-  width: 200px;
-  height: 150px;
-  object-fit: cover;
-  object-position: center top;
-}
-
-.card-cost {
-  margin: 1rem 0;
-  color: #efcb12;
-  font-weight: 500;
-  text-align: center;
-}
-
-.card-skills {
-  text-align: left;
-}
-
-.param {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.param-name {
-  min-width: 2.5rem;
-  color: #558b6d;
-  text-align: right;
-}
-
-.skill + .skill {
-  padding-top: 0.5rem;
-}
-
-.skill-name {
-  color: #cdc2a4;
-}
-
-.skill-description {
-  line-height: 1.6;
 }

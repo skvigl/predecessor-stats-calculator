@@ -1,8 +1,17 @@
 export interface Item {
-    name: string
-    cost?: number
-    tags: string[]
-    skills?: { name: string; description: string }[]
-    stats?: { [key: string]: number }
-    components?: string[]
-  }
+  name: string
+  cost?: number
+  tags: string[]
+  abilities?: IAbility[]
+  stats?: IParam
+  components?: string[]
+}
+
+export interface IAbility {
+  name: string
+  description: string
+}
+
+export interface IParam {
+  [name: string]: number
+}

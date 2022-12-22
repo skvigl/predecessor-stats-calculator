@@ -1,0 +1,10 @@
+.param {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.param-value {
+  min-width: 2.5rem;
+  color: #558b6d;
+  text-align: right;
+}

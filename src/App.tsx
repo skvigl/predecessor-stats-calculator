@@ -6,16 +6,16 @@ import './styles/App.css'
 import { Item } from './types'
 import { items } from './data/items'
 import { HeroBuildsService } from './services/implementations/HeroBuildsService'
-import { Filters } from './components/Filters/Filters'
-import { Items } from './components/Items/Items'
-import { BuildPanel } from './components/BuildPanel/BuildPanel'
+import { Filters } from './components/Filters'
+import { Items } from './components/Items'
+import { BuildPanel } from './components/BuildPanel'
 
 const tags = [...new Set(items.flatMap((item) => item.tags))].sort()
 
 const heroBuildsService = new HeroBuildsService()
 
 function App() {
-  const [activeItem, setActiveItem] = useState<Item | null>(null)
+  // const [activeItem, setActiveItem] = useState<Item | null>(null)
   const [inventory, setInventory] = useState<Item[]>([])
   const [filters, setFilters] = useState<string[]>([])
   const [activeBuild, setActiveBuild] = useState<string>('new')

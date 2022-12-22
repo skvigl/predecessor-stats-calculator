@@ -1,0 +1,40 @@
+.item-details {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  background: #0c0c0c;
+}
+
+.item-details-title {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.item-details-image-wrap {
+  text-align: center;
+  user-select: none;
+}
+
+.item-details-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.item-details-params {
+  margin-top: 1rem;
+}
+
+.item-details-cost {
+  margin: 0.5rem 0;
+  color: #efcb12;
+  font-weight: 500;
+  text-align: center;
+}
+
+.item-details-abilities {
+  margin-top: 1rem;
+}

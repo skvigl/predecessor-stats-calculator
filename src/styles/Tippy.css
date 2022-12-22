@@ -1,0 +1,8 @@
+.tippy-box {
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.tippy-content {
+  padding: 0;
+}

@@ -3,9 +3,8 @@ import { Item } from '../types'
 export const items: Item[] = [
   {
     name: 'Solstone',
-    cost: 0,
     tags: ['Active', 'Vision'],
-    skills: [
+    abilities: [
       {
         name: 'Active - Oracle Ward',
         description:
@@ -25,7 +24,7 @@ export const items: Item[] = [
     name: 'Stealth Ward',
     cost: 25,
     tags: ['Active', 'Vision'],
-    skills: [
+    abilities: [
       {
         name: 'Active - Stealth Ward',
         description:
@@ -37,7 +36,7 @@ export const items: Item[] = [
     name: 'Sentry',
     cost: 25,
     tags: ['Active', 'Vision'],
-    skills: [
+    abilities: [
       {
         name: 'Active - Sentry',
         description:
@@ -52,7 +51,7 @@ export const items: Item[] = [
   {
     name: 'Wild Hunt',
     tags: ['Active', 'Passive', 'On-hit'],
-    skills: [
+    abilities: [
       {
         name: 'Active - Slay',
         description: 'Deal 1000 true damage to an Enemy Minion or Monster',
@@ -67,7 +66,7 @@ export const items: Item[] = [
   {
     name: 'Hunt',
     tags: ['Active', 'Passive', 'On-hit'],
-    skills: [
+    abilities: [
       {
         name: 'Active - Slay',
         description: 'Deal 500 true damage to an Enemy Minion or Monster',
@@ -90,7 +89,7 @@ export const items: Item[] = [
     stats: {
       Health: 80,
     },
-    skills: [
+    abilities: [
       {
         name: 'Titan',
         description:
@@ -110,7 +109,7 @@ export const items: Item[] = [
       Health: 120,
       'Base Health Regen': 25,
     },
-    skills: [
+    abilities: [
       {
         name: 'Legendary Titan',
         description:
@@ -140,7 +139,7 @@ export const items: Item[] = [
       'Physical Armor': 5,
       'Magical Armor': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Sturdy',
         description:
@@ -171,7 +170,7 @@ export const items: Item[] = [
       'Physical Armor': 15,
       'Magical Armor': 8,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Echidna',
         description:
@@ -202,7 +201,7 @@ export const items: Item[] = [
       'Physical Armor': 8,
       'Magical Armor': 8,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Resilience',
         description:
@@ -221,7 +220,7 @@ export const items: Item[] = [
       Health: 40,
       'Base Health Regen': 25,
     },
-    skills: [
+    abilities: [
       {
         name: 'Guardian',
         description:
@@ -248,7 +247,7 @@ export const items: Item[] = [
       'Base Health Regen': 50,
       'Gold Per Second': 0.2,
     },
-    skills: [
+    abilities: [
       {
         name: 'Legendary Guardian',
         description:
@@ -280,7 +279,7 @@ export const items: Item[] = [
       'Base Health Regen': 75,
       'Base Mana Regen': 75,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Safeguard',
         description:
@@ -315,7 +314,7 @@ export const items: Item[] = [
       'Base Health Regen': 100,
       Mana: 100,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Rift Snatcher',
         description:
@@ -350,7 +349,7 @@ export const items: Item[] = [
       'Physical Armor': 15,
       'Magical Armor': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Phantom Rush',
         description:
@@ -374,7 +373,7 @@ export const items: Item[] = [
       'Magical Power': 5,
       'Base Mana Regen': 25,
     },
-    skills: [
+    abilities: [
       {
         name: 'Consort',
         description:
@@ -401,7 +400,7 @@ export const items: Item[] = [
       'Base Mana Regen': 50,
       'Gold Per Second': 0.2,
     },
-    skills: [
+    abilities: [
       {
         name: 'Legendary Consort',
         description:
@@ -433,7 +432,7 @@ export const items: Item[] = [
       'Base Mana Regen': 50,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Grace',
         description:
@@ -466,7 +465,7 @@ export const items: Item[] = [
       'Magical Armor': 18,
       'Base Mana Regen': 75,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Muzzle',
         description:
@@ -499,7 +498,7 @@ export const items: Item[] = [
       'Physical Armor': 20,
       'Base Mana Regen': 75,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Cripple',
         description:
@@ -523,7 +522,7 @@ export const items: Item[] = [
       'Magical Power': 10,
       Mana: 50,
     },
-    skills: [
+    abilities: [
       {
         name: 'Magician',
         description:
@@ -544,7 +543,7 @@ export const items: Item[] = [
       Mana: 120,
       'Magical Penetration': 4,
     },
-    skills: [
+    abilities: [
       {
         name: 'Legendary Magician',
         description:
@@ -574,7 +573,7 @@ export const items: Item[] = [
       'Magical Penetration': 8,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Turntable',
         description:
@@ -604,7 +603,7 @@ export const items: Item[] = [
       'Magical Penetration': 8,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Anima',
         description:
@@ -634,7 +633,7 @@ export const items: Item[] = [
       'Magical Penetration': 8,
       Health: 100,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Stasis Device',
         description:
@@ -654,7 +653,7 @@ export const items: Item[] = [
       'Magical Power': 10,
       Health: 40,
     },
-    skills: [
+    abilities: [
       {
         name: 'Occultist',
         description:
@@ -681,7 +680,7 @@ export const items: Item[] = [
       Health: 100,
       'Magical Penetration': 4,
     },
-    skills: [
+    abilities: [
       {
         name: 'Legendary Occultist',
         description:
@@ -711,7 +710,7 @@ export const items: Item[] = [
       'Magical Penetration': 8,
       'Attack Speed': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Cyclone',
         description:
@@ -746,7 +745,7 @@ export const items: Item[] = [
       'Magical Penetration': 8,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Overcharge',
         description:
@@ -774,7 +773,7 @@ export const items: Item[] = [
       Health: 100,
       'Magical Penetration': 8,
     },
-    skills: [
+    abilities: [
       {
         name: 'Soul Stealer',
         description:
@@ -798,7 +797,7 @@ export const items: Item[] = [
       'Physical Power': 6,
       Health: 40,
     },
-    skills: [
+    abilities: [
       {
         name: 'Warrior',
         description:
@@ -818,7 +817,7 @@ export const items: Item[] = [
       'Physical Power': 10,
       Health: 100,
     },
-    skills: [
+    abilities: [
       {
         name: 'Legendary Warrior',
         description:
@@ -846,7 +845,7 @@ export const items: Item[] = [
       Health: 150,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Glacial Colosseum',
         description:
@@ -866,7 +865,7 @@ export const items: Item[] = [
       'Physical Power': 30,
       Health: 100,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Rebirth',
         description:
@@ -895,7 +894,7 @@ export const items: Item[] = [
       Health: 125,
       Lifesteal: 8,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Purifying Rage',
         description:
@@ -914,7 +913,7 @@ export const items: Item[] = [
       'Physical Power': 5,
       'Attack Speed': 5,
     },
-    skills: [
+    abilities: [
       {
         name: 'Marksman',
         description:
@@ -934,7 +933,7 @@ export const items: Item[] = [
       'Physical Power': 10,
       'Attack Speed': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Legendary Marksman',
         description:
@@ -964,7 +963,7 @@ export const items: Item[] = [
       'Critical Chance': 20,
       Lifesteal: 5,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Adrenalize',
         description:
@@ -994,7 +993,7 @@ export const items: Item[] = [
       'Critical Chance': 20,
       Lifesteal: 5,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Purifying Guard',
         description:
@@ -1023,7 +1022,7 @@ export const items: Item[] = [
       'Attack Speed': 20,
       'Critical Chance': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Rending Strikes',
         description:
@@ -1042,7 +1041,7 @@ export const items: Item[] = [
       'Physical Power': 6,
       'Ability Haste': 5,
     },
-    skills: [
+    abilities: [
       {
         name: 'Rogue',
         description:
@@ -1069,7 +1068,7 @@ export const items: Item[] = [
       'Ability Haste': 10,
       'Physical Penetration': 4,
     },
-    skills: [
+    abilities: [
       {
         name: 'Legendary Rogue',
         description:
@@ -1099,7 +1098,7 @@ export const items: Item[] = [
       'Physical Penetration': 4,
       Omnivamp: 6,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Purifying Strike',
         description:
@@ -1127,7 +1126,7 @@ export const items: Item[] = [
       'Ability Haste': 15,
       'Physical Penetration': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Active - Limit Breaker',
         description:
@@ -1155,7 +1154,7 @@ export const items: Item[] = [
       'Ability Haste': 10,
       'Physical Penetration': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Sow',
         description:
@@ -1175,7 +1174,7 @@ export const items: Item[] = [
   {
     name: 'Refillable Potion',
     tags: ['Consumable', 'Active'],
-    skills: [
+    abilities: [
       {
         name: 'Consume',
         description:
@@ -1267,7 +1266,7 @@ export const items: Item[] = [
     name: 'Spell Slasher',
     cost: 600,
     tags: ['Passive'],
-    skills: [
+    abilities: [
       {
         name: 'Spellblade',
         description:
@@ -1304,7 +1303,7 @@ export const items: Item[] = [
     name: 'Strength Tonic',
     cost: 750,
     tags: ['Consumable'],
-    skills: [
+    abilities: [
       {
         name: 'Consume',
         description:
@@ -1316,7 +1315,7 @@ export const items: Item[] = [
     name: 'Stamina Tonic',
     cost: 750,
     tags: ['Consumable'],
-    skills: [
+    abilities: [
       {
         name: 'Consume',
         description:
@@ -1328,7 +1327,7 @@ export const items: Item[] = [
     name: 'Protection Tonic',
     cost: 750,
     tags: ['Consumable'],
-    skills: [
+    abilities: [
       {
         name: 'Consume',
         description:
@@ -1340,7 +1339,7 @@ export const items: Item[] = [
     name: 'Intellect Tonic',
     cost: 750,
     tags: ['Consumable'],
-    skills: [
+    abilities: [
       {
         name: 'Consume',
         description:
@@ -1453,7 +1452,7 @@ export const items: Item[] = [
       'Magical Armor': 12,
       'Base Mana Regen': 75,
     },
-    skills: [
+    abilities: [
       {
         name: 'Celerity',
         description: 'Gain 5% bonus movement speed out of combat.',
@@ -1468,7 +1467,7 @@ export const items: Item[] = [
     stats: {
       'Physical Armor': 25,
     },
-    skills: [
+    abilities: [
       {
         name: 'Blighted Skin',
         description:
@@ -1494,7 +1493,7 @@ export const items: Item[] = [
       Health: 150,
       'Base Mana Regen': 50,
     },
-    skills: [
+    abilities: [
       {
         name: 'Elegy',
         description:
@@ -1510,7 +1509,7 @@ export const items: Item[] = [
     stats: {
       'Magical Power': 35,
     },
-    skills: [
+    abilities: [
       {
         name: 'Blighted Spells',
         description:
@@ -1526,7 +1525,7 @@ export const items: Item[] = [
     stats: {
       'Physical Power': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Blighted Strikes',
         description:
@@ -1543,7 +1542,7 @@ export const items: Item[] = [
       'Magical Power': 20,
       Mana: 200,
     },
-    skills: [
+    abilities: [
       {
         name: 'Font',
         description:
@@ -1581,7 +1580,7 @@ export const items: Item[] = [
       'Physical Power': 15,
       Mana: 400,
     },
-    skills: [
+    abilities: [
       {
         name: 'Critical Font',
         description:
@@ -1598,7 +1597,7 @@ export const items: Item[] = [
       'Physical Power': 10,
       Health: 120,
     },
-    skills: [
+    abilities: [
       {
         name: 'Sunder',
         description:
@@ -1625,7 +1624,7 @@ export const items: Item[] = [
     stats: {
       'Attack Speed': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Honed Strikes',
         description: 'Basic attacks deal 12 bonus physical damage on-hit.',
@@ -1640,7 +1639,7 @@ export const items: Item[] = [
     stats: {
       'Physical Armor': 25,
     },
-    skills: [
+    abilities: [
       {
         name: 'Stifle',
         description:
@@ -1657,7 +1656,7 @@ export const items: Item[] = [
       'Magical Power': 20,
       'Physical Armor': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Ferrumancer',
         description:
@@ -1684,7 +1683,7 @@ export const items: Item[] = [
       'Physical Power': 20,
       Lifesteal: 5,
     },
-    skills: [
+    abilities: [
       {
         name: 'Sever',
         description:
@@ -1711,7 +1710,7 @@ export const items: Item[] = [
       Health: 150,
       Mana: 200,
     },
-    skills: [
+    abilities: [
       {
         name: 'Blaze',
         description:
@@ -1754,7 +1753,7 @@ export const items: Item[] = [
       'Critical Chance': 20,
       'Attack Speed': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Swift',
         description:
@@ -1770,7 +1769,7 @@ export const items: Item[] = [
     stats: {
       'Physical Power': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Desolate',
         description:
@@ -1787,7 +1786,7 @@ export const items: Item[] = [
       Health: 200,
       'Base Health Regen': 75,
     },
-    skills: [
+    abilities: [
       {
         name: 'Colossus',
         description:
@@ -1814,7 +1813,7 @@ export const items: Item[] = [
     stats: {
       'Physical Power': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Cleave',
         description:
@@ -1841,7 +1840,7 @@ export const items: Item[] = [
       'Physical Power': 20,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Corrode',
         description:
@@ -1858,7 +1857,7 @@ export const items: Item[] = [
       'Physical Power': 25,
       'Attack Speed': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Zap',
         description:
@@ -1875,7 +1874,7 @@ export const items: Item[] = [
       'Physical Power': 20,
       'Magical Armor': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Bravery',
         description:
@@ -1902,7 +1901,7 @@ export const items: Item[] = [
       'Magical Power': 400,
       Health: 150,
     },
-    skills: [
+    abilities: [
       {
         name: 'Fiend',
         description:
@@ -1930,7 +1929,7 @@ export const items: Item[] = [
       'Magical Armor': 30,
       Tenacity: 30,
     },
-    skills: [
+    abilities: [
       {
         name: 'Vanguard',
         description:
@@ -1960,7 +1959,7 @@ export const items: Item[] = [
       'Magical Armor': 25,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Reprisal',
         description:
@@ -1984,7 +1983,7 @@ export const items: Item[] = [
       'Base Mana Regen': 125,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Sheriff',
         description:
@@ -2009,7 +2008,7 @@ export const items: Item[] = [
       'Ability Haste': 10,
       'Heal & Shield Power': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Elation',
         description:
@@ -2034,7 +2033,7 @@ export const items: Item[] = [
       'Base Mana Regen': 150,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Ferrumancer',
         description:
@@ -2064,7 +2063,7 @@ export const items: Item[] = [
       'Base Mana Regen': 125,
       'Heal & Shield Power': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Elegy',
         description:
@@ -2087,7 +2086,7 @@ export const items: Item[] = [
       Mana: 200,
       'Physical Armor': 40,
     },
-    skills: [
+    abilities: [
       {
         name: 'Heatwave',
         description:
@@ -2106,7 +2105,7 @@ export const items: Item[] = [
       Mana: 300,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Frostbite',
         description:
@@ -2134,7 +2133,7 @@ export const items: Item[] = [
       'Base Mana Regen': 100,
       'Heal & Shield Power': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Vital Waters',
         description:
@@ -2157,7 +2156,7 @@ export const items: Item[] = [
       'Physical Armor': 30,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Artillery Golem',
         description:
@@ -2182,7 +2181,7 @@ export const items: Item[] = [
       'Base Mana Regen': 150,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Chilling Blight',
         description:
@@ -2204,7 +2203,7 @@ export const items: Item[] = [
       'Physical Power': 25,
       Health: 350,
     },
-    skills: [
+    abilities: [
       {
         name: 'Colossal Cleave',
         description:
@@ -2227,7 +2226,7 @@ export const items: Item[] = [
       Mana: 400,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Meditation',
         description: 'Gain 20 ability haste while above 60% maximum mana.',
@@ -2256,7 +2255,7 @@ export const items: Item[] = [
       'Base Mana Regen': 100,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'ZeroG',
         description:
@@ -2278,7 +2277,7 @@ export const items: Item[] = [
       'Magical Armor': 35,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Unstable Shackles',
         description:
@@ -2296,7 +2295,7 @@ export const items: Item[] = [
       'Physical Armor': 55,
       Mana: 200,
     },
-    skills: [
+    abilities: [
       {
         name: 'Immobilizer',
         description:
@@ -2319,7 +2318,7 @@ export const items: Item[] = [
       'Attack Speed': 10,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Shatter',
         description:
@@ -2336,7 +2335,7 @@ export const items: Item[] = [
       'Physical Power': 25,
       Health: 400,
     },
-    skills: [
+    abilities: [
       {
         name: 'Colossal Sunder',
         description:
@@ -2364,7 +2363,7 @@ export const items: Item[] = [
       'Physical Penetration': 8,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Parting Gift',
         description:
@@ -2387,7 +2386,7 @@ export const items: Item[] = [
       Mana: 350,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Font',
         description:
@@ -2409,7 +2408,7 @@ export const items: Item[] = [
       'Physical Armor': 40,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Blighted Thorns',
         description:
@@ -2427,7 +2426,7 @@ export const items: Item[] = [
       'Magical Armor': 35,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Veil',
         description:
@@ -2449,7 +2448,7 @@ export const items: Item[] = [
       Health: 350,
       Tenacity: 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Chilling Spells',
         description: 'Damaging abilities Slow affected Units by 25% for 1.5s.',
@@ -2476,7 +2475,7 @@ export const items: Item[] = [
       'Magical Armor': 25,
       'Physical Penetration': 8,
     },
-    skills: [
+    abilities: [
       {
         name: 'Vengeful Shroud',
         description:
@@ -2492,7 +2491,7 @@ export const items: Item[] = [
     stats: {
       'Physical Power': 45,
     },
-    skills: [
+    abilities: [
       {
         name: 'Demonic',
         description:
@@ -2519,7 +2518,7 @@ export const items: Item[] = [
       Mana: 350,
       'Ability Haste': 25,
     },
-    skills: [
+    abilities: [
       {
         name: 'Spellslinger',
         description:
@@ -2548,7 +2547,7 @@ export const items: Item[] = [
       'Magical Armor': 30,
       Tenacity: 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Undying',
         description:
@@ -2570,7 +2569,7 @@ export const items: Item[] = [
       'Magical Power': 80,
       'Magical Penetration': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Spectre',
         description:
@@ -2592,7 +2591,7 @@ export const items: Item[] = [
       Health: 300,
       'Physical Armor': 70,
     },
-    skills: [
+    abilities: [
       {
         name: 'Stalwart',
         description: 'Take 15% reduced damage from Critical Strikes.',
@@ -2613,7 +2612,7 @@ export const items: Item[] = [
       'Physical Power': 50,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Calamity',
         description:
@@ -2636,7 +2635,7 @@ export const items: Item[] = [
       Health: 200,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Blighted Strikes',
         description:
@@ -2666,7 +2665,7 @@ export const items: Item[] = [
       'Critical Chance': 20,
       'Movement Speed': 3,
     },
-    skills: [
+    abilities: [
       {
         name: 'Chain Zap',
         description:
@@ -2690,7 +2689,7 @@ export const items: Item[] = [
       'Base Health Regen': 150,
       'Physical Armor': 70,
     },
-    skills: [
+    abilities: [
       {
         name: 'Shockwave',
         description:
@@ -2714,7 +2713,7 @@ export const items: Item[] = [
       Mana: 200,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Regenerator',
         description: 'Regenerate 10% of damage taken over 5s.',
@@ -2735,7 +2734,7 @@ export const items: Item[] = [
       Health: 250,
       'Ability Haste': 25,
     },
-    skills: [
+    abilities: [
       {
         name: 'Celestial Spellblade',
         description:
@@ -2753,7 +2752,7 @@ export const items: Item[] = [
       'Attack Speed': 30,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Shredding Strikes',
         description:
@@ -2783,7 +2782,7 @@ export const items: Item[] = [
       'Critical Chance': 20,
       'Movement Speed': 3,
     },
-    skills: [
+    abilities: [
       {
         name: 'Chilling Zap',
         description:
@@ -2800,7 +2799,7 @@ export const items: Item[] = [
       Health: 400,
       'Base Health Regen': 225,
     },
-    skills: [
+    abilities: [
       {
         name: 'Colossus',
         description:
@@ -2822,7 +2821,7 @@ export const items: Item[] = [
       'Magical Armor': 30,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Tenacious Bravery',
         description:
@@ -2852,7 +2851,7 @@ export const items: Item[] = [
       'Magical Armor': 30,
       'Base Mana Regen': 150,
     },
-    skills: [
+    abilities: [
       {
         name: 'Voracity',
         description:
@@ -2874,7 +2873,7 @@ export const items: Item[] = [
       'Magical Armor': 40,
       Omnivamp: 5,
     },
-    skills: [
+    abilities: [
       {
         name: 'Magnitude',
         description:
@@ -2897,7 +2896,7 @@ export const items: Item[] = [
       Mana: 250,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Chilling Presence',
         description:
@@ -2920,7 +2919,7 @@ export const items: Item[] = [
       'Magical Penetration': 10,
       Mana: 200,
     },
-    skills: [
+    abilities: [
       {
         name: 'Pyro',
         description:
@@ -2943,7 +2942,7 @@ export const items: Item[] = [
       Health: 200,
       'Physical Armor': 35,
     },
-    skills: [
+    abilities: [
       {
         name: 'Fortification',
         description: 'Gain 10 physical armor far each nearby Enemy Hero.',
@@ -2971,7 +2970,7 @@ export const items: Item[] = [
       'Physical Armor': 35,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Surge',
         description:
@@ -2994,7 +2993,7 @@ export const items: Item[] = [
       'Magical Armor': 25,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Justicar',
         description:
@@ -3012,7 +3011,7 @@ export const items: Item[] = [
       Mana: 20,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Arcane Power',
         description: 'Gain (+2% Maximum Mana) Physical Power.',
@@ -3034,7 +3033,7 @@ export const items: Item[] = [
       Health: 200,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Blighted Spells',
         description:
@@ -3063,7 +3062,7 @@ export const items: Item[] = [
       'Physical Penetration': 12,
       'Ability Haste': 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Spellweaver',
         description:
@@ -3086,7 +3085,7 @@ export const items: Item[] = [
       'Physical Penetration': 8,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Bestial Torment',
         description:
@@ -3104,7 +3103,7 @@ export const items: Item[] = [
       'Physical Penetration': 8,
       Omnivamp: 5,
     },
-    skills: [
+    abilities: [
       {
         name: 'Eclipse',
         description:
@@ -3129,7 +3128,7 @@ export const items: Item[] = [
       'Magical Lifesteal': 15,
       Tenacity: 15,
     },
-    skills: [
+    abilities: [
       {
         name: 'Leech',
         description:
@@ -3151,7 +3150,7 @@ export const items: Item[] = [
       Health: 300,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Cinder',
         description:
@@ -3174,7 +3173,7 @@ export const items: Item[] = [
       'Physical Penetration': 10,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Corrode',
         description:
@@ -3197,7 +3196,7 @@ export const items: Item[] = [
       'Magical Armor': 70,
       'Ability Haste': 10,
     },
-    skills: [
+    abilities: [
       {
         name: 'Volatile',
         description:
@@ -3215,7 +3214,7 @@ export const items: Item[] = [
       Health: 250,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Corrode',
         description:
@@ -3244,7 +3243,7 @@ export const items: Item[] = [
       Lifesteal: 15,
       'Critical Chance': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Passive - Spellblade',
         description:
@@ -3272,7 +3271,7 @@ export const items: Item[] = [
       'Attack Speed': 30,
       'Critical Chance': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Blighted Strikes',
         description:
@@ -3303,7 +3302,7 @@ export const items: Item[] = [
       'Critical Chance': 20,
       Lifesteal: 5,
     },
-    skills: [
+    abilities: [
       {
         name: 'Rend',
         description:
@@ -3326,7 +3325,7 @@ export const items: Item[] = [
       'Magical Armor': 30,
       'Critical Chance': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Swift Bravery',
         description:
@@ -3349,7 +3348,7 @@ export const items: Item[] = [
       Mana: 200,
       'Critical Chance': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Critical Font',
         description:
@@ -3372,7 +3371,7 @@ export const items: Item[] = [
       'Critical Chance': 20,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Corrode',
         description:
@@ -3395,7 +3394,7 @@ export const items: Item[] = [
       Mana: 200,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Ingenious Cleave',
         description:
@@ -3417,7 +3416,7 @@ export const items: Item[] = [
       Mana: 200,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Disintegrate',
         description:
@@ -3435,7 +3434,7 @@ export const items: Item[] = [
       Lifesteal: 8,
       'Critical Chance': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Order',
         description:
@@ -3457,7 +3456,7 @@ export const items: Item[] = [
       'Magical Power': 80,
       'Magical Penetration': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Magus',
         description:
@@ -3480,7 +3479,7 @@ export const items: Item[] = [
       Health: 200,
       Tenacity: 30,
     },
-    skills: [
+    abilities: [
       {
         name: 'Fiend',
         description:
@@ -3502,7 +3501,7 @@ export const items: Item[] = [
       Health: 500,
       Tenacity: 30,
     },
-    skills: [
+    abilities: [
       {
         name: 'Aegis',
         description:
@@ -3526,7 +3525,7 @@ export const items: Item[] = [
       'Attack Speed': 25,
       'Ability Haste': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Magical Strikes',
         description:
@@ -3548,7 +3547,7 @@ export const items: Item[] = [
       'Ability Haste': 20,
       Omnivamp: 8,
     },
-    skills: [
+    abilities: [
       {
         name: 'Mutilate',
         description:
@@ -3570,7 +3569,7 @@ export const items: Item[] = [
       'Physical Power': 50,
       'Critical Chance': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'First Strike',
         description:
@@ -3600,7 +3599,7 @@ export const items: Item[] = [
       'Critical Chance': 20,
       'Movement Speed': 3,
     },
-    skills: [
+    abilities: [
       {
         name: 'Menace',
         description:
@@ -3618,7 +3617,7 @@ export const items: Item[] = [
       Health: 300,
       'Attack Speed': 30,
     },
-    skills: [
+    abilities: [
       {
         name: 'True Strikes',
         description:
@@ -3649,7 +3648,7 @@ export const items: Item[] = [
       'Ability Haste': 10,
       'Critical Chance': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Clockwork',
         description:
@@ -3674,7 +3673,7 @@ export const items: Item[] = [
     stats: {
       'Magical Power': 120,
     },
-    skills: [
+    abilities: [
       {
         name: 'Annihilate',
         description: 'Increase your magical power by 35%.',
@@ -3690,7 +3689,7 @@ export const items: Item[] = [
       'Physical Power': 55,
       'Critical Chance': 20,
     },
-    skills: [
+    abilities: [
       {
         name: 'Perfection',
         description: 'Gain 1 physical power per 4% critical strike chance.',

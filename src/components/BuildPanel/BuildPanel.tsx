@@ -1,8 +1,9 @@
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 
-import './BuildPanel.css';
 import { Item } from '../../types'
-import { Thumbnail } from '../Thumbnail/Thumbnail'
+import { Thumbnail } from '../Thumbnail'
+import { Ability } from '../Ability'
+import './BuildPanel.css'
 
 interface BuildPanelProps {
   inventory: Item[]
@@ -32,10 +33,10 @@ export const BuildPanel: React.FC<BuildPanelProps> = ({
     }, {})
   }, [inventory])
 
-  const invSkills = useMemo(() => {
+  const invAbilities = useMemo(() => {
     return inventory.reduce((acc, item) => {
-      if (item.skills) {
-        acc.push(item.skills)
+      if (item.abilities) {
+        acc.push(item.abilities)
       }
 
       return acc
@@ -61,17 +62,12 @@ export const BuildPanel: React.FC<BuildPanelProps> = ({
         })}
       </div>
 
-      <div className="inventory-skills">
-        {invSkills.map((itemSkills, i) => {
+      <div className="inventory-abilities">
+        {invAbilities.map((itemAbilities, i) => {
           return (
-            <div key={i} className="inventory-skills-item">
-              {itemSkills.map(({ name, description }) => {
-                return (
-                  <div key={name + i} className="skill">
-                    <span className="skill-name">{name}: </span>
-                    <span className="skill-description">{description}</span>
-                  </div>
-                )
+            <div key={i} className="inventory-abilities-item">
+              {itemAbilities.map((ability, i) => {
+                return <Ability key={ability.name + i} ability={ability} />
               })}
             </div>
           )

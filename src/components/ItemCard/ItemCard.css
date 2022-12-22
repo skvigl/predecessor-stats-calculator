@@ -1,0 +1,28 @@
+.item-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  background: #0c0c0c;
+}
+
+.item-card-title {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.item-card-image-wrap {
+  text-align: center;
+  user-select: none;
+}
+
+.item-card-image {
+  height: 120px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.item-card-params {
+  margin-top: 1rem;
+}

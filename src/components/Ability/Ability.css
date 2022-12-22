@@ -1,0 +1,11 @@
+.ability + .ability {
+  padding-top: 0.5rem;
+}
+
+.ability-name {
+  color: #cdc2a4;
+}
+
+.ability-description {
+  line-height: 1.6;
+}

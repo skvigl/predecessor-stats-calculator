@@ -1,36 +1,35 @@
 .inventory {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    cursor: pointer;
-  }
-  
-  .inventory-cost {
-    color: #efcb12;
-  }
-  
-  .inventory-params {
-    margin-top: 1rem;
-  }
-  
-  .inventory-skills {
-    margin-top: 1.5rem;
-  }
-  
-  .inventory-skills-item + .inventory-skills-item {
-    position: relative;
-    margin-top: 1rem;
-    padding-top: 1rem;
-  }
-  
-  .inventory-skills-item + .inventory-skills-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 1px;
-    background-color: #cdc2a4;;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  cursor: pointer;
+}
+
+.inventory-cost {
+  color: #efcb12;
+}
+
+.inventory-params {
+  margin-top: 1rem;
+}
+
+.inventory-abilities {
+  margin-top: 1.5rem;
+}
+
+.inventory-abilities-item + .inventory-abilities-item {
+  position: relative;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.inventory-abilities-item + .inventory-abilities-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 1px;
+  background-color: #cdc2a4;
+}
