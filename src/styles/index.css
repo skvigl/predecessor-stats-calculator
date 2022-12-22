@@ -35,6 +35,10 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
