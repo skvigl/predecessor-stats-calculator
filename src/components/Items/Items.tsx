@@ -55,7 +55,7 @@ export const Items: React.FC<ItemsProps> = ({ items, onItemClick }) => {
             return (
               <div key={item.name} className="items-full-cell">
                 <Tippy placement="right" content={<ItemDetails item={item} />}>
-                  <ItemCard item={item} />
+                  <ItemCard item={item} onClick={onItemClick} />
                 </Tippy>
               </div>
             )

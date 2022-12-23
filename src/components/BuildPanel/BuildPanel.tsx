@@ -4,6 +4,7 @@ import { Item } from '../../types'
 import { Thumbnail } from '../Thumbnail'
 import { Ability } from '../Ability'
 import './BuildPanel.css'
+import { Param } from '../Param'
 
 interface BuildPanelProps {
   inventory: Item[]
@@ -52,13 +53,8 @@ export const BuildPanel: React.FC<BuildPanelProps> = ({
         })}
       </div>
       <div className="inventory-params">
-        {Object.entries(invStats).map(([key, value]) => {
-          return (
-            <div key={key} className="param">
-              <span className="param-name">+{value}</span>
-              <span>{key}</span>
-            </div>
-          )
+        {Object.entries(invStats).map((param) => {
+          return <Param key={param[0]} param={param} />
         })}
       </div>
 
