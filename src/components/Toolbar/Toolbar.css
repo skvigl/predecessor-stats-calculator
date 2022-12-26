@@ -1,0 +1,16 @@
+.toolbar {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #555;
+}
+
+.toolbar-btn {
+  width: 50%;
+  border: none;
+  background-color: #282c34;
+  color: white;
+}
+
+.toolbar-btn + .toolbar-btn {
+  border-left: 1px solid #555;
+}

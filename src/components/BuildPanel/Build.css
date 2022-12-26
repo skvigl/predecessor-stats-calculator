@@ -1,29 +1,34 @@
-.inventory {
+.build {
+  padding: 1rem;
+}
+
+.build-items {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
   cursor: pointer;
-}
-
-.inventory-cost {
-  color: #efcb12;
-}
-
-.inventory-params {
   margin-top: 1rem;
 }
 
-.inventory-abilities {
+.build-cost {
+  color: #efcb12;
+}
+
+.build-params {
+  margin-top: 1rem;
+}
+
+.build-abilities {
   margin-top: 1.5rem;
 }
 
-.inventory-abilities-item + .inventory-abilities-item {
+.build-abilities-item + .build-abilities-item {
   position: relative;
   margin-top: 1rem;
   padding-top: 1rem;
 }
 
-.inventory-abilities-item + .inventory-abilities-item::before {
+.build-abilities-item + .build-abilities-item::before {
   content: '';
   position: absolute;
   top: 0;

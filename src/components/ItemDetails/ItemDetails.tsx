@@ -1,11 +1,11 @@
-import { Item } from '../../types'
+import { IItem } from '../../types'
 import { getImageSrc } from '../../utils'
 import { Ability } from '../Ability'
 import { Param } from '../Param'
 import './ItemDetails.css'
 
 interface ItemDetailsProps {
-  item: Item
+  item: IItem
 }
 
 export const ItemDetails: React.FC<ItemDetailsProps> = ({ item }) => {

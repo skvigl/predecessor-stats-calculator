@@ -1,6 +1,6 @@
 import _ from 'lodash'
 
-import { Item } from '../../types'
+import { IItem } from '../../types'
 import { LocalStorageServce } from '../implementations/LocalStorageService'
 import { HeroBuildMapper } from './HeroBuildMapper'
 
@@ -14,7 +14,7 @@ interface IHeroBuilds {
 const MAX_INVENTORY_SIZE = 6
 
 export class HeroBuildsService {
-  addItem = (buildName: string, item: Item) => {
+  addItem = (buildName: string, item: IItem) => {
     const savedItems = this.getItems(buildName)
 
     if (_.find(savedItems, { name: item.name })) {
@@ -74,7 +74,7 @@ export class HeroBuildsService {
     return heroBuildMapper.mapIdsToItems(builds[buildName])
   }
 
-  setItems = (buildName: string, items: Item[]) => {
+  setItems = (buildName: string, items: IItem[]) => {
     if (!buildName) return
 
     const builds = lsService.get()

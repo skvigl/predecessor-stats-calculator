@@ -1,6 +1,6 @@
-import { Item } from '../types'
+import { IItem } from '../types'
 
-export const items: Item[] = [
+export const items: IItem[] = [
   {
     name: 'Solstone',
     tags: ['Active', 'Vision'],

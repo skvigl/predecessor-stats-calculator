@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react'
 import Tippy from '@tippyjs/react'
 
 import './Items.css'
-import { Item } from '../../types'
+import { IItem } from '../../types'
 import { Thumbnail } from '../Thumbnail'
 import { ItemDetails } from '../ItemDetails'
 import { ItemCard } from '../ItemCard'
@@ -10,7 +10,7 @@ import { useBreakpoint } from '../../hooks'
 import { Toggle } from '../Toggle'
 
 interface ItemsProps {
-  items: Item[]
+  items: IItem[]
   onItemClick: (event: React.MouseEvent) => void
 }
 
@@ -19,7 +19,6 @@ export const Items: React.FC<ItemsProps> = ({ items, onItemClick }) => {
   const { isMobile } = useBreakpoint()
 
   const handleChange = useCallback(() => {
-    console.log('isCompactView', isCompactView)
     setIsCompactView(!isCompactView)
   }, [isCompactView])
 

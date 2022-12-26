@@ -1,14 +1,14 @@
 import _ from 'lodash'
 
 import { items } from '../../data/items'
-import { Item } from '../../types'
+import { IItem } from '../../types'
 
 export class HeroBuildMapper {
-  mapItemstoIds = (items: Item[]): string[] => {
+  mapItemstoIds = (items: IItem[]): string[] => {
     return _.map(items, ({ name }) => name)
   }
 
-  mapIdsToItems = (ids: string[]): Item[] => {
+  mapIdsToItems = (ids: string[]): IItem[] => {
     return _.reduce(
       ids,
       (acc, id) => {

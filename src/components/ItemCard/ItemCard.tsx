@@ -1,13 +1,13 @@
 import React from 'react'
 import _ from 'lodash'
 
-import { Item } from '../../types'
+import { IItem } from '../../types'
 import { getImageSrc } from '../../utils'
 import { Param } from '../Param'
 import './ItemCard.css'
 
 interface ItemCardProps {
-  item: Item
+  item: IItem
   forwardedRef?: React.Ref<HTMLDivElement>
   onClick?: (event: React.MouseEvent) => void
 }

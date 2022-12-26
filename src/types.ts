@@ -1,4 +1,4 @@
-export interface Item {
+export interface IItem {
   name: string
   cost?: number
   tags: string[]

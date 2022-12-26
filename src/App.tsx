@@ -1,14 +1,18 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import _ from 'lodash'
 
 import './styles/App.css'
 
-import { Item } from './types'
+import { IItem } from './types'
 import { items } from './data/items'
 import { HeroBuildsService } from './services/implementations/HeroBuildsService'
 import { Filters } from './components/Filters'
 import { Items } from './components/Items'
-import { BuildPanel } from './components/BuildPanel'
+import { Build } from './components/BuildPanel'
+import { useBreakpoint } from './hooks'
+import { Toolbar } from './components/Toolbar'
+import { Panel } from './components/Panel'
+import { ItemDetails } from './components/ItemDetails'
 
 const tags = [...new Set(items.flatMap((item) => item.tags))].sort()
 
@@ -16,9 +20,13 @@ const heroBuildsService = new HeroBuildsService()
 
 function App() {
   // const [activeItem, setActiveItem] = useState<Item | null>(null)
-  const [inventory, setInventory] = useState<Item[]>([])
+  const [inventory, setInventory] = useState<IItem[]>([])
   const [filters, setFilters] = useState<string[]>([])
   const [activeBuild, setActiveBuild] = useState<string>('new')
+  const [activeItem, setActiveItem] = useState<IItem | null>()
+  const [isBuildPanelVisible, setIsBuildPanelVisible] = useState(false)
+  const [isItemPanelVisible, setIsItemPanelVisible] = useState(false)
+  const { isMobile } = useBreakpoint()
 
   useEffect(() => {
     setInventory(heroBuildsService.getItems('new'))
@@ -47,6 +55,7 @@ function App() {
     if (!newItem) return
 
     setInventory(heroBuildsService.addItem(activeBuild, newItem))
+    setActiveItem(newItem)
   }
 
   const handleInventoryItemClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -56,6 +65,16 @@ function App() {
 
     setInventory(heroBuildsService.removeItem(activeBuild, itemId))
   }
+
+  const handleToolbarBuildClick = useCallback(() => {
+    setIsItemPanelVisible(false)
+    setIsBuildPanelVisible(!isBuildPanelVisible)
+  }, [isBuildPanelVisible])
+
+  const handleToolbarItemClick = useCallback(() => {
+    setIsBuildPanelVisible(false)
+    setIsItemPanelVisible(!isItemPanelVisible)
+  }, [isItemPanelVisible])
 
   const finalItems = useMemo(() => {
     if (!filters.length) return items
@@ -81,12 +100,27 @@ function App() {
       <main className="main">
         <Items items={finalItems} onItemClick={handleItemClick} />
       </main>
-      <div className="build-panel">
-        <BuildPanel
-          inventory={inventory}
-          onItemClick={handleInventoryItemClick}
-        />
-      </div>
+      {!isMobile && (
+        <div className="build-panel">
+          <Build build={inventory} onItemClick={handleInventoryItemClick} />
+        </div>
+      )}
+      {isMobile && (
+        <div className="app-toolbar">
+          <Toolbar
+            onBuildClick={handleToolbarBuildClick}
+            onItemClick={handleToolbarItemClick}
+          />
+        </div>
+      )}
+      {isMobile && isBuildPanelVisible && (
+        <Panel>
+          <Build build={inventory} onItemClick={handleInventoryItemClick} />
+        </Panel>
+      )}
+      {isMobile && isItemPanelVisible && (
+        <Panel>{activeItem && <ItemDetails item={activeItem} />}</Panel>
+      )}
     </div>
   )
 }

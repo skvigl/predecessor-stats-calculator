@@ -1,1 +1,1 @@
-export * from './BuildPanel'
+export * from './Build'
