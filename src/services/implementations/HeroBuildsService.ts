@@ -14,16 +14,6 @@ interface IHeroBuilds {
 const MAX_INVENTORY_SIZE = 6
 
 export class HeroBuildsService {
-  private parse = (stringData: string): IHeroBuilds => {
-    try {
-      const builds = JSON.parse(stringData)
-
-      return builds === null ? {} : builds
-    } catch {
-      return {}
-    }
-  }
-
   addItem = (buildName: string, item: Item) => {
     const savedItems = this.getItems(buildName)
 
@@ -69,9 +59,9 @@ export class HeroBuildsService {
     return newItems
   }
 
-  removeItem = (buildName: string, itemId: string) => {
+  removeItem = (buildName: string, itemName: string) => {
     const saveItems = this.getItems(buildName)
-    const newItems = _.filter(saveItems, ({ name }) => name !== itemId)
+    const newItems = _.filter(saveItems, ({ name }) => name !== itemName)
 
     this.setItems(buildName, newItems)
 
@@ -79,7 +69,7 @@ export class HeroBuildsService {
   }
 
   getItems = (buildName: string) => {
-    const builds = this.parse(lsService.get())
+    const builds = lsService.get()
 
     return heroBuildMapper.mapIdsToItems(builds[buildName])
   }
@@ -87,7 +77,7 @@ export class HeroBuildsService {
   setItems = (buildName: string, items: Item[]) => {
     if (!buildName) return
 
-    const builds = this.parse(lsService.get())
+    const builds = lsService.get()
 
     builds[buildName] = heroBuildMapper.mapItemstoIds(items)
 

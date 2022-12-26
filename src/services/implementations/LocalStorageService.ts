@@ -5,8 +5,14 @@ export class LocalStorageServce {
     this.name = name
   }
 
-  get = (): string | null => {
-    return localStorage.getItem(this.name)
+  get = (): any => {
+    try {
+      const builds = JSON.parse(localStorage.getItem(this.name))
+
+      return builds === null ? {} : builds
+    } catch {
+      return {}
+    }
   }
 
   set = (value: any) => {
