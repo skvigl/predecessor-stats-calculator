@@ -32,10 +32,6 @@ p {
   margin: 0;
 }
 
-h2 {
-  margin-bottom: 1.5rem;
-}
-
 img {
   max-width: 100%;
 }
@@ -52,4 +48,8 @@ img {
 ::-webkit-scrollbar-thumb {
   background-color: #7777;
   border-radius: 4px;
+}
+
+.title {
+  margin-bottom: 1.5rem;
 }

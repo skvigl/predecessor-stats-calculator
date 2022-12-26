@@ -1,0 +1,35 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-label {
+  font-size: 0.825rem;
+}
+
+.toggle-trigger {
+  display: flex;
+  width: 3rem;
+  padding: 0.25rem;
+  border: 1px solid grey;
+  border-radius: 30px;
+}
+
+.toggle--active .toggle-trigger {
+  justify-content: flex-end;
+  border-color: #fdd29d;
+}
+
+.toggle-ball {
+  width: 1rem;
+  height: 1rem;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.toggle--active .toggle-ball {
+  background-color: #fdd29d;
+}

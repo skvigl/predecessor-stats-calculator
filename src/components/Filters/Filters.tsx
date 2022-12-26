@@ -10,7 +10,7 @@ interface IFilterProps {
 export const Filters: React.FC<IFilterProps> = ({ tags, filters, onFilterSelect }) => {
   return (
     <div>
-      <h2 className="filters">Filters</h2>
+      <h2 className="title">Filters</h2>
       <div className="filters">
         {tags.map((tag) => {
           const isActive = filters.includes(tag)
