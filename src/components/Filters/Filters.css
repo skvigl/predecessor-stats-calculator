@@ -1,16 +1,7 @@
-.filter-bar-title {
-  margin: 0 0 1.5rem;
+.filters-group + .filters-group {
+  margin-top: 1.5rem;
 }
 
-.filters {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.filter {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  user-select: none;
+.filters-item + .filters-item {
+  margin-top: 0.25rem;
 }

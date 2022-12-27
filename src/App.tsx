@@ -14,8 +14,6 @@ import { Toolbar } from './components/Toolbar'
 import { Panel } from './components/Panel'
 import { ItemDetails } from './components/ItemDetails'
 
-const tags = [...new Set(items.flatMap((item) => item.tags))].sort()
-
 const heroBuildsService = new HeroBuildsService()
 
 function App() {
@@ -93,7 +91,6 @@ function App() {
       <div className="app">
         <aside className="aside">
           <Filters
-            tags={tags}
             filters={filters}
             onFilterSelect={handleFilterClick}
           />

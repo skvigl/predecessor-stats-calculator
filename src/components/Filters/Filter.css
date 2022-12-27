@@ -1,0 +1,16 @@
+.filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter--active {
+  color: #fdd29d;
+}
+
+.filter-input {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+}
