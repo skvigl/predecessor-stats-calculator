@@ -82,8 +82,6 @@ function App() {
     })
   }, [filters])
 
-  console.log('activePanelId', activePanelId)
-
   return (
     <div className="container">
       <div className="app">
