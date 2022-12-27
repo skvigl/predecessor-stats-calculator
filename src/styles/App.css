@@ -31,7 +31,6 @@
     position: sticky;
     flex: 1 0 100%;
     max-width: 14rem;
-    padding: 1rem;
     overflow-y: auto;
   }
 

@@ -10,7 +10,7 @@ import { Filters } from './components/Filters'
 import { Items } from './components/Items'
 import { Build } from './components/BuildPanel'
 import { useBreakpoint } from './hooks'
-import { Toolbar } from './components/Toolbar'
+import { PanelEnum, Toolbar } from './components/Toolbar'
 import { Panel } from './components/Panel'
 import { ItemDetails } from './components/ItemDetails'
 
@@ -22,15 +22,14 @@ function App() {
   const [filters, setFilters] = useState<string[]>([])
   const [activeBuild, setActiveBuild] = useState<string>('new')
   const [activeItem, setActiveItem] = useState<IItem | null>()
-  const [isBuildPanelVisible, setIsBuildPanelVisible] = useState(false)
-  const [isItemPanelVisible, setIsItemPanelVisible] = useState(false)
+  const [activePanelId, setActivePanelId] = useState<PanelEnum | null>()
   const { isMobile } = useBreakpoint()
 
   useEffect(() => {
     setInventory(heroBuildsService.getItems('new'))
   }, [])
 
-  const handleFilterClick = (event: React.ChangeEvent<HTMLElement>) => {
+  const handleFilterSelect = (event: React.ChangeEvent<HTMLElement>) => {
     const newFilter = event.currentTarget.dataset.id
 
     if (!newFilter) return
@@ -64,15 +63,12 @@ function App() {
     setInventory(heroBuildsService.removeItem(activeBuild, itemId))
   }
 
-  const handleToolbarBuildClick = useCallback(() => {
-    setIsItemPanelVisible(false)
-    setIsBuildPanelVisible(!isBuildPanelVisible)
-  }, [isBuildPanelVisible])
-
-  const handleToolbarItemClick = useCallback(() => {
-    setIsBuildPanelVisible(false)
-    setIsItemPanelVisible(!isItemPanelVisible)
-  }, [isItemPanelVisible])
+  const handleToolbarClick = useCallback(
+    (panelId: PanelEnum | null) => {
+      setActivePanelId(panelId === activePanelId ? null : panelId)
+    },
+    [activePanelId],
+  )
 
   const finalItems = useMemo(() => {
     if (!filters.length) return items
@@ -86,14 +82,13 @@ function App() {
     })
   }, [filters])
 
+  console.log('activePanelId', activePanelId)
+
   return (
     <div className="container">
       <div className="app">
         <aside className="aside">
-          <Filters
-            filters={filters}
-            onFilterSelect={handleFilterClick}
-          />
+          <Filters filters={filters} onFilterSelect={handleFilterSelect} />
         </aside>
         <main className="main">
           <Items items={finalItems} onItemClick={handleItemClick} />
@@ -105,19 +100,21 @@ function App() {
         )}
         {isMobile && (
           <div className="app-toolbar">
-            <Toolbar
-              onBuildClick={handleToolbarBuildClick}
-              onItemClick={handleToolbarItemClick}
-            />
+            <Toolbar onClick={handleToolbarClick} />
           </div>
         )}
-        {isMobile && isBuildPanelVisible && (
+        {isMobile && activePanelId === PanelEnum.build && (
           <Panel>
             <Build build={inventory} onItemClick={handleInventoryItemClick} />
           </Panel>
         )}
-        {isMobile && isItemPanelVisible && (
+        {isMobile && activePanelId === PanelEnum.item && (
           <Panel>{activeItem && <ItemDetails item={activeItem} />}</Panel>
+        )}
+        {isMobile && activePanelId === PanelEnum.filter && (
+          <Panel>
+            <Filters filters={filters} onFilterSelect={handleFilterSelect} />
+          </Panel>
         )}
       </div>
     </div>

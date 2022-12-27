@@ -1,3 +1,7 @@
+.filters {
+  padding: 1rem;
+}
+
 .filters-group + .filters-group {
   margin-top: 1.5rem;
 }

@@ -15,7 +15,7 @@ export const Filters: React.FC<IFilterProps> = ({
   onFilterSelect,
 }) => {
   return (
-    <div>
+    <div className='filters'>
       <h2 className="title">Filters</h2>
       <div>
         {Object.entries(FILTER_GROUPS).map(([name, groupFilters]) => {

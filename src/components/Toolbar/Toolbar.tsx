@@ -2,19 +2,28 @@ import _ from 'lodash'
 
 import './Toolbar.css'
 
-interface ToolbarProps {
-  onBuildClick?: () => void
-  onItemClick?: () => void
+export enum PanelEnum {
+  'build',
+  'item',
+  'filter',
 }
 
-export const Toolbar: React.FC<ToolbarProps> = ({
-  onBuildClick = _.identity,
-  onItemClick = _.identity,
-}) => {
+interface ToolbarProps {
+  onClick?: (panel: PanelEnum | null) => void
+}
+
+export const Toolbar: React.FC<ToolbarProps> = ({ onClick = _.identity }) => {
   return (
     <div className="toolbar">
-      <button className="toolbar-btn" onClick={onBuildClick}>Build</button>
-      <button className="toolbar-btn" onClick={onItemClick}>Item</button>
+      <button className="toolbar-btn" onClick={() => onClick(PanelEnum.build)}>
+        Build
+      </button>
+      <button className="toolbar-btn" onClick={() => onClick(PanelEnum.item)}>
+        Item
+      </button>
+      <button className="toolbar-btn" onClick={() => onClick(PanelEnum.filter)}>
+        Filter
+      </button>
     </div>
   )
 }
