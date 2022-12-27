@@ -89,38 +89,40 @@ function App() {
   }, [filters])
 
   return (
-    <div className="app">
-      <aside className="aside">
-        <Filters
-          tags={tags}
-          filters={filters}
-          onFilterSelect={handleFilterClick}
-        />
-      </aside>
-      <main className="main">
-        <Items items={finalItems} onItemClick={handleItemClick} />
-      </main>
-      {!isMobile && (
-        <div className="build-panel">
-          <Build build={inventory} onItemClick={handleInventoryItemClick} />
-        </div>
-      )}
-      {isMobile && (
-        <div className="app-toolbar">
-          <Toolbar
-            onBuildClick={handleToolbarBuildClick}
-            onItemClick={handleToolbarItemClick}
+    <div className="container">
+      <div className="app">
+        <aside className="aside">
+          <Filters
+            tags={tags}
+            filters={filters}
+            onFilterSelect={handleFilterClick}
           />
-        </div>
-      )}
-      {isMobile && isBuildPanelVisible && (
-        <Panel>
-          <Build build={inventory} onItemClick={handleInventoryItemClick} />
-        </Panel>
-      )}
-      {isMobile && isItemPanelVisible && (
-        <Panel>{activeItem && <ItemDetails item={activeItem} />}</Panel>
-      )}
+        </aside>
+        <main className="main">
+          <Items items={finalItems} onItemClick={handleItemClick} />
+        </main>
+        {!isMobile && (
+          <div className="build-panel">
+            <Build build={inventory} onItemClick={handleInventoryItemClick} />
+          </div>
+        )}
+        {isMobile && (
+          <div className="app-toolbar">
+            <Toolbar
+              onBuildClick={handleToolbarBuildClick}
+              onItemClick={handleToolbarItemClick}
+            />
+          </div>
+        )}
+        {isMobile && isBuildPanelVisible && (
+          <Panel>
+            <Build build={inventory} onItemClick={handleInventoryItemClick} />
+          </Panel>
+        )}
+        {isMobile && isItemPanelVisible && (
+          <Panel>{activeItem && <ItemDetails item={activeItem} />}</Panel>
+        )}
+      </div>
     </div>
   )
 }
