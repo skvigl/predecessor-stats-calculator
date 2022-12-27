@@ -50,7 +50,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Wild Hunt',
-    tags: ['Active', 'Passive', 'On-hit'],
+    tags: ['Active', 'On-hit'],
     abilities: [
       {
         name: 'Active - Slay',
@@ -65,7 +65,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Hunt',
-    tags: ['Active', 'Passive', 'On-hit'],
+    tags: ['Active', 'On-hit'],
     abilities: [
       {
         name: 'Active - Slay',
@@ -85,7 +85,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Titan Crest',
-    tags: ['Passive', 'Crest', 'Health', 'When-hit'],
+    tags: ['Crest', 'Health'],
     stats: {
       Health: 80,
     },
@@ -103,11 +103,11 @@ export const items: IItem[] = [
   },
   {
     name: 'Goliath Crest',
-    tags: ['Passive', 'Crest', 'Health', 'Base Health Regen', 'When-hit'],
+    tags: ['Crest', 'Health', 'Health Regen'],
     components: ['Titan Crest'],
     stats: {
       Health: 120,
-      'Base Health Regen': 25,
+      'Health Regen': 25,
     },
     abilities: [
       {
@@ -124,18 +124,16 @@ export const items: IItem[] = [
   {
     name: "Saphir's Mantle",
     tags: [
-      'Passive',
-      'Active',
       'Crest',
       'Health',
-      'Base Health Regen',
+      'Health Regen',
       'Physical Armor',
       'Magical Armor',
     ],
     components: ['Goliath Crest'],
     stats: {
       Health: 200,
-      'Base Health Regen': 75,
+      'Health Regen': 75,
       'Physical Armor': 5,
       'Magical Armor': 10,
     },
@@ -154,19 +152,16 @@ export const items: IItem[] = [
   {
     name: 'Razorback',
     tags: [
-      'Passive',
-      'Active',
       'Crest',
       'Health',
-      'Base Health Regen',
+      'Health Regen',
       'Physical Armor',
       'Magical Armor',
-      'When-hit',
     ],
     components: ['Goliath Crest'],
     stats: {
       Health: 150,
-      'Base Health Regen': 50,
+      'Health Regen': 50,
       'Physical Armor': 15,
       'Magical Armor': 8,
     },
@@ -185,19 +180,16 @@ export const items: IItem[] = [
   {
     name: 'Nyr Warboots',
     tags: [
-      'Passive',
-      'Active',
       'Crest',
       'Health',
-      'Base Health Regen',
+      'Health Regen',
       'Physical Armor',
       'Magical Armor',
-      'When-hit',
     ],
     components: ['Goliath Crest'],
     stats: {
       Health: 175,
-      'Base Health Regen': 75,
+      'Health Regen': 75,
       'Physical Armor': 8,
       'Magical Armor': 8,
     },
@@ -215,10 +207,10 @@ export const items: IItem[] = [
   },
   {
     name: 'Guardian Crest',
-    tags: ['Passive', 'Crest', 'Health', 'Base Health Regen'],
+    tags: ['Crest', 'Health', 'Health Regen'],
     stats: {
       Health: 40,
-      'Base Health Regen': 25,
+      'Health Regen': 25,
     },
     abilities: [
       {
@@ -234,17 +226,11 @@ export const items: IItem[] = [
   },
   {
     name: 'Warden Crest',
-    tags: [
-      'Passive',
-      'Crest',
-      'Health',
-      'Base Health Regen',
-      'Gold Per Second',
-    ],
+    tags: ['Crest', 'Health', 'Health Regen'],
     components: ['Guardian Crest'],
     stats: {
       Health: 120,
-      'Base Health Regen': 50,
+      'Health Regen': 50,
       'Gold Per Second': 0.2,
     },
     abilities: [
@@ -265,19 +251,12 @@ export const items: IItem[] = [
   },
   {
     name: 'Sanctification',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Health',
-      'Base Health Regen',
-      'Base Mana Regen',
-    ],
+    tags: ['Crest', 'Health', 'Health Regen', 'Mana Regen'],
     components: ['Warden Crest'],
     stats: {
       Health: 200,
-      'Base Health Regen': 75,
-      'Base Mana Regen': 75,
+      'Health Regen': 75,
+      'Mana Regen': 75,
     },
     abilities: [
       {
@@ -298,20 +277,12 @@ export const items: IItem[] = [
   },
   {
     name: 'Rift Walkers',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Magical Power',
-      'Health',
-      'Base Health Regen',
-      'Mana',
-    ],
+    tags: ['Crest', 'Magical Power', 'Health', 'Health Regen', 'Mana'],
     components: ['Warden Crest'],
     stats: {
       'Magical Power': 15,
       Health: 150,
-      'Base Health Regen': 100,
+      'Health Regen': 100,
       Mana: 100,
     },
     abilities: [
@@ -334,18 +305,16 @@ export const items: IItem[] = [
   {
     name: 'Leafsong',
     tags: [
-      'Active',
-      'Passive',
       'Crest',
       'Health',
-      'Base Health Regen',
+      'Health Regen',
       'Physical Armor',
       'Magical Armor',
     ],
     components: ['Warden Crest'],
     stats: {
       Health: 150,
-      'Base Health Regen': 75,
+      'Health Regen': 75,
       'Physical Armor': 15,
       'Magical Armor': 10,
     },
@@ -368,10 +337,10 @@ export const items: IItem[] = [
   },
   {
     name: 'Consort Crest',
-    tags: ['Passive', 'Crest', 'Magical Power', 'Base Mana Regen'],
+    tags: ['Crest', 'Magical Power', 'Mana Regen'],
     stats: {
       'Magical Power': 5,
-      'Base Mana Regen': 25,
+      'Mana Regen': 25,
     },
     abilities: [
       {
@@ -387,17 +356,11 @@ export const items: IItem[] = [
   },
   {
     name: 'Keeper Crest',
-    tags: [
-      'Passive',
-      'Crest',
-      'Magical Power',
-      'Base Mana Regen',
-      'Gold Per Second',
-    ],
+    tags: ['Crest', 'Magical Power', 'Mana Regen'],
     components: ['Consort Crest'],
     stats: {
       'Magical Power': 10,
-      'Base Mana Regen': 50,
+      'Mana Regen': 50,
       'Gold Per Second': 0.2,
     },
     abilities: [
@@ -418,18 +381,11 @@ export const items: IItem[] = [
   },
   {
     name: 'Tranquility',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Magical Power',
-      'Base Mana Regen',
-      'Ability Haste',
-    ],
+    tags: ['Crest', 'Magical Power', 'Mana Regen', 'Ability Haste'],
     components: ['Keeper Crest'],
     stats: {
       'Magical Power': 20,
-      'Base Mana Regen': 50,
+      'Mana Regen': 50,
       'Ability Haste': 20,
     },
     abilities: [
@@ -451,19 +407,12 @@ export const items: IItem[] = [
   },
   {
     name: 'Silentium',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Magical Power',
-      'Magical Armor',
-      'Base Mana Regen',
-    ],
+    tags: ['Crest', 'Magical Power', 'Magical Armor', 'Mana Regen'],
     components: ['Keeper Crest'],
     stats: {
       'Magical Power': 25,
       'Magical Armor': 18,
-      'Base Mana Regen': 75,
+      'Mana Regen': 75,
     },
     abilities: [
       {
@@ -484,19 +433,12 @@ export const items: IItem[] = [
   },
   {
     name: 'Malediction',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Magical Power',
-      'Physical Armor',
-      'Base Mana Regen',
-    ],
+    tags: ['Crest', 'Magical Power', 'Physical Armor', 'Mana Regen'],
     components: ['Keeper Crest'],
     stats: {
       'Magical Power': 20,
       'Physical Armor': 20,
-      'Base Mana Regen': 75,
+      'Mana Regen': 75,
     },
     abilities: [
       {
@@ -517,7 +459,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Magician Crest',
-    tags: ['Passive', 'Crest', 'Magical Power', 'Mana'],
+    tags: ['Crest', 'Magical Power', 'Mana'],
     stats: {
       'Magical Power': 10,
       Mana: 50,
@@ -536,7 +478,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Wizard Crest',
-    tags: ['Passive', 'Crest', 'Magical Power', 'Mana', 'Magical Penetration'],
+    tags: ['Crest', 'Magical Power', 'Mana', 'Magical Penetration'],
     components: ['Magician Crest'],
     stats: {
       'Magical Power': 12,
@@ -558,8 +500,6 @@ export const items: IItem[] = [
   {
     name: 'Time-Flux Band',
     tags: [
-      'Passive',
-      'Active',
       'Crest',
       'Magical Power',
       'Mana',
@@ -588,8 +528,6 @@ export const items: IItem[] = [
   {
     name: 'Soulbearer',
     tags: [
-      'Passive',
-      'Active',
       'Crest',
       'Magical Power',
       'Mana',
@@ -617,15 +555,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Epoch',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Magical Power',
-      'Mana',
-      'Magical Penetration',
-      'Health',
-    ],
+    tags: ['Crest', 'Magical Power', 'Mana', 'Magical Penetration', 'Health'],
     components: ['Wizard Crest'],
     stats: {
       'Magical Power': 25,
@@ -647,7 +577,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Occult Crest',
-    tags: ['Passive', 'Crest', 'Magical Power', 'Health'],
+    tags: ['Crest', 'Magical Power', 'Health'],
     components: [],
     stats: {
       'Magical Power': 10,
@@ -667,13 +597,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Warlock Crest',
-    tags: [
-      'Passive',
-      'Crest',
-      'Magical Power',
-      'Health',
-      'Magical Penetration',
-    ],
+    tags: ['Crest', 'Magical Power', 'Health', 'Magical Penetration'],
     components: ['Occult Crest'],
     stats: {
       'Magical Power': 12,
@@ -694,15 +618,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Typhoon',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Magical Power',
-      'Health',
-      'Magical Penetration',
-      'Attack Speed',
-    ],
+    tags: ['Magical Power', 'Health', 'Magical Penetration', 'Attack Speed'],
     components: ['Warlock Crest'],
     stats: {
       'Magical Power': 20,
@@ -730,8 +646,6 @@ export const items: IItem[] = [
   {
     name: 'Tempest',
     tags: [
-      'Passive',
-      'Active',
       'Crest',
       'Magical Power',
       'Health',
@@ -759,14 +673,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Obelisk',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Magical Power',
-      'Health',
-      'Magical Penetration',
-    ],
+    tags: ['Crest', 'Magical Power', 'Health', 'Magical Penetration'],
     components: ['Warlock Crest'],
     stats: {
       'Magical Power': 35,
@@ -792,7 +699,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Warrior Crest',
-    tags: ['Passive', 'Crest', 'Physical Power', 'Health'],
+    tags: ['Crest', 'Physical Power', 'Health'],
     stats: {
       'Physical Power': 6,
       Health: 40,
@@ -811,7 +718,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Champion Crest',
-    tags: ['Passive', 'Crest', 'Physical Power', 'Health'],
+    tags: ['Crest', 'Physical Power', 'Health'],
     components: ['Warrior Crest'],
     stats: {
       'Physical Power': 10,
@@ -831,14 +738,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Iceskorn Talons',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Physical Power',
-      'Health',
-      'Ability Haste',
-    ],
+    tags: ['Crest', 'Physical Power', 'Health', 'Ability Haste'],
     components: ['Champion Crest'],
     stats: {
       'Physical Power': 15,
@@ -859,7 +759,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Fenix',
-    tags: ['Passive', 'Active', 'Crest', 'Physical Power', 'Health'],
+    tags: ['Crest', 'Physical Power', 'Health'],
     components: ['Champion Crest'],
     stats: {
       'Physical Power': 30,
@@ -879,15 +779,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Brutallax',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Physical Power',
-      'Health',
-      'Lifesteal',
-      'On-hit',
-    ],
+    tags: ['Crest', 'Physical Power', 'Health', 'Lifesteal', 'On-hit'],
     components: ['Champion Crest'],
     stats: {
       'Physical Power': 20,
@@ -908,7 +800,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Marksman Crest',
-    tags: ['Passive', 'Crest', 'Physical Power', 'Attack Speed'],
+    tags: ['Crest', 'Physical Power', 'Attack Speed'],
     stats: {
       'Physical Power': 5,
       'Attack Speed': 5,
@@ -927,7 +819,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Sharpshooter Crest',
-    tags: ['Passive', 'Crest', 'Physical Power', 'Attack Speed'],
+    tags: ['Crest', 'Physical Power', 'Attack Speed'],
     components: ['Marksman Crest'],
     stats: {
       'Physical Power': 10,
@@ -948,8 +840,6 @@ export const items: IItem[] = [
   {
     name: 'Pacifier',
     tags: [
-      'Passive',
-      'Active',
       'Crest',
       'Physical Power',
       'Attack Speed',
@@ -978,8 +868,6 @@ export const items: IItem[] = [
   {
     name: 'Liberator',
     tags: [
-      'Passive',
-      'Active',
       'Crest',
       'Physical Power',
       'Attack Speed',
@@ -1008,8 +896,6 @@ export const items: IItem[] = [
   {
     name: 'Eviscerator',
     tags: [
-      'Passive',
-      'Active',
       'Crest',
       'Physical Power',
       'Attack Speed',
@@ -1036,7 +922,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Rogue Crest',
-    tags: ['Passive', 'Crest', 'Physical Power', 'Ability Haste'],
+    tags: ['Crest', 'Physical Power', 'Ability Haste'],
     stats: {
       'Physical Power': 6,
       'Ability Haste': 5,
@@ -1055,13 +941,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Assassin Crest',
-    tags: [
-      'Passive',
-      'Crest',
-      'Physical Power',
-      'Ability Haste',
-      'Physical Penetration',
-    ],
+    tags: ['Crest', 'Physical Power', 'Ability Haste', 'Physical Penetration'],
     components: ['Rogue Crest'],
     stats: {
       'Physical Power': 10,
@@ -1083,8 +963,6 @@ export const items: IItem[] = [
   {
     name: 'Witchstalker',
     tags: [
-      'Passive',
-      'Active',
       'Crest',
       'Physical Power',
       'Ability Haste',
@@ -1112,14 +990,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Ortus',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Physical Power',
-      'Ability Haste',
-      'Physical Penetration',
-    ],
+    tags: ['Crest', 'Physical Power', 'Ability Haste', 'Physical Penetration'],
     components: ['Assassin Crest'],
     stats: {
       'Physical Power': 15,
@@ -1140,14 +1011,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Nex',
-    tags: [
-      'Passive',
-      'Active',
-      'Crest',
-      'Physical Power',
-      'Ability Haste',
-      'Physical Penetration',
-    ],
+    tags: ['Crest', 'Physical Power', 'Ability Haste', 'Physical Penetration'],
     components: ['Assassin Crest'],
     stats: {
       'Physical Power': 20,
@@ -1173,7 +1037,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Refillable Potion',
-    tags: ['Consumable', 'Active'],
+    tags: ['Active'],
     abilities: [
       {
         name: 'Consume',
@@ -1241,17 +1105,17 @@ export const items: IItem[] = [
   {
     name: 'Life Stream',
     cost: 350,
-    tags: ['Base Health Regen'],
+    tags: ['Health Regen'],
     stats: {
-      'Base Health Regen': 75,
+      'Health Regen': 75,
     },
   },
   {
     name: 'Energy Stream',
     cost: 350,
-    tags: ['Base Mana Regen'],
+    tags: ['Mana Regen'],
     stats: {
-      'Base Mana Regen': 50,
+      'Mana Regen': 50,
     },
   },
   {
@@ -1302,7 +1166,7 @@ export const items: IItem[] = [
   {
     name: 'Strength Tonic',
     cost: 750,
-    tags: ['Consumable'],
+    tags: ['Active'],
     abilities: [
       {
         name: 'Consume',
@@ -1314,7 +1178,7 @@ export const items: IItem[] = [
   {
     name: 'Stamina Tonic',
     cost: 750,
-    tags: ['Consumable'],
+    tags: ['Active'],
     abilities: [
       {
         name: 'Consume',
@@ -1326,7 +1190,7 @@ export const items: IItem[] = [
   {
     name: 'Protection Tonic',
     cost: 750,
-    tags: ['Consumable'],
+    tags: ['Active'],
     abilities: [
       {
         name: 'Consume',
@@ -1338,12 +1202,12 @@ export const items: IItem[] = [
   {
     name: 'Intellect Tonic',
     cost: 750,
-    tags: ['Consumable'],
+    tags: ['Active'],
     abilities: [
       {
         name: 'Consume',
         description:
-          'Grant 50 magical power and 5 Base Mana Regen for 5 minutes. Effect is lost upon death.',
+          'Grant 50 magical power and 5 Mana Regen for 5 minutes. Effect is lost upon death.',
       },
     ],
   },
@@ -1389,20 +1253,20 @@ export const items: IItem[] = [
   {
     name: 'Stalwart Gauntlets',
     cost: 900,
-    tags: ['Health', 'Base Health Regen'],
+    tags: ['Health', 'Health Regen'],
     components: ['Vitality Beads', 'Life Stream'],
     stats: {
       Health: 150,
-      'Base Health Regen': 125,
+      'Health Regen': 125,
     },
   },
   {
     name: 'Essence Ring',
     cost: 900,
-    tags: ['Base Mana Regen', 'Ability Haste'],
+    tags: ['Mana Regen', 'Ability Haste'],
     components: ['Energy Stream', 'Energy Stream'],
     stats: {
-      'Base Mana Regen': 125,
+      'Mana Regen': 125,
       'Ability Haste': 10,
     },
   },
@@ -1446,11 +1310,11 @@ export const items: IItem[] = [
   {
     name: 'Polar Treads',
     cost: 950,
-    tags: ['Passive', 'Magical Armor', 'Base Mana Regen'],
+    tags: ['Passive', 'Magical Armor', 'Mana Regen'],
     components: ['Wraps', 'Energy Stream'],
     stats: {
       'Magical Armor': 12,
-      'Base Mana Regen': 75,
+      'Mana Regen': 75,
     },
     abilities: [
       {
@@ -1487,17 +1351,17 @@ export const items: IItem[] = [
   {
     name: 'Hallowed Braid',
     cost: 1000,
-    tags: ['Passive', 'Health', 'Base Mana Regen'],
+    tags: ['Passive', 'Health', 'Mana Regen'],
     components: ['Energy Stream', 'Vitality Beads'],
     stats: {
       Health: 150,
-      'Base Mana Regen': 50,
+      'Mana Regen': 50,
     },
     abilities: [
       {
         name: 'Elegy',
         description:
-          'Hero Deaths grant a stack of Elegy, up to a maximum of 20. Each stack grants 1 magical power and 10% base manage regeneration.',
+          'Hero Deaths grant a stack of Elegy, up to a maximum of 20. Each stack grants 1 magical power and 10% Manage regeneration.',
       },
     ],
   },
@@ -1563,11 +1427,11 @@ export const items: IItem[] = [
   {
     name: 'Divine Wreath',
     cost: 1050,
-    tags: ['Magical Power', 'Base Mana Regen', 'Heal & Shield Power'],
+    tags: ['Magical Power', 'Mana Regen', 'Heal & Shield Power'],
     components: ['Energy Stream', 'Codex'],
     stats: {
       'Magical Power': 15,
-      'Base Mana Regen': 75,
+      'Mana Regen': 75,
       'Heal & Shield Power': 10,
     },
   },
@@ -1780,11 +1644,11 @@ export const items: IItem[] = [
   {
     name: 'Loch Shawl',
     cost: 1300,
-    tags: ['Passive', 'Health', 'Base Health Regen'],
+    tags: ['Passive', 'Health', 'Health Regen'],
     components: ['Vitality Beads', 'Life Stream'],
     stats: {
       Health: 200,
-      'Base Health Regen': 75,
+      'Health Regen': 75,
     },
     abilities: [
       {
@@ -1922,7 +1786,7 @@ export const items: IItem[] = [
   {
     name: 'Vanguardian',
     cost: 2600,
-    tags: ['Passive', 'Health', 'Magical Armor', 'Tenacity', 'When-hit'],
+    tags: ['Passive', 'Health', 'Magical Armor', 'Tenacity'],
     components: ['Tenacious Drape', 'Vitality Beads', 'Nullifying Mask'],
     stats: {
       Health: 300,
@@ -1970,17 +1834,11 @@ export const items: IItem[] = [
   {
     name: 'Marshal',
     cost: 2600,
-    tags: [
-      'Passive',
-      'Magical Power',
-      'Base Mana Regen',
-      'Ability Haste',
-      'On-hit',
-    ],
+    tags: ['Passive', 'Magical Power', 'Mana Regen', 'Ability Haste', 'On-hit'],
     components: ['Essence Ring', 'Scepter', 'Codex'],
     stats: {
       'Magical Power': 45,
-      'Base Mana Regen': 125,
+      'Mana Regen': 125,
       'Ability Haste': 15,
     },
     abilities: [
@@ -1997,14 +1855,14 @@ export const items: IItem[] = [
     tags: [
       'Passive',
       'Magical Power',
-      'Base Mana Regen',
+      'Mana Regen',
       'Ability Haste',
       'Heal & Shield Power',
     ],
     components: ['Essence Ring', 'Codex', 'Divine Wreath'],
     stats: {
       'Magical Power': 30,
-      'Base Mana Regen': 225,
+      'Mana Regen': 225,
       'Ability Haste': 10,
       'Heal & Shield Power': 15,
     },
@@ -2023,14 +1881,14 @@ export const items: IItem[] = [
       'Passive',
       'Magical Power',
       'Physical Armor',
-      'Base Mana Regen',
+      'Mana Regen',
       'Ability Haste',
     ],
     components: ['Abyssal Bracers', 'Essence Ring'],
     stats: {
       'Magical Power': 25,
       'Physical Armor': 15,
-      'Base Mana Regen': 150,
+      'Mana Regen': 150,
       'Ability Haste': 15,
     },
     abilities: [
@@ -2053,21 +1911,21 @@ export const items: IItem[] = [
       'Passive',
       'Magical Power',
       'Health',
-      'Base Mana Regen',
+      'Mana Regen',
       'Heal & Shield Power',
     ],
     components: ['Hallowed Braid', 'Divine Wreath'],
     stats: {
       'Magical Power': 20,
       Health: 200,
-      'Base Mana Regen': 125,
+      'Mana Regen': 125,
       'Heal & Shield Power': 10,
     },
     abilities: [
       {
         name: 'Elegy',
         description:
-          'When a Hero dies, gain a stack of Elegy, up to a maximum of 20 stacks. Each stack grants 1 magical power and 10% base mana regeneration.',
+          'When a Hero dies, gain a stack of Elegy, up to a maximum of 20 stacks. Each stack grants 1 magical power and 10% Mana regeneration.',
       },
       {
         name: 'Remembrance',
@@ -2121,16 +1979,11 @@ export const items: IItem[] = [
   {
     name: 'Wellspring',
     cost: 2700,
-    tags: [
-      'Passive',
-      'Magical Power',
-      'Base Mana Regen',
-      'Heal & Shield Power',
-    ],
+    tags: ['Passive', 'Magical Power', 'Mana Regen', 'Heal & Shield Power'],
     components: ['Divine Wreath', 'Scepter'],
     stats: {
       'Magical Power': 45,
-      'Base Mana Regen': 100,
+      'Mana Regen': 100,
       'Heal & Shield Power': 20,
     },
     abilities: [
@@ -2171,14 +2024,14 @@ export const items: IItem[] = [
       'Passive',
       'Physical Armor',
       'Magical Armor',
-      'Base Mana Regen',
+      'Mana Regen',
       'Ability Haste',
     ],
     components: ['Steel Mail', 'Essence Ring', 'Nullifying Mask'],
     stats: {
       'Physical Armor': 40,
       'Magical Armor': 30,
-      'Base Mana Regen': 150,
+      'Mana Regen': 150,
       'Ability Haste': 15,
     },
     abilities: [
@@ -2245,14 +2098,14 @@ export const items: IItem[] = [
       'Passive',
       'Physical Armor',
       'Magical Armor',
-      'Base Mana Regen',
+      'Mana Regen',
       'Ability Haste',
     ],
     components: ['Steel Mail', 'Polar Treads', 'Wraps'],
     stats: {
       'Physical Armor': 30,
       'Magical Armor': 30,
-      'Base Mana Regen': 100,
+      'Mana Regen': 100,
       'Ability Haste': 10,
     },
     abilities: [
@@ -2533,17 +2386,11 @@ export const items: IItem[] = [
   {
     name: 'Unbroken Will',
     cost: 2950,
-    tags: [
-      'Passive',
-      'Health',
-      'Base Health Regen',
-      'Magical Armor',
-      'Tenacity',
-    ],
+    tags: ['Passive', 'Health', 'Health Regen', 'Magical Armor', 'Tenacity'],
     components: ['Nullifying Mask', 'Stalwart Gauntlets', 'Tenacious Drape'],
     stats: {
       Health: 350,
-      'Base Health Regen': 150,
+      'Health Regen': 150,
       'Magical Armor': 30,
       Tenacity: 15,
     },
@@ -2676,17 +2523,11 @@ export const items: IItem[] = [
   {
     name: 'Stonewall',
     cost: 3000,
-    tags: [
-      'Passive',
-      'Health',
-      'Base Health Regen',
-      'Physical Armor',
-      'When-hit',
-    ],
+    tags: ['Passive', 'Health', 'Health Regen', 'Physical Armor'],
     components: ['Stalwart Gauntlets', 'Steel Mail', 'Steel Mail'],
     stats: {
       Health: 150,
-      'Base Health Regen': 150,
+      'Health Regen': 150,
       'Physical Armor': 70,
     },
     abilities: [
@@ -2705,11 +2546,11 @@ export const items: IItem[] = [
   {
     name: 'Raiment of Renewal',
     cost: 3000,
-    tags: ['Passive', 'Health', 'Base Health Regen', 'Mana', 'Ability Haste'],
+    tags: ['Passive', 'Health', 'Health Regen', 'Mana', 'Ability Haste'],
     components: ['Violet Brooch', 'Stalwart Gauntlets', 'Vitality Beads'],
     stats: {
       Health: 600,
-      'Base Health Regen': 150,
+      'Health Regen': 150,
       Mana: 200,
       'Ability Haste': 15,
     },
@@ -2793,11 +2634,11 @@ export const items: IItem[] = [
   {
     name: 'Leviathan',
     cost: 3000,
-    tags: ['Passive', 'Health', 'Base Health Regen'],
+    tags: ['Passive', 'Health', 'Health Regen'],
     components: ['Loch Shawl', 'Stalwart Gauntlets'],
     stats: {
       Health: 400,
-      'Base Health Regen': 225,
+      'Health Regen': 225,
     },
     abilities: [
       {
@@ -2842,14 +2683,14 @@ export const items: IItem[] = [
       'Physical Power',
       'Physical Penetration',
       'Magical Armor',
-      'Base Mana Regen',
+      'Mana Regen',
     ],
     components: ['Honed Kris', 'Sabre', 'Polar Treads'],
     stats: {
       'Physical Power': 40,
       'Physical Penetration': 10,
       'Magical Armor': 30,
-      'Base Mana Regen': 150,
+      'Mana Regen': 150,
     },
     abilities: [
       {
@@ -2957,13 +2798,7 @@ export const items: IItem[] = [
   {
     name: 'Draconum',
     cost: 3050,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Physical Armor',
-      'Ability Haste',
-      'When-hit',
-    ],
+    tags: ['Passive', 'Physical Power', 'Physical Armor', 'Ability Haste'],
     components: ['Temporal Ripper', 'Fortified Mantle'],
     stats: {
       'Physical Power': 35,
@@ -2986,7 +2821,7 @@ export const items: IItem[] = [
   {
     name: 'Void Helm',
     cost: 3100,
-    tags: ['Passive', 'Health', 'Magical Armor', 'Ability Haste', 'When-hit'],
+    tags: ['Passive', 'Health', 'Magical Armor', 'Ability Haste'],
     components: ['Nullifying Mask', 'Violet Brooch', 'Banded Emerald'],
     stats: {
       Health: 500,
@@ -2997,7 +2832,7 @@ export const items: IItem[] = [
       {
         name: 'Justicar',
         description:
-          'For every 40 magical damage received, gain 4 magical armor and 75% base health regeneration for 8s, stacking up to 8 times. At maximum stacks, gain 10% movement speed.',
+          'For every 40 magical damage received, gain 4 magical armor and 75% Health regeneration for 8s, stacking up to 8 times. At maximum stacks, gain 10% movement speed.',
       },
     ],
   },

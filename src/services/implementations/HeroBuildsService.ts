@@ -7,15 +7,15 @@ import { HeroBuildMapper } from './HeroBuildMapper'
 const lsService = new LocalStorageServce('predecessor-hero-builds')
 const heroBuildMapper = new HeroBuildMapper()
 
-interface IHeroBuilds {
-  [key: string]: string[]
-}
-
 const MAX_INVENTORY_SIZE = 6
+const IGNORE_TAGS = ['Active', 'Consumable', 'Vision']
 
 export class HeroBuildsService {
   addItem = (buildName: string, item: IItem) => {
     const savedItems = this.getItems(buildName)
+    const shouldIgnore = _.size(_.intersection(item.tags, IGNORE_TAGS)) > 0
+
+    if (shouldIgnore) return savedItems
 
     if (_.find(savedItems, { name: item.name })) {
       return savedItems
