@@ -43,7 +43,7 @@ export const Build: React.FC<BuildProps> = ({ build, onItemClick }) => {
 
   return (
     <div className='build'>
-      <h2 className="build-cost">Total: {invCost}</h2>
+      {/* <h2 className="build-cost">Total: {invCost}</h2> */}
       <div className="build-items">
         {build.map(({ name }) => {
           return <Thumbnail key={name} name={name} onClick={onItemClick} />
