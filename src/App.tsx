@@ -53,6 +53,7 @@ function App() {
 
     setInventory(heroBuildsService.addItem(activeBuild, newItem))
     setActiveItem(newItem)
+    setActivePanelId(PanelEnum.item)
   }
 
   const handleInventoryItemClick = (event: React.MouseEvent<HTMLElement>) => {
