@@ -618,7 +618,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Typhoon',
-    tags: ['Magical Power', 'Health', 'Magical Penetration', 'Attack Speed'],
+    tags: ['Crest', 'Magical Power', 'Health', 'Magical Penetration', 'Attack Speed'],
     components: ['Warlock Crest'],
     stats: {
       'Magical Power': 20,
