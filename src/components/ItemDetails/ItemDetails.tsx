@@ -9,16 +9,19 @@ interface ItemDetailsProps {
 }
 
 export const ItemDetails: React.FC<ItemDetailsProps> = ({ item }) => {
+  const { name } = item;
+
   return (
-    <div className="item-details" data-id={item.name}>
+    <div className="item-details" data-id={name}>
       <div className="item-details-image-wrap">
         <img
           className="item-details-image"
-          src={getImageSrc(item.name)}
-          alt=""
+          src={getImageSrc(name)}
+          alt={name}
         />
       </div>
-      <h3 className="item-details-title">{item.name}</h3>
+      <h3 className="item-details-title">{name}</h3>
+
       {item.stats && (
         <div className="item-details-params">
           {Object.entries(item.stats).map((param) => {
@@ -26,7 +29,9 @@ export const ItemDetails: React.FC<ItemDetailsProps> = ({ item }) => {
           })}
         </div>
       )}
+
       {item.cost && <div className="item-details-cost">{item.cost}</div>}
+      
       {item.abilities?.length && (
         <div className="item-details-abilities">
           {item.abilities?.map((ability) => {

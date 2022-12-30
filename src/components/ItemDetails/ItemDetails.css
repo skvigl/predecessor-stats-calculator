@@ -18,7 +18,6 @@
 }
 
 .item-details-image {
-  width: 200px;
   height: 150px;
   object-fit: cover;
   object-position: center top;

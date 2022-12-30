@@ -23,7 +23,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
       data-id={name}
       role="button"
     >
-      <img className="thumbnail-image" src={getImageSrc(name)} alt="" />
+      <img className="thumbnail-image" src={getImageSrc(name)} alt={name} />
     </div>
   )
 }
