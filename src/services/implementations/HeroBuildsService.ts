@@ -4,7 +4,9 @@ import { IItem } from '../../types'
 import { LocalStorageServce } from '../implementations/LocalStorageService'
 import { HeroBuildMapper } from './HeroBuildMapper'
 
-const lsService = new LocalStorageServce('predecessor-hero-builds')
+interface IHeroBuild extends Record<string, string[]> {}
+
+const lsService = new LocalStorageServce<IHeroBuild>('predecessor-hero-builds')
 const heroBuildMapper = new HeroBuildMapper()
 
 const MAX_INVENTORY_SIZE = 6

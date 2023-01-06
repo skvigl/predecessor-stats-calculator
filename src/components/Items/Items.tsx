@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react'
 import Tippy from '@tippyjs/react'
 
 import './Items.css'
+import { userService } from '../../services/implementations'
 import { IItem } from '../../types'
 import { Thumbnail } from '../Thumbnail'
 import { ItemDetails } from '../ItemDetails'
@@ -15,11 +16,16 @@ interface ItemsProps {
 }
 
 export const Items: React.FC<ItemsProps> = ({ items, onItemClick }) => {
-  const [isCompactView, setIsCompactView] = useState(false)
+  const [isCompactView, setIsCompactView] = useState(
+    userService.getView() === 'compact',
+  )
   const { isMobile } = useBreakpoint()
 
   const handleChange = useCallback(() => {
-    setIsCompactView(!isCompactView)
+    const newIsCompactView = !isCompactView
+
+    userService.setView(newIsCompactView ? 'compact' : 'full')
+    setIsCompactView(newIsCompactView)
   }, [isCompactView])
 
   return (

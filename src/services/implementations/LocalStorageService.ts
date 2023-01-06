@@ -1,11 +1,11 @@
-export class LocalStorageServce {
+export class LocalStorageServce<T extends {} | {}> {
   name: string
 
   constructor(name: string) {
     this.name = name
   }
 
-  get = (): any => {
+  get = (): T | {} => {
     try {
       const builds = JSON.parse(localStorage.getItem(this.name))
 
@@ -15,7 +15,7 @@ export class LocalStorageServce {
     }
   }
 
-  set = (value: any) => {
+  set = (value: T | {}) => {
     localStorage.setItem(this.name, JSON.stringify(value))
   }
 }
