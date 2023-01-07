@@ -19,7 +19,7 @@ export class HeroBuildMapper {
 
         return acc
       },
-      [],
+      []
     )
   }
 }

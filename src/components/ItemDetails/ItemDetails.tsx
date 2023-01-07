@@ -9,7 +9,7 @@ interface ItemDetailsProps {
 }
 
 export const ItemDetails: React.FC<ItemDetailsProps> = ({ item }) => {
-  const { name } = item;
+  const { name } = item
 
   return (
     <div className="item-details" data-id={name}>
@@ -31,7 +31,7 @@ export const ItemDetails: React.FC<ItemDetailsProps> = ({ item }) => {
       )}
 
       {item.cost && <div className="item-details-cost">{item.cost}</div>}
-      
+
       {item.abilities?.length && (
         <div className="item-details-abilities">
           {item.abilities?.map((ability) => {

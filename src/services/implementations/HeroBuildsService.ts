@@ -13,6 +13,28 @@ const MAX_INVENTORY_SIZE = 6
 const IGNORE_TAGS = ['Active', 'Consumable', 'Vision']
 
 export class HeroBuildsService {
+  addBuild = (name: string) => {
+    const builds = lsService.get()
+
+    //TODO validate unique?
+
+    _.set(builds, name, [])
+    lsService.set(builds)
+  }
+
+  removeBuild = (name: string) => {
+    const builds = lsService.get()
+
+    _.unset(builds, name)
+    lsService.set(builds)
+  }
+
+  getBuildNames = () => {
+    const builds = lsService.get()
+
+    return _.keys(builds)
+  }
+
   addItem = (buildName: string, item: IItem) => {
     const savedItems = this.getItems(buildName)
     const shouldIgnore = _.size(_.intersection(item.tags, IGNORE_TAGS)) > 0
@@ -30,7 +52,7 @@ export class HeroBuildsService {
 
     if (hasCrestInInventory && isNewItemCrest) {
       const itemsWithoutCrest = savedItems.filter(
-        ({ tags }) => !tags.includes('Crest'),
+        ({ tags }) => !tags.includes('Crest')
       )
 
       const newItems = [item, ...itemsWithoutCrest]

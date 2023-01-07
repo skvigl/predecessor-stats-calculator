@@ -17,7 +17,7 @@ interface ItemsProps {
 
 export const Items: React.FC<ItemsProps> = ({ items, onItemClick }) => {
   const [isCompactView, setIsCompactView] = useState(
-    userService.getView() === 'compact',
+    userService.getView() === 'compact'
   )
   const { isMobile } = useBreakpoint()
 

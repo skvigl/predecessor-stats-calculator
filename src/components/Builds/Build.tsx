@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import React, { useMemo } from 'react'
 
 import { IItem } from '../../types'
 import { Thumbnail } from '../Thumbnail'
@@ -12,7 +12,7 @@ interface BuildProps {
 }
 
 export const Build: React.FC<BuildProps> = ({ build, onItemClick }) => {
-  const invCost = build.reduce((acc, cur) => (acc += cur.cost ?? 0), 0)
+  // const invCost = build.reduce((acc, cur) => (acc += cur.cost ?? 0), 0)
 
   const invStats = useMemo(() => {
     return build.reduce<{ [key: string]: number }>((acc, cur) => {
@@ -42,7 +42,7 @@ export const Build: React.FC<BuildProps> = ({ build, onItemClick }) => {
   }, [build])
 
   return (
-    <div className='build'>
+    <div className="build">
       {/* <h2 className="build-cost">Total: {invCost}</h2> */}
       <div className="build-items">
         {build.map(({ name }) => {

@@ -31,5 +31,5 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 export default React.forwardRef<HTMLDivElement, ThumbnailProps>(
   (props, ref) => {
     return <Thumbnail {...props} forwardedRef={ref} />
-  },
+  }
 )
