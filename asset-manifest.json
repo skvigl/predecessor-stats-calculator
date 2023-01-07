@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/predecessor-stats-calculator/static/css/main.74ee68ac.css",
-    "main.js": "/predecessor-stats-calculator/static/js/main.40d42447.js",
+    "main.css": "/predecessor-stats-calculator/static/css/main.cefb077f.css",
+    "main.js": "/predecessor-stats-calculator/static/js/main.49c62a38.js",
+    "static/media/fa-solid-900.ttf": "/predecessor-stats-calculator/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
+    "static/media/fa-brands-400.ttf": "/predecessor-stats-calculator/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
+    "static/media/fa-solid-900.woff2": "/predecessor-stats-calculator/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
+    "static/media/fa-brands-400.woff2": "/predecessor-stats-calculator/static/media/fa-brands-400.3ac6859b28be946745f9.woff2",
     "index.html": "/predecessor-stats-calculator/index.html",
-    "main.74ee68ac.css.map": "/predecessor-stats-calculator/static/css/main.74ee68ac.css.map",
-    "main.40d42447.js.map": "/predecessor-stats-calculator/static/js/main.40d42447.js.map"
+    "main.cefb077f.css.map": "/predecessor-stats-calculator/static/css/main.cefb077f.css.map",
+    "main.49c62a38.js.map": "/predecessor-stats-calculator/static/js/main.49c62a38.js.map"
   },
   "entrypoints": [
-    "static/css/main.74ee68ac.css",
-    "static/js/main.40d42447.js"
+    "static/css/main.cefb077f.css",
+    "static/js/main.49c62a38.js"
   ]
 }
