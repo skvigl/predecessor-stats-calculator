@@ -12,7 +12,7 @@ const heroBuildMapper = new HeroBuildMapper()
 const MAX_INVENTORY_SIZE = 6
 const IGNORE_TAGS = ['Active', 'Consumable', 'Vision']
 
-export class HeroBuildsService {
+class HeroBuildsService {
   addBuild = (name: string) => {
     const builds = lsService.get()
 
@@ -108,3 +108,5 @@ export class HeroBuildsService {
     lsService.set(builds)
   }
 }
+
+export const heroBuildsService = new HeroBuildsService()

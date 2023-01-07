@@ -1,2 +1,2 @@
-export { HeroBuildsService } from './HeroBuildsService'
+export { heroBuildsService } from './HeroBuildsService'
 export { userService } from './UserService'

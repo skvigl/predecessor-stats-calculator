@@ -40,7 +40,7 @@
   }
 
   .build-panel {
-    overflow-y: auto;
+    overflow-y: scroll;
     flex: 1 0 100%;
     max-width: 24rem;
   }

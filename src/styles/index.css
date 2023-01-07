@@ -61,3 +61,14 @@ img {
 .title {
   margin-bottom: 1.5rem;
 }
+
+.link {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: #fdd29d;
+}
+
+.link:hover {
+  color: #be9057;
+}

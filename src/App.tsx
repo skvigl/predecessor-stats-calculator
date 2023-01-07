@@ -5,7 +5,7 @@ import './styles/App.css'
 
 import { IItem } from './types'
 import { items } from './data/items'
-import { HeroBuildsService } from './services/implementations/HeroBuildsService'
+import { heroBuildsService } from './services/implementations'
 import { Filters } from './components/Filters'
 import { Items } from './components/Items'
 import { Build } from './components/Builds'
@@ -13,11 +13,9 @@ import { useBreakpoint } from './hooks'
 import { PanelEnum, Toolbar } from './components/Toolbar'
 import { Panel } from './components/Panel'
 import { ItemDetails } from './components/ItemDetails'
-
-const heroBuildsService = new HeroBuildsService()
+import { BuildForm } from './components/BuildForm'
 
 function App() {
-  // const [activeItem, setActiveItem] = useState<Item | null>(null)
   const [inventory, setInventory] = useState<IItem[]>([])
   const [filters, setFilters] = useState<string[]>([])
   const [activeBuild, setActiveBuild] = useState<string>('new')
@@ -68,8 +66,23 @@ function App() {
     (panelId: PanelEnum | null) => {
       setActivePanelId(panelId === activePanelId ? null : panelId)
     },
-    [activePanelId],
+    [activePanelId]
   )
+
+  const handleSelectBuild = useCallback((buildName: string) => {
+    setActiveBuild(buildName)
+    setInventory(heroBuildsService.getItems(buildName))
+  }, [])
+
+  const handleCreateBuild = useCallback((buildName: string) => {
+    setActiveBuild(buildName)
+    setInventory(heroBuildsService.getItems(buildName))
+  }, [])
+
+  const handleRemoveBuild = useCallback((newBuildName: string) => {
+    setActiveBuild(newBuildName)
+    setInventory(heroBuildsService.getItems(newBuildName))
+  }, [])
 
   const finalItems = useMemo(() => {
     if (!filters.length) return items
@@ -94,6 +107,14 @@ function App() {
         </main>
         {!isMobile && (
           <div className="build-panel">
+            <div style={{ padding: '1rem' }}>
+              <BuildForm
+                activeBuild={activeBuild}
+                onSelectBuild={handleSelectBuild}
+                onCreateBuild={handleCreateBuild}
+                onRemoveBuild={handleRemoveBuild}
+              />
+            </div>
             <Build build={inventory} onItemClick={handleInventoryItemClick} />
           </div>
         )}
@@ -104,6 +125,14 @@ function App() {
         )}
         {isMobile && activePanelId === PanelEnum.build && (
           <Panel>
+            <div style={{ padding: '1rem' }}>
+              <BuildForm
+                activeBuild={activeBuild}
+                onSelectBuild={handleSelectBuild}
+                onCreateBuild={handleCreateBuild}
+                onRemoveBuild={handleRemoveBuild}
+              />
+            </div>
             <Build build={inventory} onItemClick={handleInventoryItemClick} />
           </Panel>
         )}
