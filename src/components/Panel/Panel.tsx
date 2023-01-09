@@ -2,6 +2,17 @@ import { PropsWithChildren } from 'react'
 
 import './Panel.css'
 
-export const Panel: React.FC<PropsWithChildren> = ({ children }) => {
-  return <div className="panel">{children}</div>
+interface PanelProps extends PropsWithChildren {
+  onClose?: () => void
+}
+
+export const Panel: React.FC<PanelProps> = ({ onClose, children }) => {
+  return (
+    <div className="panel">
+      <button className="panel-close" onClick={onClose}>
+        <i className="fa-solid fa-xmark"></i>
+      </button>
+      {children}
+    </div>
+  )
 }

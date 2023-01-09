@@ -69,6 +69,10 @@ function App() {
     [activePanelId]
   )
 
+  const handleClosePanel = useCallback(() => {
+    setActivePanelId(null)
+  }, [])
+
   const handleSelectBuild = useCallback((buildName: string) => {
     setActiveBuild(buildName)
     setInventory(heroBuildsService.getItems(buildName))
@@ -120,12 +124,16 @@ function App() {
         )}
         {isMobile && (
           <div className="app-toolbar">
-            <Toolbar onClick={handleToolbarClick} />
+            <Toolbar
+              activePanelId={activePanelId}
+              onClick={handleToolbarClick}
+            />
           </div>
         )}
         {isMobile && activePanelId === PanelEnum.build && (
-          <Panel>
+          <Panel onClose={handleClosePanel}>
             <div style={{ padding: '1rem' }}>
+              <h2 className="title">Builds</h2>
               <BuildForm
                 activeBuild={activeBuild}
                 onSelectBuild={handleSelectBuild}
@@ -137,10 +145,15 @@ function App() {
           </Panel>
         )}
         {isMobile && activePanelId === PanelEnum.item && (
-          <Panel>{activeItem && <ItemDetails item={activeItem} />}</Panel>
+          <Panel onClose={handleClosePanel}>
+            {!activeItem && (
+              <h3 style={{ padding: '1rem' }}>Select item from list</h3>
+            )}
+            {activeItem && <ItemDetails item={activeItem} />}
+          </Panel>
         )}
         {isMobile && activePanelId === PanelEnum.filter && (
-          <Panel>
+          <Panel onClose={handleClosePanel}>
             <Filters filters={filters} onFilterSelect={handleFilterSelect} />
           </Panel>
         )}

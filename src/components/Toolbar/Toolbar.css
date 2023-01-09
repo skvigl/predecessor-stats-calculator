@@ -1,14 +1,19 @@
 .toolbar {
   display: flex;
   width: 100%;
-  border-bottom: 1px solid #555;
+  border-top: 1px solid #555;
 }
 
 .toolbar-btn {
-  width: 50%;
+  flex: 1;
   border: none;
   background-color: #282c34;
   color: white;
+}
+
+.toolbar-btn--active {
+  background-color: #fdd29d;
+  color: #333;
 }
 
 .toolbar-btn + .toolbar-btn {
