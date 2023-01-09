@@ -72,3 +72,20 @@ img {
 .link:hover {
   color: #be9057;
 }
+
+.icon-btn {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: #fdd29d;
+}
+
+.icon-btn:hover {
+  color: #be9057;
+}

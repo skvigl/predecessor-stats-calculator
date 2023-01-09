@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from 'react'
+import React, { useCallback, useRef, useState } from 'react'
 import _ from 'lodash'
 
 import { heroBuildsService } from '../../services/implementations'
@@ -18,7 +18,8 @@ export const BuildForm: React.FC<BuildFormProps> = ({
   onCreateBuild,
   onRemoveBuild,
 }) => {
-  const [isCreateForm, setIsCreateForm] = useState(false)
+  const buildNames = heroBuildsService.getBuildNames()
+  const [isCreateForm, setIsCreateForm] = useState(_.size(buildNames) === 0)
   const inputRef = useRef<HTMLInputElement | null>(null)
 
   const handleSelectBuild = useCallback(
@@ -28,23 +29,39 @@ export const BuildForm: React.FC<BuildFormProps> = ({
     [onSelectBuild]
   )
 
-  const handleCreateBuild = useCallback(() => {
-    const buildName = inputRef.current?.value
+  const handleCreateBuild = useCallback(
+    (e: React.FormEvent) => {
+      e.preventDefault()
 
-    if (!buildName) return
+      const buildName = inputRef.current?.value
 
-    inputRef.current.value = ''
-    heroBuildsService.addBuild(buildName)
-    setIsCreateForm(false)
-    onCreateBuild(buildName)
-  }, [onCreateBuild])
+      if (!buildName) return
+
+      inputRef.current.value = ''
+      heroBuildsService.addBuild(buildName)
+      setIsCreateForm(false)
+      onCreateBuild(buildName)
+    },
+    [onCreateBuild]
+  )
 
   const handleRemoveBuild = useCallback(() => {
     if (!activeBuild) return
 
+    const isConfirmed = window.confirm(
+      `Would you like to delete build: ${activeBuild} ?`
+    )
+
+    if (!isConfirmed) return
+
     heroBuildsService.removeBuild(activeBuild)
 
     const newBuildName = _.first(heroBuildsService.getBuildNames())
+
+    if (!newBuildName) {
+      setIsCreateForm(true)
+    }
+
     onRemoveBuild(newBuildName)
   }, [activeBuild, onRemoveBuild])
 
@@ -53,10 +70,8 @@ export const BuildForm: React.FC<BuildFormProps> = ({
   }
 
   const handleCancelClick = () => {
-    setIsCreateForm(false)
+    setIsCreateForm(_.size(buildNames) === 0)
   }
-
-  const buildNames = heroBuildsService.getBuildNames()
 
   return (
     <div>
@@ -75,16 +90,16 @@ export const BuildForm: React.FC<BuildFormProps> = ({
               )
             })}
           </select>
-          <button className="link" onClick={handleCreateClick}>
+          <button className="icon-btn" onClick={handleCreateClick}>
             <i className="fa-solid fa-plus"></i>
           </button>
-          <button className="link" onClick={handleRemoveBuild}>
+          <button className="icon-btn" onClick={handleRemoveBuild}>
             <i className="fa-solid fa-trash"></i>
           </button>
         </div>
       )}
       {isCreateForm && (
-        <div>
+        <form onSubmit={handleCreateBuild}>
           <label>
             <div className="build-form-label">Name</div>
             <input
@@ -98,11 +113,11 @@ export const BuildForm: React.FC<BuildFormProps> = ({
             <button className="link" onClick={handleCreateBuild}>
               Create
             </button>
-            <button className="link" onClick={handleCancelClick}>
+            <button className="link" onClick={handleCancelClick} type="button">
               Cancel
             </button>
           </div>
-        </div>
+        </form>
       )}
     </div>
   )

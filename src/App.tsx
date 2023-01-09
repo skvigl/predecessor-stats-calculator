@@ -6,6 +6,7 @@ import './styles/App.css'
 import { IItem } from './types'
 import { items } from './data/items'
 import { heroBuildsService } from './services/implementations'
+import { userService } from './services/implementations'
 import { Filters } from './components/Filters'
 import { Items } from './components/Items'
 import { Build } from './components/Builds'
@@ -18,14 +19,20 @@ import { BuildForm } from './components/BuildForm'
 function App() {
   const [inventory, setInventory] = useState<IItem[]>([])
   const [filters, setFilters] = useState<string[]>([])
-  const [activeBuild, setActiveBuild] = useState<string>('new')
+  const [activeBuild, setActiveBuild] = useState<string>(
+    userService.getActvieBuild()
+  )
   const [activeItem, setActiveItem] = useState<IItem | null>()
   const [activePanelId, setActivePanelId] = useState<PanelEnum | null>()
   const { isMobile } = useBreakpoint()
 
   useEffect(() => {
-    setInventory(heroBuildsService.getItems('new'))
-  }, [])
+    setInventory(heroBuildsService.getItems(activeBuild))
+
+    if (activeBuild !== userService.getActvieBuild()) {
+      userService.setActiveBuild(activeBuild)
+    }
+  }, [activeBuild])
 
   const handleFilterSelect = (event: React.ChangeEvent<HTMLElement>) => {
     const newFilter = event.currentTarget.dataset.id
@@ -73,19 +80,8 @@ function App() {
     setActivePanelId(null)
   }, [])
 
-  const handleSelectBuild = useCallback((buildName: string) => {
+  const handleChangeBuild = useCallback((buildName: string) => {
     setActiveBuild(buildName)
-    setInventory(heroBuildsService.getItems(buildName))
-  }, [])
-
-  const handleCreateBuild = useCallback((buildName: string) => {
-    setActiveBuild(buildName)
-    setInventory(heroBuildsService.getItems(buildName))
-  }, [])
-
-  const handleRemoveBuild = useCallback((newBuildName: string) => {
-    setActiveBuild(newBuildName)
-    setInventory(heroBuildsService.getItems(newBuildName))
   }, [])
 
   const finalItems = useMemo(() => {
@@ -114,9 +110,9 @@ function App() {
             <div style={{ padding: '1rem' }}>
               <BuildForm
                 activeBuild={activeBuild}
-                onSelectBuild={handleSelectBuild}
-                onCreateBuild={handleCreateBuild}
-                onRemoveBuild={handleRemoveBuild}
+                onSelectBuild={handleChangeBuild}
+                onCreateBuild={handleChangeBuild}
+                onRemoveBuild={handleChangeBuild}
               />
             </div>
             <Build build={inventory} onItemClick={handleInventoryItemClick} />
@@ -136,9 +132,9 @@ function App() {
               <h2 className="title">Builds</h2>
               <BuildForm
                 activeBuild={activeBuild}
-                onSelectBuild={handleSelectBuild}
-                onCreateBuild={handleCreateBuild}
-                onRemoveBuild={handleRemoveBuild}
+                onSelectBuild={handleChangeBuild}
+                onCreateBuild={handleChangeBuild}
+                onRemoveBuild={handleChangeBuild}
               />
             </div>
             <Build build={inventory} onItemClick={handleInventoryItemClick} />
