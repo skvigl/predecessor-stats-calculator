@@ -23,7 +23,7 @@
   .app {
     display: flex;
     height: 100vh;
-    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .aside {
