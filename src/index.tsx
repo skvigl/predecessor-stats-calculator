@@ -15,28 +15,28 @@ import './fontawesome/css/fontawesome.css'
 import './fontawesome/css/brands.css'
 import './fontawesome/css/solid.css'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    errorElement: (
-      <a href='/predecessor-stats-calculator' style={{ color: 'white' }}>
-        Back to home
-      </a>
-    ),
-  },
-  {
-    path: '/predecessor-stats-calculator/',
-    element: <HomePage />,
-  },
-  {
-    path: '/predecessor-stats-calculator/compare',
-    element: <ComparePage />,
-  },
-  {
-    path: '/predecessor-stats-calculator/share',
-    element: <SharePage />,
-  },
-])
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <HomePage />,
+      errorElement: (
+        <a href='/' style={{ color: 'white' }}>
+          Back to home
+        </a>
+      ),
+    },
+    {
+      path: '/compare',
+      element: <ComparePage />,
+    },
+    {
+      path: '/share',
+      element: <SharePage />,
+    },
+  ],
+  { basename: '/predecessor-stats-calculator' }
+)
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
