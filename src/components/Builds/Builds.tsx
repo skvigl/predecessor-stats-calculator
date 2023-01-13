@@ -1,17 +1,18 @@
 import React, { useMemo } from 'react'
+import _ from 'lodash'
 
 import { IItem } from '../../types'
 import { Thumbnail } from '../Thumbnail'
 import { Ability } from '../Ability'
 import { Param } from '../Param'
-import './Build.css'
+import './Builds.css'
 
-interface BuildProps {
+interface BuildsProps {
   build: IItem[]
-  onItemClick: (event: React.MouseEvent) => void
+  onItemClick?: (event: React.MouseEvent) => void
 }
 
-export const Build: React.FC<BuildProps> = ({ build, onItemClick }) => {
+export const Builds: React.FC<BuildsProps> = ({ build, onItemClick = _.identity }) => {
   // const invCost = build.reduce((acc, cur) => (acc += cur.cost ?? 0), 0)
 
   const invStats = useMemo(() => {
@@ -42,23 +43,23 @@ export const Build: React.FC<BuildProps> = ({ build, onItemClick }) => {
   }, [build])
 
   return (
-    <div className="build">
+    <div className='build'>
       {/* <h2 className="build-cost">Total: {invCost}</h2> */}
-      <div className="build-items">
+      <div className='build-items'>
         {build.map(({ name }) => {
           return <Thumbnail key={name} name={name} onClick={onItemClick} />
         })}
       </div>
-      <div className="build-params">
+      <div className='build-params'>
         {Object.entries(invStats).map((param) => {
           return <Param key={param[0]} param={param} />
         })}
       </div>
 
-      <div className="build-abilities">
+      <div className='build-abilities'>
         {invAbilities.map((itemAbilities, i) => {
           return (
-            <div key={i} className="build-abilities-item">
+            <div key={i} className='build-abilities-item'>
               {itemAbilities.map((ability, i) => {
                 return <Ability key={ability.name + i} ability={ability} />
               })}

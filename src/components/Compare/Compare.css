@@ -1,0 +1,14 @@
+.compare {
+  display: flex;
+  align-items: flex-start;
+  overflow-x: scroll;
+  min-height: 100vh;
+}
+
+.compare-add {
+  display: flex;
+  align-items: center;
+  min-width: 10rem;
+  min-height: 4rem;
+  padding: 1rem;
+}

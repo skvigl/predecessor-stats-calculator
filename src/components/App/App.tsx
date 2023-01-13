@@ -1,27 +1,25 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import _ from 'lodash'
 
-import './styles/App.css'
+import './App.css'
 
-import { IItem } from './types'
-import { items } from './data/items'
-import { heroBuildsService } from './services/implementations'
-import { userService } from './services/implementations'
-import { Filters } from './components/Filters'
-import { Items } from './components/Items'
-import { Build } from './components/Builds'
-import { useBreakpoint } from './hooks'
-import { PanelEnum, Toolbar } from './components/Toolbar'
-import { Panel } from './components/Panel'
-import { ItemDetails } from './components/ItemDetails'
-import { BuildForm } from './components/BuildForm'
+import { IItem } from '../../types'
+import { items } from '../../data/items'
+import { heroBuildsService } from '../../services/implementations'
+import { userService } from '../../services/implementations'
+import { Filters } from '../Filters'
+import { Items } from '../Items'
+import { Builds } from '../Builds'
+import { useBreakpoint } from '../../hooks'
+import { PanelEnum, Toolbar } from '../Toolbar'
+import { Panel } from '../Panel'
+import { ItemDetails } from '../ItemDetails'
+import { BuildForm } from '../BuildForm'
 
-function App() {
+export const App = () => {
   const [inventory, setInventory] = useState<IItem[]>([])
   const [filters, setFilters] = useState<string[]>([])
-  const [activeBuild, setActiveBuild] = useState<string>(
-    userService.getActvieBuild()
-  )
+  const [activeBuild, setActiveBuild] = useState<string>(userService.getActvieBuild())
   const [activeItem, setActiveItem] = useState<IItem | null>()
   const [activePanelId, setActivePanelId] = useState<PanelEnum | null>()
   const { isMobile } = useBreakpoint()
@@ -97,16 +95,16 @@ function App() {
   }, [filters])
 
   return (
-    <div className="container">
-      <div className="app">
-        <aside className="aside">
+    <div className='container'>
+      <div className='app'>
+        <aside className='aside'>
           <Filters filters={filters} onFilterSelect={handleFilterSelect} />
         </aside>
-        <main className="main">
+        <main className='main'>
           <Items items={finalItems} onItemClick={handleItemClick} />
         </main>
         {!isMobile && (
-          <div className="build-panel">
+          <div className='build-panel'>
             <div style={{ padding: '1rem' }}>
               <BuildForm
                 activeBuild={activeBuild}
@@ -115,21 +113,18 @@ function App() {
                 onRemoveBuild={handleChangeBuild}
               />
             </div>
-            <Build build={inventory} onItemClick={handleInventoryItemClick} />
+            <Builds build={inventory} onItemClick={handleInventoryItemClick} />
           </div>
         )}
         {isMobile && (
-          <div className="app-toolbar">
-            <Toolbar
-              activePanelId={activePanelId}
-              onClick={handleToolbarClick}
-            />
+          <div className='app-toolbar'>
+            <Toolbar activePanelId={activePanelId} onClick={handleToolbarClick} />
           </div>
         )}
         {isMobile && activePanelId === PanelEnum.build && (
           <Panel onClose={handleClosePanel}>
             <div style={{ padding: '1rem' }}>
-              <h2 className="title">Builds</h2>
+              <h2 className='title'>Builds</h2>
               <BuildForm
                 activeBuild={activeBuild}
                 onSelectBuild={handleChangeBuild}
@@ -137,14 +132,12 @@ function App() {
                 onRemoveBuild={handleChangeBuild}
               />
             </div>
-            <Build build={inventory} onItemClick={handleInventoryItemClick} />
+            <Builds build={inventory} onItemClick={handleInventoryItemClick} />
           </Panel>
         )}
         {isMobile && activePanelId === PanelEnum.item && (
           <Panel onClose={handleClosePanel}>
-            {!activeItem && (
-              <h3 style={{ padding: '1rem' }}>Select item from list</h3>
-            )}
+            {!activeItem && <h3 style={{ padding: '1rem' }}>Select item from list</h3>}
             {activeItem && <ItemDetails item={activeItem} />}
           </Panel>
         )}
@@ -157,5 +150,3 @@ function App() {
     </div>
   )
 }
-
-export default App

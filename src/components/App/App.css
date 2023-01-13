@@ -10,6 +10,10 @@
   overflow-x: hidden;
 }
 
+.build-panel {
+  min-width: 20rem;
+}
+
 .app-toolbar {
   position: fixed;
   bottom: 0;

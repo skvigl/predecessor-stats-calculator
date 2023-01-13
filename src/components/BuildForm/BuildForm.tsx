@@ -7,24 +7,21 @@ import './BuildForm.css'
 
 interface BuildFormProps {
   activeBuild: string
-  onSelectBuild: (name: string) => void
-  onCreateBuild: (name: string) => void
-  onRemoveBuild: (name: string) => void
+  onSelectBuild?: (name: string) => void
+  onCreateBuild?: (name: string) => void
+  onRemoveBuild?: (name: string) => void
 }
 
-export const BuildForm: React.FC<BuildFormProps> = ({
-  activeBuild,
-  onSelectBuild,
-  onCreateBuild,
-  onRemoveBuild,
-}) => {
+export const BuildForm: React.FC<BuildFormProps> = ({ activeBuild, onSelectBuild, onCreateBuild, onRemoveBuild }) => {
   const buildNames = heroBuildsService.getBuildNames()
   const [isCreateForm, setIsCreateForm] = useState(_.size(buildNames) === 0)
   const inputRef = useRef<HTMLInputElement | null>(null)
 
   const handleSelectBuild = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
-      onSelectBuild(e.target.value)
+      const { value } = e.target
+
+      onSelectBuild(value === 'none' ? '' : value)
     },
     [onSelectBuild]
   )
@@ -48,9 +45,7 @@ export const BuildForm: React.FC<BuildFormProps> = ({
   const handleRemoveBuild = useCallback(() => {
     if (!activeBuild) return
 
-    const isConfirmed = window.confirm(
-      `Would you like to delete build: ${activeBuild} ?`
-    )
+    const isConfirmed = window.confirm(`Would you like to delete build: ${activeBuild} ?`)
 
     if (!isConfirmed) return
 
@@ -76,12 +71,9 @@ export const BuildForm: React.FC<BuildFormProps> = ({
   return (
     <div>
       {!isCreateForm && (
-        <div className="build-form-builds">
-          <select
-            className="build-form-select"
-            onChange={handleSelectBuild}
-            value={activeBuild}
-          >
+        <div className='build-form-builds'>
+          <select className='build-form-select' onChange={handleSelectBuild} value={activeBuild}>
+            <option value=''>Select</option>
             {_.map(buildNames, (buildName) => {
               return (
                 <option key={buildName} value={buildName}>
@@ -90,30 +82,29 @@ export const BuildForm: React.FC<BuildFormProps> = ({
               )
             })}
           </select>
-          <button className="icon-btn" onClick={handleCreateClick}>
-            <i className="fa-solid fa-plus"></i>
-          </button>
-          <button className="icon-btn" onClick={handleRemoveBuild}>
-            <i className="fa-solid fa-trash"></i>
-          </button>
+          {onCreateBuild && (
+            <button className='icon-btn' onClick={handleCreateClick}>
+              <i className='fa-solid fa-plus'></i>
+            </button>
+          )}
+          {onRemoveBuild && (
+            <button className='icon-btn' onClick={handleRemoveBuild}>
+              <i className='fa-solid fa-trash'></i>
+            </button>
+          )}
         </div>
       )}
       {isCreateForm && (
         <form onSubmit={handleCreateBuild}>
           <label>
-            <div className="build-form-label">Name</div>
-            <input
-              className="build-form-input"
-              ref={inputRef}
-              type="text"
-              placeholder="Support"
-            />
+            <div className='build-form-label'>Name</div>
+            <input className='build-form-input' ref={inputRef} type='text' placeholder='Support' />
           </label>
-          <div className="build-form-create">
-            <button className="link" onClick={handleCreateBuild}>
+          <div className='build-form-create'>
+            <button className='link' onClick={handleCreateBuild}>
               Create
             </button>
-            <button className="link" onClick={handleCancelClick} type="button">
+            <button className='link' onClick={handleCancelClick} type='button'>
               Cancel
             </button>
           </div>
