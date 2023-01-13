@@ -18,14 +18,22 @@ import './fontawesome/css/solid.css'
 const router = createBrowserRouter([
   {
     path: '/',
+    errorElement: (
+      <a href='/predecessor-stats-calculator' style={{ color: 'white' }}>
+        Back to home
+      </a>
+    ),
+  },
+  {
+    path: '/predecessor-stats-calculator/',
     element: <HomePage />,
   },
   {
-    path: '/compare',
+    path: '/predecessor-stats-calculator/compare',
     element: <ComparePage />,
   },
   {
-    path: '/share',
+    path: '/predecessor-stats-calculator/share',
     element: <SharePage />,
   },
 ])
