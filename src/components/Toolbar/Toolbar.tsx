@@ -4,9 +4,9 @@ import _ from 'lodash'
 import './Toolbar.css'
 
 export enum PanelEnum {
-  build = 'build',
+  build = 'builds',
   item = 'item',
-  filter = 'filter',
+  filter = 'filters',
 }
 
 interface ToolbarProps {
@@ -14,18 +14,15 @@ interface ToolbarProps {
   onClick?: (panel: PanelEnum | null) => void
 }
 
-const buttons = [PanelEnum.build, PanelEnum.item, PanelEnum.filter]
+const buttons = [PanelEnum.build, PanelEnum.filter]
 
-export const Toolbar: React.FC<ToolbarProps> = ({
-  activePanelId,
-  onClick = _.identity,
-}) => {
+export const Toolbar: React.FC<ToolbarProps> = ({ activePanelId, onClick = _.identity }) => {
   const getActiveClass = (panelId: PanelEnum) => {
     return panelId === activePanelId ? 'toolbar-btn--active' : ''
   }
 
   return (
-    <div className="toolbar">
+    <div className='toolbar'>
       {_.map(buttons, (button) => {
         return (
           <button
