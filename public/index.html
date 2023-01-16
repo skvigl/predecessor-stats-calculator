@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Predecessor stats calculator" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
@@ -28,6 +25,33 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      ;(function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+        }
+      })(window.location)
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       ;(function (m, e, t, r, i, k, a) {
@@ -47,13 +71,7 @@
           (k.async = 1),
           (k.src = r),
           a.parentNode.insertBefore(k, a)
-      })(
-        window,
-        document,
-        'script',
-        'https://mc.yandex.ru/metrika/tag.js',
-        'ym',
-      )
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym')
 
       ym(91829380, 'init', {
         clickmap: true,
@@ -63,11 +81,7 @@
     </script>
     <noscript>
       <div>
-        <img
-          src="https://mc.yandex.ru/watch/91829380"
-          style="position: absolute; left: -9999px;"
-          alt=""
-        />
+        <img src="https://mc.yandex.ru/watch/91829380" style="position: absolute; left: -9999px;" alt="" />
       </div>
     </noscript>
     <!-- /Yandex.Metrika counter -->
