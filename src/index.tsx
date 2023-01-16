@@ -21,9 +21,11 @@ const router = createBrowserRouter(
       path: '/',
       element: <HomePage />,
       errorElement: (
-        <a href='/' style={{ color: 'white' }}>
-          Back to home
-        </a>
+        <div>
+          <a href='/predecessor-stats-calculator' style={{ color: 'white' }}>
+            Back to home
+          </a>
+        </div>
       ),
     },
     {
