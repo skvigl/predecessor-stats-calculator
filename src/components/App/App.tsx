@@ -32,18 +32,21 @@ export const App = () => {
     }
   }, [activeBuild])
 
-  const handleFilterSelect = (event: React.ChangeEvent<HTMLElement>) => {
-    const newFilter = event.currentTarget.dataset.id
+  const handleFilterSelect = useCallback(
+    (filterId: string) => {
+      if (filters.includes(filterId)) {
+        setFilters([...filters.filter((f) => f !== filterId)])
+        return
+      }
 
-    if (!newFilter) return
+      setFilters([...filters, filterId])
+    },
+    [filters]
+  )
 
-    if (filters.includes(newFilter)) {
-      setFilters([...filters.filter((f) => f !== newFilter)])
-      return
-    }
-
-    setFilters([...filters, newFilter])
-  }
+  const handleFilterClear = useCallback(() => {
+    setFilters([])
+  }, [])
 
   const handleItemClick = (event: React.MouseEvent<HTMLElement>) => {
     const newItemId = event.currentTarget.dataset.id
@@ -98,7 +101,7 @@ export const App = () => {
     <div className='container'>
       <div className='app'>
         <aside className='aside'>
-          <Filters filters={filters} onFilterSelect={handleFilterSelect} />
+          <Filters filters={filters} onFilterSelect={handleFilterSelect} onFiltersClear={handleFilterClear} />
         </aside>
         <main className='main'>
           <Items items={finalItems} onItemClick={handleItemClick} />
@@ -143,7 +146,7 @@ export const App = () => {
         )}
         {isMobile && activePanelId === PanelEnum.filter && (
           <Panel onClose={handleClosePanel}>
-            <Filters filters={filters} onFilterSelect={handleFilterSelect} />
+            <Filters filters={filters} onFilterSelect={handleFilterSelect} onFiltersClear={handleFilterClear} />
           </Panel>
         )}
       </div>
