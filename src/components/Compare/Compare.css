@@ -1,8 +1,8 @@
 .compare {
   display: flex;
   align-items: flex-start;
-  overflow-x: scroll;
-  min-height: 100vh;
+  overflow: scroll;
+  height: 100vh;
 }
 
 .compare-add {
