@@ -32,7 +32,7 @@ class HeroBuildsService {
   getBuildNames = () => {
     const builds = lsService.get()
 
-    return _.keys(builds)
+    return _(builds).keys().sortBy().value()
   }
 
   addItem = (buildName: string, item: IItem) => {
@@ -51,9 +51,7 @@ class HeroBuildsService {
     })
 
     if (hasCrestInInventory && isNewItemCrest) {
-      const itemsWithoutCrest = savedItems.filter(
-        ({ tags }) => !tags.includes('Crest')
-      )
+      const itemsWithoutCrest = savedItems.filter(({ tags }) => !tags.includes('Crest'))
 
       const newItems = [item, ...itemsWithoutCrest]
 
@@ -69,9 +67,7 @@ class HeroBuildsService {
       return newItems
     }
 
-    const maxInventorySize = hasCrestInInventory
-      ? MAX_INVENTORY_SIZE
-      : MAX_INVENTORY_SIZE - 1
+    const maxInventorySize = hasCrestInInventory ? MAX_INVENTORY_SIZE : MAX_INVENTORY_SIZE - 1
 
     if (savedItems.length === maxInventorySize) {
       return savedItems
