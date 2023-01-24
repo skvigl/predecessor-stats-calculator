@@ -51,7 +51,7 @@ export const App = () => {
   const handleItemClick = (event: React.MouseEvent<HTMLElement>) => {
     const newItemId = event.currentTarget.dataset.id
 
-    if (!newItemId) return
+    if (!newItemId || !activeBuild) return
 
     const newItem = _.find(items, { name: newItemId })
 
