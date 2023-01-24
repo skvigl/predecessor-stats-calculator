@@ -62,6 +62,7 @@ export const BuildForm: React.FC<BuildFormProps> = ({ activeBuild, onSelectBuild
 
   const handleCreateClick = () => {
     setIsCreateForm(true)
+    onSelectBuild('')
   }
 
   const handleCancelClick = () => {
