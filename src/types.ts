@@ -15,3 +15,5 @@ export interface IAbility {
 export interface IParam {
   [name: string]: number
 }
+
+export type TParam = [string, number]

@@ -17,6 +17,14 @@
   margin-top: 1rem;
 }
 
+.build-params-group-name {
+  margin-bottom: 0.25rem;
+}
+
+.build-params-group + .build-params-group {
+  margin-top: 0.75rem;
+}
+
 .build-abilities {
   margin-top: 1.5rem;
 }

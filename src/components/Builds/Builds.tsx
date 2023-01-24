@@ -1,11 +1,12 @@
 import React, { useMemo } from 'react'
 import _ from 'lodash'
 
-import { IItem } from '../../types'
+import { IItem, TParam } from '../../types'
 import { Thumbnail } from '../Thumbnail'
 import { Ability } from '../Ability'
 import { Param } from '../Param'
 import './Builds.css'
+import { BUILD_GROUPS } from './contants'
 
 interface BuildsProps {
   build: IItem[]
@@ -13,9 +14,7 @@ interface BuildsProps {
 }
 
 export const Builds: React.FC<BuildsProps> = ({ build, onItemClick = _.identity }) => {
-  // const invCost = build.reduce((acc, cur) => (acc += cur.cost ?? 0), 0)
-
-  const invStats = useMemo(() => {
+  const buildStats = useMemo(() => {
     return build.reduce<{ [key: string]: number }>((acc, cur) => {
       if (!cur.stats) return acc
 
@@ -32,7 +31,21 @@ export const Builds: React.FC<BuildsProps> = ({ build, onItemClick = _.identity 
     }, {})
   }, [build])
 
-  const invAbilities = useMemo(() => {
+  const buildGroups = useMemo(() => {
+    const newGroups = _.cloneDeep(BUILD_GROUPS)
+
+    return _.map(newGroups, (group) => {
+      return {
+        ...group,
+        params: _(group.params)
+          .map((p): TParam => [p, buildStats[p]])
+          .filter((p) => !_.isUndefined(p[1]))
+          .value(),
+      }
+    }).filter((g) => !_.isEmpty(g.params))
+  }, [buildStats])
+
+  const buildAbilities = useMemo(() => {
     return build.reduce((acc, item) => {
       if (item.abilities) {
         acc.push(item.abilities)
@@ -44,23 +57,30 @@ export const Builds: React.FC<BuildsProps> = ({ build, onItemClick = _.identity 
 
   return (
     <div className='build'>
-      {/* <h2 className="build-cost">Total: {invCost}</h2> */}
       <div className='build-items'>
-        {build.map(({ name }) => {
+        {_.map(build, ({ name }) => {
           return <Thumbnail key={name} name={name} onClick={onItemClick} />
         })}
       </div>
       <div className='build-params'>
-        {Object.entries(invStats).map((param) => {
-          return <Param key={param[0]} param={param} />
+        {_.map(buildGroups, (group) => {
+          return (
+            <div key={group.name} className='build-params-group'>
+              <div className='build-params-group-name'>{group.name}</div>
+
+              {_.map(group.params, (param) => {
+                return <Param key={param[0]} param={param} />
+              })}
+            </div>
+          )
         })}
       </div>
 
       <div className='build-abilities'>
-        {invAbilities.map((itemAbilities, i) => {
+        {_.map(buildAbilities, (itemAbilities, i) => {
           return (
             <div key={i} className='build-abilities-item'>
-              {itemAbilities.map((ability, i) => {
+              {_.map(itemAbilities, (ability, i) => {
                 return <Ability key={ability.name + i} ability={ability} />
               })}
             </div>
