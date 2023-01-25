@@ -1,5 +1,11 @@
+import { Navigation } from '../components/Navigation'
 import { App } from '../components/App'
 
 export const HomePage = () => {
-  return <App />
+  return (
+    <>
+      <Navigation />
+      <App />
+    </>
+  )
 }

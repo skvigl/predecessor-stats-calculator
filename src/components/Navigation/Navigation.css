@@ -1,0 +1,21 @@
+.navigation {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.navigation-list {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navigation-link {
+  color: #fdd29d;
+  text-decoration: none;
+}
+
+.navigation-link:hover {
+  color: #be9057;
+}
