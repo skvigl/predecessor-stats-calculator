@@ -23,3 +23,5 @@ export class HeroBuildMapper {
     )
   }
 }
+
+export const heroBuildMapper = new HeroBuildMapper()

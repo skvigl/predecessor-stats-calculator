@@ -85,6 +85,13 @@ export const App = () => {
     setActiveBuild(buildName)
   }, [])
 
+  const handleShareBuild = useCallback(() => {
+    const names = _.map(inventory, 'name').join(',')
+    const url = `${window.location.href}/share?name=${activeBuild}&items=${names}`
+
+    navigator.clipboard.writeText(encodeURI(url))
+  }, [activeBuild, inventory])
+
   const finalItems = useMemo(() => {
     if (!filters.length) return items
 
@@ -114,6 +121,7 @@ export const App = () => {
                 onSelectBuild={handleChangeBuild}
                 onCreateBuild={handleChangeBuild}
                 onRemoveBuild={handleChangeBuild}
+                onShareBuild={handleShareBuild}
               />
             </div>
             <Builds build={inventory} onItemClick={handleInventoryItemClick} />

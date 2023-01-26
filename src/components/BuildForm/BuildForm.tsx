@@ -10,9 +10,16 @@ interface BuildFormProps {
   onSelectBuild?: (name: string) => void
   onCreateBuild?: (name: string) => void
   onRemoveBuild?: (name: string) => void
+  onShareBuild?: () => void
 }
 
-export const BuildForm: React.FC<BuildFormProps> = ({ activeBuild, onSelectBuild, onCreateBuild, onRemoveBuild }) => {
+export const BuildForm: React.FC<BuildFormProps> = ({
+  activeBuild,
+  onSelectBuild = _.identity,
+  onCreateBuild,
+  onRemoveBuild,
+  onShareBuild,
+}) => {
   const buildNames = heroBuildsService.getBuildNames()
   const [isCreateForm, setIsCreateForm] = useState(_.size(buildNames) === 0)
   const inputRef = useRef<HTMLInputElement | null>(null)
@@ -91,6 +98,11 @@ export const BuildForm: React.FC<BuildFormProps> = ({ activeBuild, onSelectBuild
           {onRemoveBuild && (
             <button className='icon-btn' onClick={handleRemoveBuild}>
               <i className='fa-solid fa-trash'></i>
+            </button>
+          )}
+          {onShareBuild && (
+            <button className='icon-btn' onClick={onShareBuild}>
+              <i className='fa-solid fa-share'></i>
             </button>
           )}
         </div>
