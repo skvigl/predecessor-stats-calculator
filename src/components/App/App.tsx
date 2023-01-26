@@ -87,7 +87,7 @@ export const App = () => {
 
   const handleShareBuild = useCallback(() => {
     const names = _.map(inventory, 'name').join(',')
-    const url = `${window.location.href}/share?name=${activeBuild}&items=${names}`
+    const url = `${window.location.href}share?name=${activeBuild}&items=${names}`
 
     navigator.clipboard.writeText(encodeURI(url))
   }, [activeBuild, inventory])
