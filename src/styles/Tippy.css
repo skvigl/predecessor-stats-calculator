@@ -1,5 +1,6 @@
 .tippy-box {
   overflow: hidden;
+  min-width: 350px;
   border-radius: 0.25rem;
 }
 
