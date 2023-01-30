@@ -157,6 +157,7 @@ export const App = () => {
             <Filters filters={filters} onFilterSelect={handleFilterSelect} onFiltersClear={handleFilterClear} />
           </Panel>
         )}
+                  onShareBuild={handleShareBuild}
       </div>
     </div>
   )
