@@ -11,7 +11,7 @@ import './Share.css'
 export const Share = () => {
   const [buildName, setBuildName] = useState<string | undefined>()
   const [inventory, setInventory] = useState<IItem[]>([])
-  const [isBuildValid, setIsBuidlValid] = useState(true)
+  const [isBuildValid, setIsBuidlValid] = useState(false)
   const [isSaveDisabled, setIsSaveDisabled] = useState(true)
   const navigate = useNavigate()
 
@@ -20,13 +20,12 @@ export const Share = () => {
 
     const name = sp.get('name')
     const items = heroBuildMapper.mapIdsToItems(_.split(sp.get('items'), ','))
-
-    if (!name || _.isEmpty(items)) {
-      setIsBuidlValid(false)
-    }
+    const names = heroBuildsService.getBuildNames()
 
     setBuildName(name ?? '')
     setInventory(items)
+    setIsBuidlValid(name && !_.isEmpty(items))
+    setIsSaveDisabled(names.includes(name) || name === '')
   }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
