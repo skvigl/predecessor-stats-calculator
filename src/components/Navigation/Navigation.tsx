@@ -4,8 +4,8 @@ import './Navigation.css'
 
 export const Navigation = () => {
   return (
-    <div className='container'>
-      <nav className='navigation'>
+    <nav className='navigation'>
+      <div className='container'>
         <ul className='navigation-list'>
           <li>
             <Link className='navigation-link' to='/'>
@@ -18,7 +18,7 @@ export const Navigation = () => {
             </Link>
           </li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   )
 }

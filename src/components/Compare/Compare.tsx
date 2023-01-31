@@ -9,19 +9,23 @@ export const Compare = () => {
 
   return (
     <div className='compare'>
-      {panels.map((panel, index) => {
-        return <Panel key={index} />
-      })}
-      <div className='compare-add'>
-        <button
-          className='link'
-          onClick={() => {
-            setPanelCount(panelCount + 1)
-          }}
-        >
-          <i className='fa-solid fa-plus'></i>
-          <span>&nbsp;Add build</span>
-        </button>
+      <div className='container'>
+        <div className='compare-grid'>
+          {panels.map((panel, index) => {
+            return <Panel key={index} />
+          })}
+          <div className='compare-add'>
+            <button
+              className='link'
+              onClick={() => {
+                setPanelCount(panelCount + 1)
+              }}
+            >
+              <i className='fa-solid fa-plus'></i>
+              <span>&nbsp;Add build</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   )

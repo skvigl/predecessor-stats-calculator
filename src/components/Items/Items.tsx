@@ -16,9 +16,7 @@ interface ItemsProps {
 }
 
 export const Items: React.FC<ItemsProps> = ({ items, onItemClick }) => {
-  const [isCompactView, setIsCompactView] = useState(
-    userService.getView() === 'compact'
-  )
+  const [isCompactView, setIsCompactView] = useState(userService.getView() === 'compact')
   const { isMobile } = useBreakpoint()
 
   const handleChange = useCallback(() => {
@@ -29,25 +27,21 @@ export const Items: React.FC<ItemsProps> = ({ items, onItemClick }) => {
   }, [isCompactView])
 
   return (
-    <div className="items">
-      <div className="items-top">
+    <div className='items'>
+      <div className='items-top'>
         <h2>Items({items.length})</h2>
-        <Toggle
-          label="Compact View"
-          isActive={isCompactView}
-          onChange={handleChange}
-        />
+        <Toggle label='Compact View' isActive={isCompactView} onChange={handleChange} />
       </div>
 
       {isCompactView && (
-        <div className="items-thumbnails">
+        <div className='items-thumbnails'>
           {items.map((item) => {
             const { name } = item
 
             return (
               <Tippy
                 key={name}
-                placement="right"
+                placement='right'
                 content={<ItemDetails item={item} />}
                 disabled={isMobile}
               >
@@ -59,15 +53,11 @@ export const Items: React.FC<ItemsProps> = ({ items, onItemClick }) => {
       )}
 
       {!isCompactView && (
-        <div className="items-full">
+        <div className='items-full'>
           {items.map((item) => {
             return (
-              <div key={item.name} className="items-full-cell">
-                <Tippy
-                  placement="right"
-                  content={<ItemDetails item={item} />}
-                  disabled={isMobile}
-                >
+              <div key={item.name} className='items-full-cell'>
+                <Tippy placement='right' content={<ItemDetails item={item} />} disabled={isMobile}>
                   <ItemCard item={item} onClick={onItemClick} />
                 </Tippy>
               </div>

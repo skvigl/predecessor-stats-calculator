@@ -1,11 +1,10 @@
-import { Navigation } from '../components/Navigation'
+import { Page } from '../components/Page'
 import { App } from '../components/App'
 
 export const HomePage = () => {
   return (
-    <>
-      <Navigation />
+    <Page>
       <App />
-    </>
+    </Page>
   )
 }

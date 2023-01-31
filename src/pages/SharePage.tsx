@@ -1,11 +1,12 @@
-import { Navigation } from '../components/Navigation'
+import { Page } from '../components/Page'
 import { Share } from '../components/Share/Share'
 
 export const SharePage = () => {
   return (
-    <div className='build-panel'>
-      <Navigation />
-      <Share />
-    </div>
+    <Page>
+      <div className='build-panel'>
+        <Share />
+      </div>
+    </Page>
   )
 }

@@ -46,7 +46,7 @@ export const Share = () => {
     navigate('/')
   }
 
-  if (buildName === null) {
+  if (buildName === undefined) {
     return null
   }
 

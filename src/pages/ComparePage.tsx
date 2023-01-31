@@ -1,11 +1,10 @@
-import { Navigation } from '../components/Navigation'
+import { Page } from '../components/Page'
 import { Compare } from '../components/Compare'
 
 export const ComparePage = () => {
   return (
-    <>
-      <Navigation />
+    <Page>
       <Compare />
-    </>
+    </Page>
   )
 }

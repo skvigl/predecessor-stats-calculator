@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import { toast } from 'react-toastify'
+import { useHref } from 'react-router-dom'
 import _ from 'lodash'
 
 import './App.css'
@@ -23,6 +25,7 @@ export const App = () => {
   const [activeItem, setActiveItem] = useState<IItem | null>()
   const [activePanelId, setActivePanelId] = useState<PanelEnum | null>()
   const { isMobile } = useBreakpoint()
+  const href = useHref('/')
 
   useEffect(() => {
     setInventory(heroBuildsService.getItems(activeBuild))
@@ -87,10 +90,11 @@ export const App = () => {
 
   const handleShareBuild = useCallback(() => {
     const names = _.map(inventory, 'name').join(',')
-    const url = `${window.location.href}share?name=${activeBuild}&items=${names}`
+    const url = `${window.location.origin}${href}/share?name=${activeBuild}&items=${names}`
 
     navigator.clipboard.writeText(encodeURI(url))
-  }, [activeBuild, inventory])
+    toast.success('The link to the build has been copied to the clipboard. Use Ctrl+V to paste the link')
+  }, [activeBuild, href, inventory])
 
   const finalItems = useMemo(() => {
     if (!filters.length) return items
@@ -105,59 +109,61 @@ export const App = () => {
   }, [filters])
 
   return (
-    <div className='container'>
-      <div className='app'>
-        <aside className='aside'>
-          <Filters filters={filters} onFilterSelect={handleFilterSelect} onFiltersClear={handleFilterClear} />
-        </aside>
-        <main className='main'>
-          <Items items={finalItems} onItemClick={handleItemClick} />
-        </main>
-        {!isMobile && (
-          <div className='build-panel'>
-            <div style={{ padding: '1rem' }}>
-              <BuildForm
-                activeBuild={activeBuild}
-                onSelectBuild={handleChangeBuild}
-                onCreateBuild={handleChangeBuild}
-                onRemoveBuild={handleChangeBuild}
-                onShareBuild={handleShareBuild}
-              />
-            </div>
-            <Builds build={inventory} onItemClick={handleInventoryItemClick} />
-          </div>
-        )}
-        {isMobile && (
-          <div className='app-toolbar'>
-            <Toolbar activePanelId={activePanelId} onClick={handleToolbarClick} />
-          </div>
-        )}
-        {isMobile && activePanelId === PanelEnum.build && (
-          <Panel onClose={handleClosePanel}>
-            <div style={{ padding: '1rem' }}>
-              <h2 className='title'>Builds</h2>
-              <BuildForm
-                activeBuild={activeBuild}
-                onSelectBuild={handleChangeBuild}
-                onCreateBuild={handleChangeBuild}
-                onRemoveBuild={handleChangeBuild}
-              />
-            </div>
-            <Builds build={inventory} onItemClick={handleInventoryItemClick} />
-          </Panel>
-        )}
-        {isMobile && activePanelId === PanelEnum.item && (
-          <Panel onClose={handleClosePanel}>
-            {!activeItem && <h3 style={{ padding: '1rem' }}>Select item from list</h3>}
-            {activeItem && <ItemDetails item={activeItem} />}
-          </Panel>
-        )}
-        {isMobile && activePanelId === PanelEnum.filter && (
-          <Panel onClose={handleClosePanel}>
+    <div className='app'>
+      <div className='app-container container'>
+        <div className='app-grid'>
+          <aside className='aside'>
             <Filters filters={filters} onFilterSelect={handleFilterSelect} onFiltersClear={handleFilterClear} />
-          </Panel>
-        )}
+          </aside>
+          <main className='main'>
+            <Items items={finalItems} onItemClick={handleItemClick} />
+          </main>
+          {!isMobile && (
+            <div className='build-panel'>
+              <div style={{ padding: '1rem' }}>
+                <BuildForm
+                  activeBuild={activeBuild}
+                  onSelectBuild={handleChangeBuild}
+                  onCreateBuild={handleChangeBuild}
+                  onRemoveBuild={handleChangeBuild}
                   onShareBuild={handleShareBuild}
+                />
+              </div>
+              <Builds build={inventory} onItemClick={handleInventoryItemClick} />
+            </div>
+          )}
+          {isMobile && (
+            <div className='app-toolbar'>
+              <Toolbar activePanelId={activePanelId} onClick={handleToolbarClick} />
+            </div>
+          )}
+          {isMobile && activePanelId === PanelEnum.build && (
+            <Panel onClose={handleClosePanel}>
+              <div style={{ padding: '1rem' }}>
+                <h2 className='title'>Builds</h2>
+                <BuildForm
+                  activeBuild={activeBuild}
+                  onSelectBuild={handleChangeBuild}
+                  onCreateBuild={handleChangeBuild}
+                  onRemoveBuild={handleChangeBuild}
+                  onShareBuild={handleShareBuild}
+                />
+              </div>
+              <Builds build={inventory} onItemClick={handleInventoryItemClick} />
+            </Panel>
+          )}
+          {isMobile && activePanelId === PanelEnum.item && (
+            <Panel onClose={handleClosePanel}>
+              {!activeItem && <h3 style={{ padding: '1rem' }}>Select item from list</h3>}
+              {activeItem && <ItemDetails item={activeItem} />}
+            </Panel>
+          )}
+          {isMobile && activePanelId === PanelEnum.filter && (
+            <Panel onClose={handleClosePanel}>
+              <Filters filters={filters} onFilterSelect={handleFilterSelect} onFiltersClear={handleFilterClear} />
+            </Panel>
+          )}
+        </div>
       </div>
     </div>
   )

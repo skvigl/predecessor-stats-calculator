@@ -1,8 +1,10 @@
 .compare {
+  overflow: scroll;
+}
+
+.compare-grid {
   display: flex;
   align-items: flex-start;
-  overflow: scroll;
-  height: 100vh;
 }
 
 .compare-add {
