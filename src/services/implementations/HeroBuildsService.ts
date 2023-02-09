@@ -41,7 +41,7 @@ class HeroBuildsService {
 
     if (shouldIgnore) return savedItems
 
-    if (_.find(savedItems, { name: item.name })) {
+    if (item.tier === 3 && _.find(savedItems, { name: item.name })) {
       return savedItems
     }
 
@@ -80,12 +80,13 @@ class HeroBuildsService {
   }
 
   removeItem = (buildName: string, itemName: string) => {
-    const saveItems = this.getItems(buildName)
-    const newItems = _.filter(saveItems, ({ name }) => name !== itemName)
+    const savedItems = this.getItems(buildName)
+    const foundIndex = _.findIndex(savedItems, { name: itemName })
 
-    this.setItems(buildName, newItems)
+    savedItems.splice(foundIndex, 1)
+    this.setItems(buildName, savedItems)
 
-    return newItems
+    return savedItems
   }
 
   getItems = (buildName: string) => {
