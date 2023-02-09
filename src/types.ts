@@ -5,6 +5,7 @@ export interface IItem {
   abilities?: IAbility[]
   stats?: IParam
   components?: string[]
+  tier?: number
 }
 
 export interface IAbility {

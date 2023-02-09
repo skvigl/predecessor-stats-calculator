@@ -39,8 +39,7 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Active - Sentry',
-        description:
-          'Reveal nearby Enemy Wards in a small area around you for 15s - 96s (-2 per level) CD.',
+        description: 'Reveal nearby Enemy Wards in a small area around you for 15s - 96s (-2 per level) CD.',
       },
       {
         name: 'Max Charges',
@@ -106,7 +105,7 @@ export const items: IItem[] = [
     tags: ['Crest', 'Health', 'Health Regen'],
     components: ['Titan Crest'],
     stats: {
-      Health: 120,
+      Health: 150,
       'Health Regen': 25,
     },
     abilities: [
@@ -123,13 +122,7 @@ export const items: IItem[] = [
   },
   {
     name: "Saphir's Mantle",
-    tags: [
-      'Crest',
-      'Health',
-      'Health Regen',
-      'Physical Armor',
-      'Magical Armor',
-    ],
+    tags: ['Crest', 'Health', 'Health Regen', 'Physical Armor', 'Magical Armor'],
     components: ['Goliath Crest'],
     stats: {
       Health: 200,
@@ -145,19 +138,13 @@ export const items: IItem[] = [
       },
       {
         name: 'Passive',
-        description: 'Deal 30 extra basic damage to Minions.',
+        description: 'Deal 40 extra basic damage to Minions.',
       },
     ],
   },
   {
     name: 'Razorback',
-    tags: [
-      'Crest',
-      'Health',
-      'Health Regen',
-      'Physical Armor',
-      'Magical Armor',
-    ],
+    tags: ['Crest', 'Health', 'Health Regen', 'Physical Armor', 'Magical Armor'],
     components: ['Goliath Crest'],
     stats: {
       Health: 150,
@@ -168,8 +155,7 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Active - Echidna',
-        description:
-          'Reflect 50% of damage received from Enemy Heroes as true damage for 4s - 90s CD.',
+        description: 'Reflect 50% of damage received from Enemy Heroes as true damage for 4s - 90s CD.',
       },
       {
         name: 'Creep Slayer',
@@ -179,13 +165,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Nyr Warboots',
-    tags: [
-      'Crest',
-      'Health',
-      'Health Regen',
-      'Physical Armor',
-      'Magical Armor',
-    ],
+    tags: ['Crest', 'Health', 'Health Regen', 'Physical Armor', 'Magical Armor'],
     components: ['Goliath Crest'],
     stats: {
       Health: 175,
@@ -266,8 +246,7 @@ export const items: IItem[] = [
       },
       {
         name: 'Wealthy Pacifist',
-        description:
-          'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
+        description: 'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
       },
       {
         name: 'Visionary',
@@ -293,8 +272,7 @@ export const items: IItem[] = [
       },
       {
         name: 'Wealthy Pacifist',
-        description:
-          'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
+        description: 'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
       },
       {
         name: 'Visionary',
@@ -304,13 +282,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Leafsong',
-    tags: [
-      'Crest',
-      'Health',
-      'Health Regen',
-      'Physical Armor',
-      'Magical Armor',
-    ],
+    tags: ['Crest', 'Health', 'Health Regen', 'Physical Armor', 'Magical Armor'],
     components: ['Warden Crest'],
     stats: {
       Health: 150,
@@ -326,8 +298,7 @@ export const items: IItem[] = [
       },
       {
         name: 'Wealthy Pacifist',
-        description:
-          'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
+        description: 'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
       },
       {
         name: 'Visionary',
@@ -396,8 +367,7 @@ export const items: IItem[] = [
       },
       {
         name: 'Wealthy Pacifist',
-        description:
-          'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
+        description: 'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
       },
       {
         name: 'Visionary',
@@ -422,8 +392,7 @@ export const items: IItem[] = [
       },
       {
         name: 'Wealthy Pacifist',
-        description:
-          'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
+        description: 'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
       },
       {
         name: 'Visionary',
@@ -448,8 +417,7 @@ export const items: IItem[] = [
       },
       {
         name: 'Wealthy Pacifist',
-        description:
-          'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
+        description: 'Increase Passive Gold Income by 50% and receive diminishing gold from excessive Minion kills.',
       },
       {
         name: 'Visionary',
@@ -499,13 +467,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Time-Flux Band',
-    tags: [
-      'Crest',
-      'Magical Power',
-      'Mana',
-      'Magical Penetration',
-      'Ability Haste',
-    ],
+    tags: ['Crest', 'Magical Power', 'Mana', 'Magical Penetration', 'Ability Haste'],
     components: ['Wizard Crest'],
     stats: {
       'Magical Power': 20,
@@ -527,13 +489,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Soulbearer',
-    tags: [
-      'Crest',
-      'Magical Power',
-      'Mana',
-      'Magical Penetration',
-      'Ability Haste',
-    ],
+    tags: ['Crest', 'Magical Power', 'Mana', 'Magical Penetration', 'Ability Haste'],
     components: ['Wizard Crest'],
     stats: {
       'Magical Power': 15,
@@ -544,8 +500,7 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Active - Anima',
-        description:
-          'Gain a (+25% maximum mana) shield, 20% magical lifesteal, and 10% movement speed for 8s - 90s CD',
+        description: 'Gain a (+25% maximum mana) shield, 20% magical lifesteal, and 10% movement speed for 8s - 90s CD',
       },
       {
         name: 'Creep Slayer',
@@ -645,13 +600,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Tempest',
-    tags: [
-      'Crest',
-      'Magical Power',
-      'Health',
-      'Magical Penetration',
-      'Ability Haste',
-    ],
+    tags: ['Crest', 'Magical Power', 'Health', 'Magical Penetration', 'Ability Haste'],
     components: ['Warlock Crest'],
     stats: {
       'Magical Power': 15,
@@ -663,7 +612,7 @@ export const items: IItem[] = [
       {
         name: 'Active - Overcharge',
         description:
-          'Overcharge for 8s causing lightning to zap up to 3 nearby Enemy Heroes each second, dealing 30 (+10% Magical Power) magical damage and healing you equal to the damage dealt. Multiple strikes against the same Target deal 50% reduced damage - 90s CD.',
+          'Overcharge for 8s causing lightning to zap up to 3 nearby Enemy Heroes each second, dealing 20 (+14% Magical Power) magical damage and healing you equal to the damage dealt. Multiple strikes against the same Target deal 50% reduced damage - 90s CD.',
       },
       {
         name: 'Creep Slayer',
@@ -683,8 +632,7 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Soul Stealer',
-        description:
-          'When you achieve a Takedown, gain a Soul which permanently grants you 2 Magical Power.',
+        description: 'When you achieve a Takedown, gain a Soul which permanently grants you 2 Magical Power.',
       },
       {
         name: 'Active - Condemn',
@@ -769,7 +717,7 @@ export const items: IItem[] = [
       {
         name: 'Active - Rebirth',
         description:
-          'Mark your current location and resurrect at the mark with 40% maximum health and mana should you die within the next 6s - 210s CD.',
+          'Mark your current location and resurrect at the mark with 40% maximum health and mana should you die within the next 4s - 210s CD.',
       },
       {
         name: 'Creep Slayer',
@@ -839,13 +787,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Pacifier',
-    tags: [
-      'Crest',
-      'Physical Power',
-      'Attack Speed',
-      'Critical Chance',
-      'Lifesteal',
-    ],
+    tags: ['Crest', 'Physical Power', 'Attack Speed', 'Critical Chance', 'Lifesteal'],
     components: ['Sharpshooter Crest'],
     stats: {
       'Physical Power': 15,
@@ -867,13 +809,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Liberator',
-    tags: [
-      'Crest',
-      'Physical Power',
-      'Attack Speed',
-      'Critical Chance',
-      'Lifesteal',
-    ],
+    tags: ['Crest', 'Physical Power', 'Attack Speed', 'Critical Chance', 'Lifesteal'],
     components: ['Sharpshooter Crest'],
     stats: {
       'Physical Power': 10,
@@ -885,7 +821,7 @@ export const items: IItem[] = [
       {
         name: 'Active - Purifying Guard',
         description:
-          'Cleanse all Negative Debuffs and gain a 100 (+10 per level)(+150% Bonus Physical Power) shield for 2.5s - 150s CD.',
+          'Cleanse all Debuffs and gain a 100 (+10 per level)(+150% Bonus Physical Power) shield for 2.5s - 150s CD.',
       },
       {
         name: 'Creep Slayer',
@@ -895,13 +831,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Eviscerator',
-    tags: [
-      'Crest',
-      'Physical Power',
-      'Attack Speed',
-      'Critical Chance',
-      'On-hit',
-    ],
+    tags: ['Crest', 'Physical Power', 'Attack Speed', 'Critical Chance', 'On-hit'],
     components: ['Sharpshooter Crest'],
     stats: {
       'Physical Power': 12,
@@ -912,7 +842,7 @@ export const items: IItem[] = [
       {
         name: 'Active - Rending Strikes',
         description:
-          'Upon activation, gain 25% attack speed and empower your basic attacks to deal (+10% Total Physical Power) true damage on-hit for 6s, increasing by (+5% Total Physical Power) for each successful hit against Enemy Heroes - 90s CD.',
+          'Upon activation, gain 10% attack speed and empower your basic attacks to deal (+15% Total Physical Power) true damage on-hit for 6s, increasing by (+5% Total Physical Power) for each successful hit against Enemy Heroes - 90s CD.',
       },
       {
         name: 'Creep Slayer',
@@ -944,7 +874,7 @@ export const items: IItem[] = [
     tags: ['Crest', 'Physical Power', 'Ability Haste', 'Physical Penetration'],
     components: ['Rogue Crest'],
     stats: {
-      'Physical Power': 10,
+      'Physical Power': 12,
       'Ability Haste': 10,
       'Physical Penetration': 4,
     },
@@ -962,13 +892,7 @@ export const items: IItem[] = [
   },
   {
     name: 'Witchstalker',
-    tags: [
-      'Crest',
-      'Physical Power',
-      'Ability Haste',
-      'Physical Penetration',
-      'Omnivamp',
-    ],
+    tags: ['Crest', 'Physical Power', 'Ability Haste', 'Physical Penetration', 'Omnivamp'],
     components: ['Assassin Crest'],
     stats: {
       'Physical Power': 15,
@@ -980,7 +904,7 @@ export const items: IItem[] = [
       {
         name: 'Active - Purifying Strike',
         description:
-          'Cleanse all Negative Debuffs and empower your next basic attack or damaging ability against an Enemy Hero to deal 4% (+4% per effect removed) of their maximum health as bonus true damage, healing you for an equal amount - 150s CD.',
+          'Cleanse all Debuffs and empower your next basic attack or damaging ability against an Enemy Hero to deal 4% (+4% per effect removed) of their maximum health as bonus true damage, healing you for an equal amount - 150s CD.',
       },
       {
         name: 'Creep Slayer',
@@ -1020,18 +944,14 @@ export const items: IItem[] = [
     },
     abilities: [
       {
-        name: 'Sow',
-        description:
-          'Store 30% of all damage dealt to Enemy Heroes (15% for AOE abilities) in the past 5s as Sow. Sow charges are expended upon using Reap.',
-      },
-      {
         name: 'Active - Reap',
         description:
           'Dash a short distance and deal (+100% Bonus Physical Power)(+100% of Sow) physical damage to all nearby Enemy Heroes and Slow them by 80% for 1s - 90s CD.',
       },
       {
-        name: 'Creep Slayer',
-        description: 'Deal 30 extra basic damage to minions.',
+        name: 'Sow',
+        description:
+          'Store 30% of damage dealt to Enemy Heroes(15% for AOE abilities) in the past 5s as Sow. Sow charges are expanded upon using Reap.',
       },
     ],
   },
@@ -1041,8 +961,7 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Consume',
-        description:
-          'Restores 80 (+10 per level) health per second for 10s, restoring a total of 80-260 health.',
+        description: 'Restores 80 (+10 per level) health per second for 10s, restoring a total of 80-260 health.',
       },
       {
         name: 'Max Charges',
@@ -1061,6 +980,7 @@ export const items: IItem[] = [
     stats: {
       'Magical Armor': 10,
     },
+    tier: 1,
   },
   {
     name: 'Vitality Beads',
@@ -1069,6 +989,7 @@ export const items: IItem[] = [
     stats: {
       Health: 100,
     },
+    tier: 1,
   },
   {
     name: 'Tunic',
@@ -1077,6 +998,7 @@ export const items: IItem[] = [
     stats: {
       'Physical Armor': 12,
     },
+    tier: 1,
   },
   {
     name: 'Spirit Beads',
@@ -1085,6 +1007,7 @@ export const items: IItem[] = [
     stats: {
       Mana: 150,
     },
+    tier: 1,
   },
   {
     name: 'Shortsword',
@@ -1093,6 +1016,7 @@ export const items: IItem[] = [
     stats: {
       'Physical Power': 8,
     },
+    tier: 1,
   },
   {
     name: 'Longbow',
@@ -1101,6 +1025,7 @@ export const items: IItem[] = [
     stats: {
       'Attack Speed': 10,
     },
+    tier: 1,
   },
   {
     name: 'Life Stream',
@@ -1109,6 +1034,7 @@ export const items: IItem[] = [
     stats: {
       'Health Regen': 75,
     },
+    tier: 1,
   },
   {
     name: 'Energy Stream',
@@ -1117,6 +1043,7 @@ export const items: IItem[] = [
     stats: {
       'Mana Regen': 50,
     },
+    tier: 1,
   },
   {
     name: 'Codex',
@@ -1125,6 +1052,7 @@ export const items: IItem[] = [
     stats: {
       'Magical Power': 15,
     },
+    tier: 1,
   },
   {
     name: 'Spell Slasher',
@@ -1137,6 +1065,7 @@ export const items: IItem[] = [
           'After using an ability, your next basic attack within 6s deals (+40% Total Physical Power) bonus physical damage - 1.5s CD.',
       },
     ],
+    tier: 1,
   },
   {
     name: 'Crossbow',
@@ -1145,6 +1074,7 @@ export const items: IItem[] = [
     stats: {
       'Critical Chance': 15,
     },
+    tier: 1,
   },
   {
     name: 'Sabre',
@@ -1153,6 +1083,7 @@ export const items: IItem[] = [
     stats: {
       'Physical Power': 15,
     },
+    tier: 1,
   },
   {
     name: 'Nullifying Mask',
@@ -1162,6 +1093,7 @@ export const items: IItem[] = [
     stats: {
       'Magical Armor': 25,
     },
+    tier: 2,
   },
   {
     name: 'Strength Tonic',
@@ -1170,10 +1102,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Consume',
-        description:
-          'Grant 30 physical power and 10% omnivamp for 5 minutes. Effect is lost upon death.',
+        description: 'Grant 30 physical power and 10% omnivamp for 5 minutes. Effect is lost upon death.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Stamina Tonic',
@@ -1182,10 +1114,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Consume',
-        description:
-          'Grant 300 health and 20% increased healing for 5 minutes. Effect is lost upon death.',
+        description: 'Grant 300 health and 12 health regeneration for 5 minutes. Effect is lost upon death.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Protection Tonic',
@@ -1195,9 +1127,10 @@ export const items: IItem[] = [
       {
         name: 'Consume',
         description:
-          'Grant 20 physical armor, 20 magical armor and 15 tenacity for 5 minutes. Effect is lost upon death.',
+          'Grant 20 physical armor, 20 magical armor and 30% tenacity for 5 minutes. Effect is lost upon death.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Intellect Tonic',
@@ -1206,10 +1139,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Consume',
-        description:
-          'Grant 50 magical power and 5 Mana Regen for 5 minutes. Effect is lost upon death.',
+        description: 'Grant 50 magical power and 200% base mana regeneration for 5 minutes. Effect is lost upon death.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Violet Brooch',
@@ -1220,6 +1153,7 @@ export const items: IItem[] = [
       Health: 150,
       'Ability Haste': 10,
     },
+    tier: 2,
   },
   {
     name: 'Steel Mail',
@@ -1229,6 +1163,7 @@ export const items: IItem[] = [
     stats: {
       'Physical Armor': 30,
     },
+    tier: 2,
   },
   {
     name: 'Blood Tome',
@@ -1239,6 +1174,7 @@ export const items: IItem[] = [
       'Magical Power': 20,
       'Magical Lifesteal': 5,
     },
+    tier: 2,
   },
   {
     name: 'Tenacious Drape',
@@ -1249,6 +1185,7 @@ export const items: IItem[] = [
       Health: 150,
       Tenacity: 15,
     },
+    tier: 2,
   },
   {
     name: 'Stalwart Gauntlets',
@@ -1259,6 +1196,7 @@ export const items: IItem[] = [
       Health: 150,
       'Health Regen': 125,
     },
+    tier: 2,
   },
   {
     name: 'Essence Ring',
@@ -1269,6 +1207,7 @@ export const items: IItem[] = [
       'Mana Regen': 125,
       'Ability Haste': 10,
     },
+    tier: 2,
   },
   {
     name: 'Crimson Edge',
@@ -1279,6 +1218,7 @@ export const items: IItem[] = [
       'Physical Power': 15,
       Lifesteal: 5,
     },
+    tier: 2,
   },
   {
     name: 'Chronomatic Wand',
@@ -1289,6 +1229,7 @@ export const items: IItem[] = [
       'Magical Power': 20,
       'Ability Haste': 10,
     },
+    tier: 2,
   },
   {
     name: 'Banded Emerald',
@@ -1298,6 +1239,7 @@ export const items: IItem[] = [
     stats: {
       Health: 275,
     },
+    tier: 2,
   },
   {
     name: 'Scepter',
@@ -1306,6 +1248,7 @@ export const items: IItem[] = [
     stats: {
       'Magical Power': 30,
     },
+    tier: 1,
   },
   {
     name: 'Polar Treads',
@@ -1322,6 +1265,7 @@ export const items: IItem[] = [
         description: 'Gain 5% bonus movement speed out of combat.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Horned Plate',
@@ -1334,10 +1278,27 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Blighted Skin',
-        description:
-          "When hit by a basic attack, reduce the Source's Healing by 15% for 3s.",
+        description: "When hit by a basic attack, reduce the Source's Healing by 20% for 3s.",
       },
     ],
+    tier: 2,
+  },
+  {
+    name: 'Loch Shawl',
+    cost: 950,
+    tags: ['Passive', 'Health', 'Health Regen'],
+    components: ['Vitality Beads', 'Life Stream'],
+    stats: {
+      Health: 150,
+      'Magical Armor': 15,
+    },
+    abilities: [
+      {
+        name: 'Colossus',
+        description: "Receiving magical damage reduces the Source's Healing by 20% for 3s.",
+      },
+    ],
+    tier: 2,
   },
   {
     name: 'Rune Bow',
@@ -1347,6 +1308,7 @@ export const items: IItem[] = [
     stats: {
       'Attack Speed': 30,
     },
+    tier: 2,
   },
   {
     name: 'Hallowed Braid',
@@ -1361,9 +1323,10 @@ export const items: IItem[] = [
       {
         name: 'Elegy',
         description:
-          'Hero Deaths grant a stack of Elegy, up to a maximum of 20. Each stack grants 1 magical power and 10% Manage regeneration.',
+          'Hero Deaths grant a stack of Elegy, up to a maximum of 20. Each stack grants 1 magical power and 10% mana regeneration.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Spiked Birch',
@@ -1376,10 +1339,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Blighted Spells',
-        description:
-          "Dealing magical damage reduces the Target's Healing by 15% for 3s.",
+        description: "Dealing magical damage reduces the Target's Healing by 20% for 3s.",
       },
     ],
+    tier: 2,
   },
   {
     name: 'Serrated Blade',
@@ -1392,10 +1355,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Blighted Strikes',
-        description:
-          "Dealing physical damage reduces the Target's Healing by 15% for 3s.",
+        description: "Dealing physical damage reduces the Target's Healing by 20% for 3s.",
       },
     ],
+    tier: 2,
   },
   {
     name: 'Alchemical Rod',
@@ -1413,6 +1376,7 @@ export const items: IItem[] = [
           'Killing an Enemy Minion grants 8 bonus mana, up to a maximum of 400. At maximum stacks, gain 10 ability haste.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Honed Kris',
@@ -1423,6 +1387,7 @@ export const items: IItem[] = [
       'Physical Power': 20,
       'Physical Penetration': 4,
     },
+    tier: 2,
   },
   {
     name: 'Divine Wreath',
@@ -1434,6 +1399,7 @@ export const items: IItem[] = [
       'Mana Regen': 75,
       'Heal & Shield Power': 10,
     },
+    tier: 2,
   },
   {
     name: 'Soul Chalice',
@@ -1442,7 +1408,7 @@ export const items: IItem[] = [
     components: ['Shortsword', 'Spirit Beads'],
     stats: {
       'Physical Power': 15,
-      Mana: 400,
+      Mana: 150,
     },
     abilities: [
       {
@@ -1451,6 +1417,7 @@ export const items: IItem[] = [
           'Killing an Enemy Minion grants 8 bonus mana, up to a maximum of 400. At maximum stacks, gain 2.5% of your bonus mana as additional critical strike chance.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Claymore',
@@ -1468,6 +1435,7 @@ export const items: IItem[] = [
           'Every third consecutive basic attack deals 15% (+3% of Bonus Health) bonus physical damage and slows the Target by 10% for 1s.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Cerulean Stone',
@@ -1479,6 +1447,7 @@ export const items: IItem[] = [
       Mana: 200,
       'Ability Haste': 10,
     },
+    tier: 2,
   },
   {
     name: 'Composite Bow',
@@ -1494,6 +1463,7 @@ export const items: IItem[] = [
         description: 'Basic attacks deal 12 bonus physical damage on-hit.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Barbed Pauldron',
@@ -1510,6 +1480,7 @@ export const items: IItem[] = [
           "When hit by a basic attack, reduce the Source's total attack speed by 3% for 3s, stacking up to 5 times.",
       },
     ],
+    tier: 2,
   },
   {
     name: 'Abyssal Bracers',
@@ -1523,10 +1494,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Ferrumancer',
-        description:
-          'Casting an ability grants 3 magical power and physical armor for 5s, stacking up to 5 times.',
+        description: 'Casting an ability grants 3 magical power and physical armor for 5s, stacking up to 5 times.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Temporal Ripper',
@@ -1537,6 +1508,7 @@ export const items: IItem[] = [
       'Physical Power': 20,
       'Ability Haste': 10,
     },
+    tier: 2,
   },
   {
     name: 'Ravenous Rapier',
@@ -1554,6 +1526,7 @@ export const items: IItem[] = [
           'Basic attacks against Enemy Heroes deal 2.5% of their current health as bonus physical damage on-hit.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Fortified Mantle',
@@ -1564,6 +1537,7 @@ export const items: IItem[] = [
       'Physical Power': 15,
       'Physical Armor': 15,
     },
+    tier: 2,
   },
   {
     name: 'Brimstone',
@@ -1577,10 +1551,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Blaze',
-        description:
-          'Deal 20 magical damage per second to nearby Enemies, increased by 50% against Monsters.',
+        description: 'Deal 12 magical damage per second to nearby Enemies, doubled against Monsters.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Bloodlust',
@@ -1591,6 +1565,7 @@ export const items: IItem[] = [
       'Physical Power': 20,
       Omnivamp: 5,
     },
+    tier: 2,
   },
   {
     name: 'Potent Staff',
@@ -1599,6 +1574,7 @@ export const items: IItem[] = [
     stats: {
       'Magical Power': 40,
     },
+    tier: 1,
   },
   {
     name: 'Greatsword',
@@ -1607,6 +1583,7 @@ export const items: IItem[] = [
     stats: {
       'Physical Power': 30,
     },
+    tier: 1,
   },
   {
     name: 'Robust Arbalest',
@@ -1620,10 +1597,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Swift',
-        description:
-          'Basic attacking an Enemy Hero grants 3% movement speed for 3s.',
+        description: 'Basic attacking an Enemy Hero grants 3% movement speed for 3s.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Zealous Tomahawk',
@@ -1636,27 +1613,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Desolate',
-        description:
-          "Your physical damage ignores 15% of your target's physical armor (Before Penetration).",
+        description: "Your physical damage ignores 15% of your target's physical armor (Before Penetration).",
       },
     ],
-  },
-  {
-    name: 'Loch Shawl',
-    cost: 1300,
-    tags: ['Passive', 'Health', 'Health Regen'],
-    components: ['Vitality Beads', 'Life Stream'],
-    stats: {
-      Health: 200,
-      'Health Regen': 75,
-    },
-    abilities: [
-      {
-        name: 'Colossus',
-        description:
-          'Killing an Enemy Minion grants 4 bonus health per stack, up to a maximum of 400. At maximum stacks, gain 10 ability haste.',
-      },
-    ],
+    tier: 2,
   },
   {
     name: 'Dusk Stave',
@@ -1668,6 +1628,7 @@ export const items: IItem[] = [
       Mana: 150,
       'Ability Haste': 10,
     },
+    tier: 2,
   },
   {
     name: 'Barbaric Cleaver',
@@ -1684,6 +1645,7 @@ export const items: IItem[] = [
           'Basic attack deal an additional (+25% Total Physical Power) physical damage in a small area around the Target. Damage ranges from 100% to 50% based on distance between Targets.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Diffusal Cane',
@@ -1694,6 +1656,7 @@ export const items: IItem[] = [
       'Magical Power': 35,
       'Magical Penetration': 8,
     },
+    tier: 2,
   },
   {
     name: 'Ruthless Broadsword',
@@ -1711,6 +1674,7 @@ export const items: IItem[] = [
           'Dealing damage to an Enemy Hero reduces their physical armor by 5% for 2s, stacking up to 6 times.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Ironwood Warbow',
@@ -1724,10 +1688,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Zap',
-        description:
-          'Every fourth successful basic attack deals 15 (+40% Bonus Physical Power) bonus magical damage.',
+        description: 'Every fourth successful basic attack deals 15 (+40% Bonus Physical Power) bonus magical damage.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Heroic Guard',
@@ -1741,10 +1705,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Bravery',
-        description:
-          'Upon falling below 40% maximum health, Cleanse all Negative Debuffs - 90s CD.',
+        description: 'Upon falling below 40% maximum health, Cleanse all Negative Debuffs - 90s CD.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Scalding Sceptre',
@@ -1755,6 +1719,7 @@ export const items: IItem[] = [
       'Magical Power': 30,
       'Magical Penetration': 20,
     },
+    tier: 2,
   },
   {
     name: 'Void Crystal',
@@ -1762,7 +1727,7 @@ export const items: IItem[] = [
     tags: ['Passive', 'Magical Power', 'Health'],
     components: ['Codex', 'Vitality Beads', 'Codex'],
     stats: {
-      'Magical Power': 400,
+      'Magical Power': 40,
       Health: 150,
     },
     abilities: [
@@ -1772,6 +1737,7 @@ export const items: IItem[] = [
           'Dealing magical damage to an Enemy Hero increases your magical damage dealt by 3% for 5s, stacking up to 4 times.',
       },
     ],
+    tier: 2,
   },
   {
     name: 'Chaotic Core',
@@ -1782,6 +1748,7 @@ export const items: IItem[] = [
       'Magical Power': 50,
       'Ability Haste': 10,
     },
+    tier: 2,
   },
   {
     name: 'Vanguardian',
@@ -1801,25 +1768,19 @@ export const items: IItem[] = [
       },
       {
         name: 'Guardian',
-        description:
-          'Nearby Allied Heroes gain 10 physical armor and 10 magical armor.',
+        description: 'Nearby Allied Heroes gain 10 physical armor and 10 magical armor.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Truesilver Bracelet',
     cost: 2600,
-    tags: [
-      'Passive',
-      'Magical Power',
-      'Health',
-      'Magical Armor',
-      'Ability Haste',
-    ],
+    tags: ['Passive', 'Magical Power', 'Health', 'Magical Armor', 'Ability Haste'],
     components: ['Nullifying Mask', 'Violet Brooch', 'Codex'],
     stats: {
       'Magical Power': 25,
-      Health: 250,
+      Health: 200,
       'Magical Armor': 25,
       'Ability Haste': 10,
     },
@@ -1830,6 +1791,7 @@ export const items: IItem[] = [
           'Casting your ultimate grants you a 250 (+15% Bonus Health) shield for 5s. While the shield holds, gain CC immunity. Upon removal, it explodes dealing magical damage to nearby Enemies for 60% of the initial strength - 40s CD.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Marshal',
@@ -1848,17 +1810,12 @@ export const items: IItem[] = [
           "Yourself and nearby Allied Heroes gain 20% attack speed and deal 15 (+1 per the Target's level) magical damage on-hit.",
       },
     ],
+    tier: 3,
   },
   {
     name: 'Crystal Tear',
     cost: 2650,
-    tags: [
-      'Passive',
-      'Magical Power',
-      'Mana Regen',
-      'Ability Haste',
-      'Heal & Shield Power',
-    ],
+    tags: ['Passive', 'Magical Power', 'Mana Regen', 'Ability Haste', 'Heal & Shield Power'],
     components: ['Essence Ring', 'Codex', 'Divine Wreath'],
     stats: {
       'Magical Power': 30,
@@ -1869,51 +1826,15 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Elation',
-        description:
-          'Healing or Shielding Allied Heroes grants you both 40 magical power and 20 ability haste for 5s.',
+        description: 'Healing or Shielding Allied Heroes grants you both 40 magical power and 20 ability haste for 5s.',
       },
     ],
-  },
-  {
-    name: 'Timewarp',
-    cost: 2700,
-    tags: [
-      'Passive',
-      'Magical Power',
-      'Physical Armor',
-      'Mana Regen',
-      'Ability Haste',
-    ],
-    components: ['Abyssal Bracers', 'Essence Ring'],
-    stats: {
-      'Magical Power': 25,
-      'Physical Armor': 15,
-      'Mana Regen': 150,
-      'Ability Haste': 15,
-    },
-    abilities: [
-      {
-        name: 'Ferrumancer',
-        description:
-          'Casting an ability grants you 5 magical power and 5 physical armor for 5s, stacking up to 5 times.',
-      },
-      {
-        name: 'Chime',
-        description:
-          'When you cast an ability, reduce all other current basic ability cooldowns by 15%, with a maximum reduction of 1s.',
-      },
-    ],
+    tier: 3,
   },
   {
     name: 'Requiem',
     cost: 2700,
-    tags: [
-      'Passive',
-      'Magical Power',
-      'Health',
-      'Mana Regen',
-      'Heal & Shield Power',
-    ],
+    tags: ['Passive', 'Magical Power', 'Health', 'Mana Regen', 'Heal & Shield Power'],
     components: ['Hallowed Braid', 'Divine Wreath'],
     stats: {
       'Magical Power': 20,
@@ -1929,10 +1850,10 @@ export const items: IItem[] = [
       },
       {
         name: 'Remembrance',
-        description:
-          'Grant nearby Allies 1 physical power and 0.5% lifesteal per stack of Elegy.',
+        description: 'Grant nearby Allies 1 physical power and 0.5% lifesteal per stack of Elegy.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Fire Blossom',
@@ -1948,9 +1869,10 @@ export const items: IItem[] = [
       {
         name: 'Heatwave',
         description:
-          'Deal 25 (+1.5% Bonus Health) magical damage per second to nearby Enemies, increased by 50% against Immobilied Targets, and 100% against Monsters.',
+          'Deal 15 (+1.5% Bonus Health) magical damage per second to nearby Enemies, doubled against Targets and Monsters.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Elafrost',
@@ -1975,6 +1897,7 @@ export const items: IItem[] = [
           'Applying 8 stacks of Frostbite to a Target deals an additional (+10% Maximum Mana) magical damage and Roots them for 1s - 8s CD per Target.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Wellspring',
@@ -1989,15 +1912,15 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Vital Waters',
-        description:
-          'Casting an ability heals nearby Allies for 40 (+20% Magical Power) over 2s.',
+        description: 'Casting an ability heals nearby Allies for 40 (+20% Magical Power) over 2s.',
       },
       {
         name: 'Soothing Waters',
         description:
-          "Vital Waters heals an additional 15% of your lowest Ally's maximum health. Basic attacks against Enemy Heroes reduce the cooldown of Soothing Waters by 1s - 15s CD.",
+          "Vital Waters heals an additional 15% of your lowest Ally's maximum health. Basic attacks against Enemy Heroes reduce the cooldown of Soothing Waters by 1s - 20s CD.",
       },
     ],
+    tier: 3,
   },
   {
     name: "Golem's Gift",
@@ -2007,29 +1930,24 @@ export const items: IItem[] = [
     stats: {
       'Magical Power': 70,
       'Physical Armor': 30,
-      'Ability Haste': 10,
+      'Ability Haste': 20,
     },
     abilities: [
       {
         name: 'Artillery Golem',
         description:
-          'Gain 40 magical power and 40 physical armor. Whenever you take physical damage from an Enemy Hero, decrease both bonuses by 10. This efect resets to full when you leave combat.',
+          'Gain 30 magical power and 30 physical armor. Whenever you take physical damage from an Enemy Hero, decrease both bonuses by 6. This efect resets to full when you leave combat.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Tainted Totem',
     cost: 2800,
-    tags: [
-      'Passive',
-      'Physical Armor',
-      'Magical Armor',
-      'Mana Regen',
-      'Ability Haste',
-    ],
+    tags: ['Passive', 'Physical Armor', 'Magical Armor', 'Mana Regen', 'Ability Haste'],
     components: ['Steel Mail', 'Essence Ring', 'Nullifying Mask'],
     stats: {
-      'Physical Armor': 40,
+      'Physical Armor': 35,
       'Magical Armor': 30,
       'Mana Regen': 150,
       'Ability Haste': 15,
@@ -2037,15 +1955,14 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Chilling Blight',
-        description:
-          'Nearby Enemy Heroes have their Healing reduced by 30% and are Slowed by 10%.',
+        description: 'Nearby Enemy Heroes have their Healing reduced by 40% and are Slowed by 10%.',
       },
       {
         name: 'Nirvana',
-        description:
-          'Yourself and nearby Allied Heroes receive 20% increased Healing and Shielding.',
+        description: 'Yourself and nearby Allied Heroes receive 15% increased Healing and Shielding.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Overlord',
@@ -2064,10 +1981,10 @@ export const items: IItem[] = [
       },
       {
         name: 'Bludgeon',
-        description:
-          'Basic attacks deal (+3.5% Bonus Health) physical damage on-hit.',
+        description: 'Basic attacks deal (+3.5% Bonus Health) physical damage on-hit.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Hexbound Bracers',
@@ -2086,21 +2003,15 @@ export const items: IItem[] = [
       },
       {
         name: 'Mana Reactor',
-        description:
-          'Restore mana equal to 10% of the damage taken from Enemy Heroes.',
+        description: 'Restore mana equal to 10% of the damage taken from Enemy Heroes.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Galaxy Greaves',
     cost: 2800,
-    tags: [
-      'Passive',
-      'Physical Armor',
-      'Magical Armor',
-      'Mana Regen',
-      'Ability Haste',
-    ],
+    tags: ['Passive', 'Physical Armor', 'Magical Armor', 'Mana Regen', 'Ability Haste'],
     components: ['Steel Mail', 'Polar Treads', 'Wraps'],
     stats: {
       'Physical Armor': 30,
@@ -2111,14 +2022,14 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'ZeroG',
-        description:
-          'Moving generates stacks of ZeroG. At 100 stacks, your next jump will have increased height.',
+        description: 'Moving generates stacks of ZeroG. At 100 stacks, your next jump will have increased height.',
       },
       {
         name: 'Celerity',
         description: 'Gain 10% bonus movement speed out of combat.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Flux Matrix',
@@ -2133,10 +2044,10 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Unstable Shackles',
-        description:
-          'Nearby Enemy Heroes take 15% additional magical damage and have their tenacity decreased by 20%.',
+        description: 'Nearby Enemy Heroes take 15% additional magical damage and have their tenacity decreased by 20%.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Dynamo',
@@ -2152,32 +2063,28 @@ export const items: IItem[] = [
       {
         name: 'Immobilizer',
         description:
-          'Immobilizing an Enemy deals 30 (+5% Maximum Health) bonus magical damage to the Target and nearby Enemies, shredding their physical armor and magical armor by 30% for 4s. Damage is increased by 200% against Monsters - 12s CD.',
+          'Immobilizing an Enemy deals 30 (+4% Maximum Health) bonus magical damage to the Target and nearby Enemies, shredding their physical armor and magical armor by 30% for 4s. Damage is increased by 200% against Monsters - 12s CD.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Breach',
     cost: 2800,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Physical Penetration',
-      'Ability Haste',
-    ],
+    tags: ['Passive', 'Physical Power', 'Physical Penetration', 'Ability Haste'],
     components: ['Honed Kris', 'Temporal Ripper'],
     stats: {
       'Physical Power': 50,
-      'Attack Speed': 10,
+      'Physical Penetration': 10,
       'Ability Haste': 20,
     },
     abilities: [
       {
         name: 'Shatter',
-        description:
-          'Deal 50% bonus damage to Shielded Targets as physical damage.',
+        description: 'Deal 50% bonus damage to Shielded Targets as physical damage.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Bonesaw',
@@ -2196,38 +2103,10 @@ export const items: IItem[] = [
       },
       {
         name: 'Flurry',
-        description:
-          'Dealing damage with Colossal Sunder grants 8% attack speed for 5s, stacking up to 6 times.',
+        description: 'Dealing damage with Colossal Sunder grants 8% attack speed for 5s, stacking up to 6 times.',
       },
     ],
-  },
-  {
-    name: 'Malady',
-    cost: 2800,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Physical Penetration',
-      'Ability Haste',
-    ],
-    components: ['Honed Kris', 'Temporal Ripper'],
-    stats: {
-      'Physical Power': 45,
-      'Physical Penetration': 8,
-      'Ability Haste': 15,
-    },
-    abilities: [
-      {
-        name: 'Parting Gift',
-        description:
-          "Killing an Enemy Unit causes them to explode in a small radius, dealing (+30% of the Target's Maximum Health) as physical damage. Damage ranges from 100% to 40% based on distance between Targets and is capped at 500 - 2s CD.",
-      },
-      {
-        name: 'Demise',
-        description:
-          "Dealing damage to an Enemy Hero that is below 40% maximum health deals an additional 40 (+30% Bonus Physical Power) physical damage, increasing by 10 with each activation. Takedowns reset Demise's cooldown - 45s CD.",
-      },
-    ],
+    tier: 3,
   },
   {
     name: 'Azure Core',
@@ -2243,13 +2122,14 @@ export const items: IItem[] = [
       {
         name: 'Font',
         description:
-          'Killing an Enemy Minion grants 8 bonus mana per stack, up to a maximum of 400. At maximum stacks, gain 10 ability haste.',
+          'Killing an Enemy Minion grants 4 bonus mana per stack, up to a maximum of 400. At maximum stacks, gain 10 ability haste.',
       },
       {
         name: 'Arcane Magic',
-        description: 'Grants bonus magical power equal to (+3% Maximum Mana).',
+        description: 'Grants bonus magical power equal to (+4% Maximum Mana).',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Tainted Guard',
@@ -2257,17 +2137,40 @@ export const items: IItem[] = [
     tags: ['Passive', 'Health', 'Physical Armor', 'Ability Haste'],
     components: ['Violet Brooch', 'Horned Plate', 'Vitality Beads'],
     stats: {
-      Health: 400,
+      Health: 350,
       'Physical Armor': 40,
-      'Ability Haste': 10,
+      'Ability Haste': 15,
     },
     abilities: [
       {
         name: 'Blighted Thorns',
         description:
-          "When hit by a basic attack, reduce the Source's Healing by 30% and apply a bleed dealing 30 (+30% Bonus Physical Armor) magical damage over 3s.",
+          "When hit by a basic attack, reduce the Source's Healing by 40% and apply a bleed dealing 30 (+21% Bonus Physical Armor) magical damage over 3s.",
       },
     ],
+    tier: 3,
+  },
+  {
+    name: 'Tainted Bastion',
+    cost: 2850,
+    tags: ['Passive', 'Health', 'Health Regen'],
+    components: ['Loch Shawl', 'Stalwart Gauntlets'],
+    stats: {
+      Health: 350,
+      'Health Regen': 150,
+      'Magical Armor': 30,
+    },
+    abilities: [
+      {
+        name: 'Blighted Veil',
+        description: "Receiving magical damage reduces the Source's Healing by 40% for 3s.",
+      },
+      {
+        name: 'Colossus',
+        description: 'Gain 5% Damage migration, doubled vs Targets affected by Blight.',
+      },
+    ],
+    tier: 3,
   },
   {
     name: 'Spellbreaker',
@@ -2275,53 +2178,26 @@ export const items: IItem[] = [
     tags: ['Passive', 'Magical Power', 'Magical Armor', 'Ability Haste'],
     components: ['Chronomatic Wand', 'Scepter', 'Nullifying Mask'],
     stats: {
-      'Magical Power': 55,
+      'Magical Power': 60,
       'Magical Armor': 35,
       'Ability Haste': 10,
     },
     abilities: [
       {
         name: 'Veil',
-        description:
-          'Grants a Spell Shield that blocks the next Enemy ability - 60s CD.',
+        description: 'Grants a Spell Shield that blocks the next Enemy ability - 60s CD.',
       },
       {
         name: 'Malefic',
         description: 'Gain 20% increased magical power while Veil is active.',
       },
     ],
-  },
-  {
-    name: 'Dreambinder',
-    cost: 2900,
-    tags: ['Passive', 'Magical Power', 'Health', 'Tenacity'],
-    components: ['Scepter', 'Tenacious Drape', 'Codex'],
-    stats: {
-      'Magical Power': 60,
-      Health: 350,
-      Tenacity: 15,
-    },
-    abilities: [
-      {
-        name: 'Chilling Spells',
-        description: 'Damaging abilities Slow affected Units by 25% for 1.5s.',
-      },
-      {
-        name: 'Thaw',
-        description:
-          'Abilities deal 10% additional damage to Slowed Enemy Heroes.',
-      },
-    ],
+    tier: 3,
   },
   {
     name: 'Mesmer',
     cost: 2900,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Magical Armor',
-      'Physical Penetration',
-    ],
+    tags: ['Passive', 'Physical Power', 'Magical Armor', 'Physical Penetration'],
     components: ['Sabre', 'Honed Kris', 'Nullifying Mask'],
     stats: {
       'Physical Power': 40,
@@ -2335,6 +2211,7 @@ export const items: IItem[] = [
           'Grants a Spell Shield that blocks the next Enemy ability. Upon blocking an Enemy Ability, gain 30 physical power for 3s - 60s CD.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Demon Edge',
@@ -2342,13 +2219,12 @@ export const items: IItem[] = [
     tags: ['Passive', 'Physical Power'],
     components: ['Shortsword', 'Zealous Tomahawk', 'Shortsword'],
     stats: {
-      'Physical Power': 45,
+      'Physical Power': 40,
     },
     abilities: [
       {
         name: 'Demonic',
-        description:
-          'While above 40% maximum health gain (+15% Bonus Physical Power).',
+        description: 'While above 40% maximum health gain (+10% Bonus Physical Power).',
       },
       {
         name: 'Ceaseless',
@@ -2356,10 +2232,34 @@ export const items: IItem[] = [
       },
       {
         name: 'Desolate',
-        description:
-          "Your physical damage ignores 35% of your target's physical armor (Before Penetration).",
+        description: "Your physical damage ignores 35% of your target's physical armor (Before Penetration).",
       },
     ],
+    tier: 3,
+  },
+  {
+    name: 'Malady',
+    cost: 2900,
+    tags: ['Passive', 'Physical Power', 'Physical Penetration', 'Ability Haste'],
+    components: ['Honed Kris', 'Temporal Ripper'],
+    stats: {
+      'Physical Power': 45,
+      'Physical Penetration': 8,
+      'Ability Haste': 15,
+    },
+    abilities: [
+      {
+        name: 'Parting Gift',
+        description:
+          "Killing an Enemy Unit causes them to explode in a small radius, dealing (+30% of the Target's Maximum Health) as physical damage. Damage ranges from 100% to 40% based on distance between Targets and is capped at 500 - 2s CD.",
+      },
+      {
+        name: 'Demise',
+        description:
+          "Dealing damage to an Enemy Hero that is below 40% maximum health deals an additional 40 (+10% Bonus Physical Power) physical damage, increasing by 10 with each activation. Takedowns reset Demise's cooldown - 45s CD.",
+      },
+    ],
+    tier: 3,
   },
   {
     name: 'Astral Catalyst',
@@ -2367,21 +2267,21 @@ export const items: IItem[] = [
     tags: ['Passive', 'Magical Power', 'Mana', 'Ability Haste'],
     components: ['Dusk Stave', 'Chronomatic Wand'],
     stats: {
-      'Magical Power': 50,
-      Mana: 350,
+      'Magical Power': 60,
+      Mana: 300,
       'Ability Haste': 25,
     },
     abilities: [
       {
         name: 'Spellslinger',
-        description:
-          'Using an ability grants you 3% increased magical power for 3s, stacking up to 4 times.',
+        description: 'Using an ability grants you 3% increased magical power for 3s, stacking up to 3 times.',
       },
       {
         name: 'Ravenous',
-        description: "Takedowns refund 25% of your ultimate's total cooldown.",
+        description: "Takedowns refund 20% of your ultimate's total cooldown.",
       },
     ],
+    tier: 3,
   },
   {
     name: 'Unbroken Will',
@@ -2397,15 +2297,14 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Undying',
-        description:
-          'When you are Immobilized, take 20% decreased damage for 2s.',
+        description: 'When you are Immobilized, take 20% decreased damage for 2s.',
       },
       {
         name: 'Persistence',
-        description:
-          'If you are Immobilized or Displaced, you restore (+6% Maximum Health) health over 4s.',
+        description: 'If you are Immobilized or Displaced, you restore (+6% Maximum Health) health over 4s.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Wraith Leggings',
@@ -2419,36 +2318,14 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Spectre',
-        description:
-          'Dealing damage to an Enemy Hero with an ability grants 100 movement speed for 1.5s.',
+        description: 'Dealing damage to an Enemy Hero with an ability grants 100 movement speed for 1.5s.',
       },
       {
         name: 'Carnage',
-        description:
-          'Abilities deal an additional 20% magical damage against Enemy Heroes below 40% maximum health.',
+        description: 'Abilities deal an additional 20% magical damage against Enemy Heroes below 40% maximum health.',
       },
     ],
-  },
-  {
-    name: "Warden's Faith",
-    cost: 3000,
-    tags: ['Passive', 'Health', 'Physical Armor'],
-    components: ['Steel Mail', 'Banded Emerald', 'Steel Mail'],
-    stats: {
-      Health: 300,
-      'Physical Armor': 70,
-    },
-    abilities: [
-      {
-        name: 'Stalwart',
-        description: 'Take 15% reduced damage from Critical Strikes.',
-      },
-      {
-        name: 'Retribution',
-        description:
-          'When hit by a basic attack, reduce current basic ability cooldowns by 0.2s.',
-      },
-    ],
+    tier: 3,
   },
   {
     name: 'The Perforator',
@@ -2463,14 +2340,14 @@ export const items: IItem[] = [
       {
         name: 'Calamity',
         description:
-          'Abilities deal 0% to 35% (based on 0 to 1600 maximum health difference) bonus physical damage against Enemy Heroes with greater maximum health than you.',
+          'Abilities deal 0% to 40% (based on 0 to 1600 maximum health difference) bonus physical damage against Enemy Heroes with greater maximum health than you.',
       },
       {
         name: 'Desolate',
-        description:
-          "Your physical damage ignores 35% of your target's physical armor (Before Penetration).",
+        description: "Your physical damage ignores 35% of your target's physical armor (Before Penetration).",
       },
     ],
+    tier: 3,
   },
   {
     name: 'Tainted Blade',
@@ -2485,8 +2362,7 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Blighted Strikes',
-        description:
-          'Dealing physical damage to an Enemy Target reduces their Healing by 30% for 3s.',
+        description: 'Dealing physical damage to an Enemy Target reduces their Healing by 40% for 3s.',
       },
       {
         name: 'Hex',
@@ -2494,17 +2370,12 @@ export const items: IItem[] = [
           'Damaging an Enemy Target affected by Blight with an ability deals an additional 20 physical damage and causes them to take 10% more damage for 3s - 1s CD.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Storm Breaker',
     cost: 3000,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Attack Speed',
-      'Critical Chance',
-      'Movement Speed',
-    ],
+    tags: ['Passive', 'Physical Power', 'Attack Speed', 'Critical Chance', 'Movement Speed'],
     components: ['Ironwood Warbow', 'Robust Arbalest'],
     stats: {
       'Physical Power': 25,
@@ -2519,6 +2390,7 @@ export const items: IItem[] = [
           'Every fourth successful basic attack releases a bolt of lightning which leaps between 7 Targets, dealing 50 (+1.5 per 1% Critical Strike Chance) magical damage to each.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Stonewall',
@@ -2538,10 +2410,10 @@ export const items: IItem[] = [
       },
       {
         name: 'Bulwark',
-        description:
-          'Take 10 (+7.5% Bonus Physical Armor)% decreased damage from physical abilities.',
+        description: 'Take 10 (+7.5% Bonus Physical Armor)% decreased damage from physical abilities.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Raiment of Renewal',
@@ -2557,13 +2429,14 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Regenerator',
-        description: 'Regenerate 10% of damage taken over 5s.',
+        description: 'Regenerate 15% of damage taken over 5s.',
       },
       {
         name: 'Synthesis',
-        description: 'Increase all Healing received by 20%.',
+        description: 'Gain Health Regeneration equal to 1% of your bonus health.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Oathkeeper',
@@ -2571,17 +2444,37 @@ export const items: IItem[] = [
     tags: ['Passive', 'Magical Power', 'Health', 'Ability Haste', 'On-hit'],
     components: ['Chronomatic Wand', 'Spell Slasher', 'Violet Brooch'],
     stats: {
-      'Magical Power': 60,
-      Health: 250,
+      'Magical Power': 70,
+      Health: 200,
       'Ability Haste': 25,
     },
     abilities: [
       {
         name: 'Celestial Spellblade',
         description:
-          'After using an ability, your next basic attack within 6s deals (+60% Total Physical Power)(+40% Magical Power) bonus magical damage on-hit - 1.5s CD.',
+          'After using an ability, your next basic attack within 6s deals (+60% Total Physical Power)(+50% Magical Power) bonus magical damage on-hit - 1.5s CD.',
       },
     ],
+    tier: 3,
+  },
+  {
+    name: 'Nightfall',
+    cost: 3000,
+    tags: ['Passive', 'Physical Power', 'Physical Penetration', 'Omnivamp'],
+    components: ['Sabre', 'Honed Kris', 'Crimson Edge'],
+    stats: {
+      'Physical Power': 45,
+      'Physical Penetration': 8,
+      Omnivamp: 5,
+    },
+    abilities: [
+      {
+        name: 'Eclipse',
+        description:
+          'Dealing damage to an isolated Enemy Hero grants 10% attack speed and 10 ability haste for 5s, stacking up to 3 times. At maximum stacks, gain 5% omnivamp.',
+      },
+    ],
+    tier: 3,
   },
   {
     name: 'Magnify',
@@ -2589,33 +2482,26 @@ export const items: IItem[] = [
     tags: ['Passive', 'Magical Power', 'Attack Speed', 'Ability Haste'],
     components: ['Chaotic Core', 'Rune Bow'],
     stats: {
-      'Magical Power': 50,
+      'Magical Power': 60,
       'Attack Speed': 30,
       'Ability Haste': 10,
     },
     abilities: [
       {
         name: 'Shredding Strikes',
-        description:
-          "Your basic attacks decrease the Target's magical armor by 6% for 3s, stacking up to 5 times.",
+        description: "Your basic attacks decrease the Target's magical armor by 6% for 3s, stacking up to 5 times.",
       },
       {
         name: 'Magnifying Strikes',
-        description:
-          'Basic attacks against Enemy Heroes grant you 8 magical power for 3s, stacking up to 5 times.',
+        description: 'Basic attacks against Enemy Heroes grant you 8 magical power for 3s, stacking up to 5 times.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Lightning Hawk',
     cost: 3000,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Attack Speed',
-      'Critical Chance',
-      'Movement Speed',
-    ],
+    tags: ['Passive', 'Physical Power', 'Attack Speed', 'Critical Chance', 'Movement Speed'],
     components: ['Ironwood Warbow', 'Robust Arbalest'],
     stats: {
       'Physical Power': 35,
@@ -2630,27 +2516,7 @@ export const items: IItem[] = [
           'Every fourth successful basic attack deals 30 (+100% Bonus Physical Power) bonus magical damage and Slows the Target by 35% for 0.5s.',
       },
     ],
-  },
-  {
-    name: 'Leviathan',
-    cost: 3000,
-    tags: ['Passive', 'Health', 'Health Regen'],
-    components: ['Loch Shawl', 'Stalwart Gauntlets'],
-    stats: {
-      Health: 400,
-      'Health Regen': 225,
-    },
-    abilities: [
-      {
-        name: 'Colossus',
-        description:
-          'Killing an Enemy Minion grants 4 bonus health per stack, up to a maximum of 300 bonus health. At maximum stacks, gain 10 ability haste.',
-      },
-      {
-        name: 'Hasty Colossus',
-        description: 'Gain (+1% Maximum Health) ability haste.',
-      },
-    ],
+    tier: 3,
   },
   {
     name: 'Legacy',
@@ -2658,9 +2524,9 @@ export const items: IItem[] = [
     tags: ['Passive', 'Physical Power', 'Magical Armor', 'Ability Haste'],
     components: ['Heroic Guard', 'Temporal Ripper'],
     stats: {
-      'Physical Power': 30,
+      'Physical Power': 40,
       'Magical Armor': 30,
-      'Ability Haste': 20,
+      'Ability Haste': 10,
     },
     abilities: [
       {
@@ -2670,21 +2536,15 @@ export const items: IItem[] = [
       },
       {
         name: 'Resolute',
-        description:
-          'Gain 1 physical power for every 2% missing health, for a maximum of 30 physical power.',
+        description: 'Gain 1 physical power for every 2% missing health, for a maximum of 30 physical power.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Dread',
     cost: 3000,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Physical Penetration',
-      'Magical Armor',
-      'Mana Regen',
-    ],
+    tags: ['Passive', 'Physical Power', 'Physical Penetration', 'Magical Armor', 'Mana Regen'],
     components: ['Honed Kris', 'Sabre', 'Polar Treads'],
     stats: {
       'Physical Power': 40,
@@ -2695,14 +2555,14 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Voracity',
-        description:
-          'Killing an Enemy Target restores 5% of your missing health, increased to 25% for Enemy Heroes.',
+        description: 'Killing an Enemy Target restores 5% of your missing health, increased to 25% for Enemy Heroes.',
       },
       {
         name: 'Celerity',
         description: 'Gain 10% bonus movement speed out of combat.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Tectonic Mallet',
@@ -2713,18 +2573,19 @@ export const items: IItem[] = [
       'Physical Power': 35,
       'Magical Armor': 40,
       Omnivamp: 5,
+      'Movement Speed': 5,
     },
     abilities: [
       {
         name: 'Magnitude',
-        description:
-          'Gain 25% of your bonus movement speed as bonus physical power.',
+        description: 'Gain 25% of your bonus movement speed as bonus physical power.',
       },
       {
         name: 'Harmonic Absorber',
         description: 'While Slowed, gain 10% increased movement speed.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Frostguard',
@@ -2740,8 +2601,7 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Chilling Presence',
-        description:
-          'Slow nearby Enemies by 10% and apply a stack of Stifle every 0.5s.',
+        description: 'Slow nearby Enemies by 10% and apply a stack of Stifle every 0.5s.',
       },
       {
         name: 'Stifle',
@@ -2749,29 +2609,52 @@ export const items: IItem[] = [
           "When hit by a basic attack, reduce the Source's total attack speed by 3% for 3s, stacking up to 5 times.",
       },
     ],
+    tier: 3,
+  },
+  {
+    name: 'Dreambinder',
+    cost: 3000,
+    tags: ['Passive', 'Magical Power', 'Health', 'Tenacity'],
+    components: ['Scepter', 'Tenacious Drape', 'Codex'],
+    stats: {
+      'Magical Power': 80,
+      Health: 250,
+      Tenacity: 15,
+    },
+    abilities: [
+      {
+        name: 'Chilling Spells',
+        description: 'Damaging abilities Slow affected Units by 25% for 1.5s.',
+      },
+      {
+        name: 'Thaw',
+        description: 'Abilities deal 10% additional damage to Slowed Enemy Heroes.',
+      },
+    ],
+    tier: 3,
   },
   {
     name: 'Combustion',
-    cost: 3200,
+    cost: 3000,
     tags: ['Passive', 'Magical Power', 'Magical Penetration', 'Mana'],
     components: ['Scepter', 'Diffusal Cane', 'Spirit Beads'],
     stats: {
       'Magical Power': 70,
       'Magical Penetration': 10,
-      Mana: 200,
+      Mana: 300,
     },
     abilities: [
       {
         name: 'Pyro',
         description:
-          'Your next instance of ability damage will deal 80 (+10% Magical Power) bonus magical damage to the Target and nearby Enemies - 12s CD.',
+          'Your next instance of ability damage will deal 70(+18% Magical Power) bonus magical damage to the Target and nearby Enemies - 12s CD.',
       },
       {
         name: 'Pyromaniac',
-        description:
-          'Damaging Enemy Heroes reduces the cooldown of Pyro by 0.5s.',
+        description: 'Damaging Enemy Heroes reduces the cooldown of Pyro by 0.5s.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Citadel',
@@ -2790,10 +2673,10 @@ export const items: IItem[] = [
       },
       {
         name: 'Intimidation',
-        description:
-          'Nearby Enemy Heroes have their physical armor decreased by 20%.',
+        description: 'Nearby Enemy Heroes have their physical armor decreased by 20%.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Draconum',
@@ -2817,6 +2700,7 @@ export const items: IItem[] = [
           'Takedowns restore 12% of your missing health and grant you 3% Attack Speed per stack of Surge for 8s.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Void Helm',
@@ -2832,9 +2716,10 @@ export const items: IItem[] = [
       {
         name: 'Justicar',
         description:
-          'For every 40 magical damage received, gain 4 magical armor and 75% Health regeneration for 8s, stacking up to 8 times. At maximum stacks, gain 10% movement speed.',
+          'For every 40 magical damage received, gain 4 magical armor and 75% Health regeneration for 8s, stacking up to 8 times. At maximum stacks, gain 15% movement speed.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Vanquisher',
@@ -2853,10 +2738,10 @@ export const items: IItem[] = [
       },
       {
         name: 'Annihilate',
-        description:
-          'If you deal damage that would leave a Hero below 5% of their maximum health, execute them.',
+        description: 'If you deal damage that would leave a Hero below 5% of their maximum health, execute them.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Tainted Scepter',
@@ -2864,33 +2749,27 @@ export const items: IItem[] = [
     tags: ['Passive', 'Magical Power', 'Health', 'Ability Haste'],
     components: ['Scepter', 'Spiked Birch', 'Violet Brooch'],
     stats: {
-      'Magical Power': 65,
+      'Magical Power': 70,
       Health: 200,
       'Ability Haste': 20,
     },
     abilities: [
       {
         name: 'Blighted Spells',
-        description:
-          'Dealing magical damage to an Enemy Target reduces their Healing by 30% for 3s.',
+        description: 'Dealing magical damage to an Enemy Target reduces their Healing by 40% for 3s.',
       },
       {
         name: 'Malice',
         description:
-          'Every second, gain a stack of Malice, up to a maximum of 15. Damaging an Enemy Hero with an ability consumes Malice to deal 6 true damage per stack. Takedowns grant maximum stacks of Malice instantly.',
+          'Every second, gain a stack of Malice, up to a maximum of 15. Damaging an Enemy Hero with an ability consumes Malice to deal 5 (+1 magical power) true damage per stack. Takedowns grant maximum stacks of Malice instantly.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Painweaver',
     cost: 3100,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Physical Penetration',
-      'Ability Haste',
-      'On-hit',
-    ],
+    tags: ['Passive', 'Physical Power', 'Physical Penetration', 'Ability Haste', 'On-hit'],
     components: ['Honed Kris', 'Spell Slasher', 'Temporal Ripper'],
     stats: {
       'Physical Power': 45,
@@ -2904,16 +2783,12 @@ export const items: IItem[] = [
           "After using an ability, your next basic attack within 6s deal (+50% Bonus Physical Power) bonus physical damage on-hit, increasing by up to 50% based on the Target's missing health - 1.5s CD.",
       },
     ],
+    tier: 3,
   },
   {
     name: 'Omen',
     cost: 3100,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Physical Penetration',
-      'Ability Haste',
-    ],
+    tags: ['Passive', 'Physical Power', 'Physical Penetration', 'Ability Haste'],
     components: ['Honed Kris', 'Temporal Ripper'],
     stats: {
       'Physical Power': 45,
@@ -2927,53 +2802,30 @@ export const items: IItem[] = [
           'Moving generates stacks of Torment. At 100 stacks, your next basic attack consumes them to deal 30 (+40% Bonus Physical Power) bonus physical damage and reduce your curent basic ability cooldowns by 1.5s.',
       },
     ],
-  },
-  {
-    name: 'Nightfall',
-    cost: 3100,
-    tags: ['Passive', 'Physical Power', 'Physical Penetration', 'Omnivamp'],
-    components: ['Sabre', 'Honed Kris', 'Crimson Edge'],
-    stats: {
-      'Physical Power': 45,
-      'Physical Penetration': 8,
-      Omnivamp: 5,
-    },
-    abilities: [
-      {
-        name: 'Eclipse',
-        description:
-          'Dealing damage to an isolated Enemy Hero grants 10% attack speed and 10 ability haste for 5s, stacking up to 3 times. At maximum stacks, gain 10% omnivamp.',
-      },
-    ],
+    tier: 3,
   },
   {
     name: 'Lifebinder',
     cost: 3100,
-    tags: [
-      'Passive',
-      'Magical Power',
-      'Health',
-      'Magical Lifesteal',
-      'Tenacity',
-    ],
+    tags: ['Passive', 'Magical Power', 'Health', 'Magical Lifesteal', 'Tenacity'],
     components: ['Blood Tome', 'Tenacious Drape', 'Blood Tome'],
     stats: {
-      'Magical Power': 55,
+      'Magical Power': 60,
       Health: 200,
-      'Magical Lifesteal': 15,
-      Tenacity: 15,
+      'Magical Lifesteal': 10,
+      'Ability Haste': 10,
     },
     abilities: [
       {
-        name: 'Leech',
-        description:
-          'Damaging an Enemy Hero with an ability restores 4% (+1% per 100 Magical Power) of your maximum health over 8s. Additional applications refresh the duration.',
+        name: 'Vital Bond',
+        description: 'Gain (+0.5% bonus health) Ability Haste per 50 Magiccal Power.',
       },
       {
         name: 'Magi',
         description: 'Achieving a Takedown grants 50 magical power for 8s.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Infernum',
@@ -2992,16 +2844,12 @@ export const items: IItem[] = [
           'Abilities burn Enemy Units, dealing an additional (+80% Total Physical Power) physical damage over 3s.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Deathstalker',
     cost: 3100,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Physical Penetration',
-      'Ability Haste',
-    ],
+    tags: ['Passive', 'Physical Power', 'Physical Penetration', 'Ability Haste'],
     components: ['Honed Kris', 'Ruthless Broadsword'],
     stats: {
       'Physical Power': 40,
@@ -3011,15 +2859,14 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Corrode',
-        description:
-          'Dealing damage to an Enemy Hero reduces their physical armor by 5% for 2s. Stacks up to 6 times.',
+        description: 'Dealing damage to an Enemy Hero reduces their physical armor by 5% for 2s. Stacks up to 6 times.',
       },
       {
         name: 'Virulence',
-        description:
-          'Your abilities deal 20% bonus true damage against Targets with 6 stacks of Corrode.',
+        description: 'Your abilities deal 20% bonus true damage against Targets with 6 stacks of Corrode.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Crystalline Cuirass',
@@ -3038,6 +2885,7 @@ export const items: IItem[] = [
           'When you take ability damage, release a pulse of energy dealing 20 (+3% Maximum Health) magical damage to all nearby Enemies - 1.5s CD.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Basilisk',
@@ -3052,8 +2900,7 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Corrode',
-        description:
-          'Dealing damage to an Enemy Hero reduces their physical armor by 5% for 2s. Stacks up to 6 times.',
+        description: 'Dealing damage to an Enemy Hero reduces their physical armor by 5% for 2s. Stacks up to 6 times.',
       },
       {
         name: 'Eminence',
@@ -3061,17 +2908,33 @@ export const items: IItem[] = [
           'Your basic attacks against Targets with 6 stacks of Corrode deal 4% of their missing health as bonus physical damage.',
       },
     ],
+    tier: 3,
+  },
+  {
+    name: "Warden's Faith",
+    cost: 3200,
+    tags: ['Passive', 'Health', 'Physical Armor'],
+    components: ['Steel Mail', 'Banded Emerald', 'Steel Mail'],
+    stats: {
+      Health: 300,
+      'Physical Armor': 70,
+    },
+    abilities: [
+      {
+        name: 'Stalwart',
+        description: 'Take 15% reduced damage from Critical Strikes.',
+      },
+      {
+        name: 'Retribution',
+        description: 'When hit by a basic attack, reduce current basic ability cooldowns by 0.2s.',
+      },
+    ],
+    tier: 3,
   },
   {
     name: 'Terminus',
     cost: 3200,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Lifesteal',
-      'Critical Chance',
-      'On-hit',
-    ],
+    tags: ['Passive', 'Physical Power', 'Lifesteal', 'Critical Chance', 'On-hit'],
     components: ['Crimson Edge', 'Crossbow', 'Crimson Edge'],
     stats: {
       'Physical Power': 50,
@@ -3080,37 +2943,27 @@ export const items: IItem[] = [
     },
     abilities: [
       {
-        name: 'Passive - Spellblade',
+        name: 'Anon',
         description:
-          'After using an ability, your next 2 basic attacks within 6s deal bonus physical damage based on your critical strike chance - 3s CD.',
-      },
-      {
-        name: 'Passive',
-        description: 'Basic attacks restore 1% maximum mana on-hit.',
+          'Excess healing from lifesteal is converted into a shield, up to (+80% Total Phusical Power) total. The shield slowly decays after 15s of leaving combat.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Tainted Rounds',
     cost: 3200,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Attack Speed',
-      'Critical Chance',
-      'On-hit',
-    ],
+    tags: ['Passive', 'Physical Power', 'Attack Speed', 'Critical Chance', 'On-hit'],
     components: ['Serrated Blade', 'Crossbow', 'Rune Bow'],
     stats: {
       'Physical Power': 25,
-      'Attack Speed': 30,
+      'Attack Speed': 35,
       'Critical Chance': 20,
     },
     abilities: [
       {
         name: 'Blighted Strikes',
-        description:
-          "Successful Basic Attacks reduce the Target's Healing by 30% for 3s.",
+        description: "Successful Basic Attacks reduce the Target's Healing by 40% for 3s.",
       },
       {
         name: 'Wicked Strikes',
@@ -3118,18 +2971,12 @@ export const items: IItem[] = [
           "Basic attacks deal (+12% Total Physical Power) magical damage on-hit, increasing by up to 100% based on the Target's missing health.",
       },
     ],
+    tier: 3,
   },
   {
     name: 'Sky Splitter',
     cost: 3200,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Attack Speed',
-      'Critical Chance',
-      'Lifesteal',
-      'On-hit',
-    ],
+    tags: ['Passive', 'Physical Power', 'Attack Speed', 'Critical Chance', 'Lifesteal', 'On-hit'],
     components: ['Ravenous Rapier', 'Composite Bow', 'Crossbow'],
     stats: {
       'Physical Power': 25,
@@ -3145,10 +2992,10 @@ export const items: IItem[] = [
       },
       {
         name: 'MPA',
-        description:
-          "Rend's bonus damage deals a minimum of 10 and is capped at 50 against Monsters and Minions.",
+        description: "Rend's bonus damage deals a minimum of 10 and is capped at 50 against Monsters and Minions.",
       },
     ],
+    tier: 3,
   },
   {
     name: 'Absolution',
@@ -3168,10 +3015,10 @@ export const items: IItem[] = [
       },
       {
         name: 'Determined',
-        description:
-          'Gain 1% attack speed for every 2% missing health, for a maximum of 30% attack speed.',
+        description: 'Gain 1% attack speed for every 2% missing health, for a maximum of 30% attack speed.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Resolution',
@@ -3191,10 +3038,10 @@ export const items: IItem[] = [
       },
       {
         name: 'Arcane Strikes',
-        description:
-          'Deal 3% of your maximum mana as bonus physical damage on-hit.',
+        description: 'Deal 3% of your maximum mana as bonus physical damage on-hit.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Viper',
@@ -3202,22 +3049,21 @@ export const items: IItem[] = [
     tags: ['Passive', 'Physical Power', 'Critical Chance', 'Ability Haste'],
     components: ['Sabre', 'Ruthless Broadsword', 'Crossbow'],
     stats: {
-      'Physical Power': 45,
+      'Physical Power': 50,
       'Critical Chance': 20,
       'Ability Haste': 20,
     },
     abilities: [
       {
         name: 'Corrode',
-        description:
-          'Dealing damage to an Enemy Hero reduces their physical armor by 5% for 2s. Stacks up to 6 times.',
+        description: 'Dealing damage to an Enemy Hero reduces their physical armor by 5% for 2s. Stacks up to 6 times.',
       },
       {
         name: 'Diligence',
-        description:
-          'Your Critical Strikes deal 15% more damage against Targets with 6 stacks of Corrode.',
+        description: 'Your Critical Strikes deal 15% more damage against Targets with 6 stacks of Corrode.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Mindrazor',
@@ -3240,6 +3086,7 @@ export const items: IItem[] = [
         description: 'Gain (+2.5% Maximum Mana) Physical Power.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Megacosm',
@@ -3258,6 +3105,7 @@ export const items: IItem[] = [
           'Dealing damage to an Enemy Target with an ability deals 5% of their maximum health as magical damage over 3s. Additional applications within the duration deal 2.5% of their maximum health as magical damage instantly and refresh the duration.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Kingsbane',
@@ -3277,10 +3125,10 @@ export const items: IItem[] = [
       },
       {
         name: 'Regicide',
-        description:
-          'Takedowns grant you a (+150% Total Physical Power) shield for 3s.',
+        description: 'Takedowns grant you a (+150% Total Physical Power) shield for 3s.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Caustica',
@@ -3294,15 +3142,14 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Magus',
-        description:
-          'While above 50% maximum mana, gain 20% magical penetration.',
+        description: 'While above 50% maximum mana, gain 20% magical penetration.',
       },
       {
         name: 'Arcane Resolve',
-        description:
-          'While below 50% maximum mana, gain (+1% Maximum Mana) mana regeneration per second.',
+        description: 'While below 50% maximum mana, gain (+1% Maximum Mana) mana regeneration per second.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'World Breaker',
@@ -3311,7 +3158,7 @@ export const items: IItem[] = [
     components: ['Void Crystal', 'Tenacious Drape'],
     stats: {
       'Magical Power': 45,
-      Health: 200,
+      Health: 300,
       Tenacity: 30,
     },
     abilities: [
@@ -3325,6 +3172,30 @@ export const items: IItem[] = [
         description: 'Gain (+2% Maximum Health) bonus magical power.',
       },
     ],
+    tier: 3,
+  },
+  {
+    name: 'Timewarp',
+    cost: 3300,
+    tags: ['Passive', 'Magical Power', 'Physical Armor', 'Mana Regen', 'Ability Haste'],
+    components: ['Abyssal Bracers', 'Essence Ring'],
+    stats: {
+      'Magical Power': 100,
+      'Physical Armor': 15,
+      'Ability Haste': 15,
+    },
+    abilities: [
+      {
+        name: 'Ferrumancer',
+        description:
+          'Casting an ability grants you 6 magical power and 3 physical armor for 5s, stacking up to 5 times.',
+      },
+      {
+        name: 'Chime',
+        description: 'Every 5s, subtract 0.5s from all current Ability Cooldowns.',
+      },
+    ],
+    tier: 3,
   },
   {
     name: 'Salvation',
@@ -3343,17 +3214,12 @@ export const items: IItem[] = [
           'Falling below 40% maximum health grants you a (+20% Maximum Health) shield (halved for Ranged Heroes) and 10% Omnivamp for 6s - 60s CD.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Prophecy',
     cost: 3300,
-    tags: [
-      'Passive',
-      'Magical Power',
-      'Attack Speed',
-      'Ability Haste',
-      'On-hit',
-    ],
+    tags: ['Passive', 'Magical Power', 'Attack Speed', 'Ability Haste', 'On-hit'],
     components: ['Scepter', 'Composite Bow', 'Chronomatic Wand'],
     stats: {
       'Magical Power': 60,
@@ -3363,14 +3229,14 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Magical Strikes',
-        description:
-          'Basic attacks deal 15 (+20 Magical Power) bonus magic damage on-hit.',
+        description: 'Basic attacks deal 15 (+20 Magical Power) bonus magic damage on-hit.',
       },
       {
         name: 'Hasty',
-        description: 'Gain (+75% Ability Haste)% attack speed.',
+        description: 'Gain (+60% Ability Haste)% attack speed.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Mutilator',
@@ -3378,7 +3244,7 @@ export const items: IItem[] = [
     tags: ['Passive', 'Physical Power', 'Ability Haste', 'Omnivamp'],
     components: ['Bloodlust', 'Temporal Ripper'],
     stats: {
-      'Physical Power': 45,
+      'Physical Power': 40,
       'Ability Haste': 20,
       Omnivamp: 8,
     },
@@ -3386,14 +3252,15 @@ export const items: IItem[] = [
       {
         name: 'Mutilate',
         description:
-          "Basic attacks deal 1.5% of the Enemy Hero's maximum health as bonus physical damage. Applies twice on non-DOT abilities.",
+          "Basic attacks deal 1% of the Enemy Hero's maximum health as bonus physical damage. Applies twice on non-DOT abilities.",
       },
       {
         name: 'Devour',
         description:
-          'Damaging an Enemy Hero with an ability steals 8% of their maximum health for 20s. Can only occur once per Target.',
+          'Damaging an Enemy Hero with an ability steals 5% of their maximum health for 20s. Can only occur once per Target.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Demolisher',
@@ -3408,28 +3275,22 @@ export const items: IItem[] = [
       {
         name: 'First Strike',
         description:
-          'Your first basic attack when entering combat deals 50% additional physical damage. Takedowns refresh this effect.',
+          'Your first basic attack when entering combat deals 35% additional physical damage. Takedowns refresh this effect.',
       },
       {
         name: 'Desolate',
-        description:
-          "Your physical damage ignores 35% of your target's physical armor (Before Penetration).",
+        description: "Your physical damage ignores 35% of your target's physical armor (Before Penetration).",
       },
     ],
+    tier: 3,
   },
   {
     name: 'Dust Devil',
     cost: 3300,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Attack Speed',
-      'Critical Chance',
-      'Movement Speed',
-    ],
+    tags: ['Passive', 'Physical Power', 'Attack Speed', 'Critical Chance', 'Movement Speed'],
     components: ['Robust Arbalest', 'Rune Bow'],
     stats: {
-      'Physical Power': 45,
+      'Physical Power': 30,
       'Attack Speed': 20,
       'Critical Chance': 20,
       'Movement Speed': 3,
@@ -3438,9 +3299,10 @@ export const items: IItem[] = [
       {
         name: 'Menace',
         description:
-          'Critical Strikes grant 2% attack speed for 5s, stacking up to 6 times. At maximum stacks, gain 30 physical power and 10% movement speed.',
+          'Critical Strikes grant 3% attack speed for 5s, stacking up to 6 times. At maximum stacks, gain 30 physical power and 15% movement speed.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Augmentation',
@@ -3448,38 +3310,30 @@ export const items: IItem[] = [
     tags: ['Passive', 'Physical Power', 'Health', 'Attack Speed', 'On-hit'],
     components: ['Sabre', 'Composite Bow', 'Banded Emerald'],
     stats: {
-      'Physical Power': 30,
+      'Physical Power': 20,
       Health: 300,
-      'Attack Speed': 30,
+      'Attack Speed': 40,
     },
     abilities: [
       {
         name: 'True Strikes',
-        description:
-          'Basic attacks deal (+30% Base Physical Power) bonus true damage on-hit.',
+        description: 'Basic attacks deal (+30% Base Physical Power) bonus true damage on-hit.',
       },
       {
         name: 'Overclocked',
-        description:
-          'Upon casting your ultimate, gain 15% movement speed for 6s - 20s CD.',
+        description: 'Upon casting your ultimate, gain 15% movement speed for 6s - 20s CD.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Ashbringer',
     cost: 3300,
-    tags: [
-      'Passive',
-      'Physical Power',
-      'Attack Speed',
-      'Ability Haste',
-      'Critical Chance',
-      'On-hit',
-    ],
+    tags: ['Passive', 'Physical Power', 'Attack Speed', 'Ability Haste', 'Critical Chance', 'On-hit'],
     components: ['Zealous Tomahawk', 'Composite Bow', 'Crossbow'],
     stats: {
       'Physical Power': 30,
-      'Attack Speed': 20,
+      'Attack Speed': 25,
       'Ability Haste': 10,
       'Critical Chance': 20,
     },
@@ -3495,10 +3349,10 @@ export const items: IItem[] = [
       },
       {
         name: 'Desolate',
-        description:
-          "Your physical damage ignores 35% of your target's physical armor (Before Penetration).",
+        description: "Your physical damage ignores 35% of your target's physical armor (Before Penetration).",
       },
     ],
+    tier: 3,
   },
   {
     name: 'Oblivion Crown',
@@ -3511,9 +3365,15 @@ export const items: IItem[] = [
     abilities: [
       {
         name: 'Annihilate',
-        description: 'Increase your magical power by 35%.',
+        description: 'Increase your magical power by 15%.',
+      },
+      {
+        name: 'Oblivion',
+        description:
+          'Your next instance of ability damage against an Enemy Hero will deal an additional 8% of their current health as magical damage and increse their magical damage taken by 10% for 3s - 30s CD.',
       },
     ],
+    tier: 3,
   },
   {
     name: 'Imperator',
@@ -3534,5 +3394,6 @@ export const items: IItem[] = [
         description: 'Critical strikes deal 15% more damage.',
       },
     ],
+    tier: 3,
   },
 ]
