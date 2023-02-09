@@ -12,27 +12,18 @@ interface ItemCardProps {
   onClick?: (event: React.MouseEvent) => void
 }
 
-export const ItemCard: React.FC<ItemCardProps> = ({
-  item,
-  forwardedRef,
-  onClick = _.identity,
-}) => {
+export const ItemCard: React.FC<ItemCardProps> = ({ item, forwardedRef, onClick = _.identity }) => {
   const { name } = item
 
   return (
-    <div
-      ref={forwardedRef}
-      className="item-card"
-      onClick={onClick}
-      data-id={name}
-    >
-      <div className="item-card-image-wrap">
-        <img className="item-card-image" src={getImageSrc(name)} alt={name} />
+    <div ref={forwardedRef} className='item-card' onClick={onClick} data-id={name}>
+      <div className='item-card-image-wrap'>
+        <img className='item-card-image' src={getImageSrc(name)} alt={name} />
       </div>
-      <h4 className="item-card-title">{name}</h4>
+      <h4 className='item-card-title'>{name}</h4>
 
       {item.stats && (
-        <div className="item-card-params">
+        <div className='item-card-params'>
           {Object.entries(item.stats).map((param) => {
             return <Param key={param[0]} param={param} />
           })}

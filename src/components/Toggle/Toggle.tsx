@@ -9,19 +9,12 @@ interface ToggleProps {
   onChange?: () => void
 }
 
-export const Toggle: React.FC<ToggleProps> = ({
-  label,
-  isActive = false,
-  onChange = _.identity,
-}) => {
+export const Toggle: React.FC<ToggleProps> = ({ label, isActive = false, onChange = _.identity }) => {
   return (
-    <div
-      className={classNames('toggle', isActive ? 'toggle--active' : '')}
-      onClick={onChange}
-    >
-      {Boolean(label) && <div className="toggle-label">{label}</div>}
-      <div className="toggle-trigger">
-        <div className="toggle-ball"></div>
+    <div className={classNames('toggle', isActive ? 'toggle--active' : '')} onClick={onChange}>
+      {Boolean(label) && <div className='toggle-label'>{label}</div>}
+      <div className='toggle-trigger'>
+        <div className='toggle-ball'></div>
       </div>
     </div>
   )

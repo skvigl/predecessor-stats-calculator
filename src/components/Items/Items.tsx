@@ -39,12 +39,7 @@ export const Items: React.FC<ItemsProps> = ({ items, onItemClick }) => {
             const { name } = item
 
             return (
-              <Tippy
-                key={name}
-                placement='right'
-                content={<ItemDetails item={item} />}
-                disabled={isMobile}
-              >
+              <Tippy key={name} placement='right' content={<ItemDetails item={item} />} disabled={isMobile}>
                 <Thumbnail name={name} onClick={onItemClick} />
               </Tippy>
             )
