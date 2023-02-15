@@ -58,8 +58,9 @@ export const Builds: React.FC<BuildsProps> = ({ build, onItemClick = _.identity 
   return (
     <div className='build'>
       <div className='build-items'>
-        {_.map(build, ({ name }, i) => {
-          return <Thumbnail key={name + i} name={name} onClick={onItemClick} />
+        {_.map(build, ({ name, tags }, i) => {
+          const isCrest = _.includes(tags, 'Crest')
+          return <Thumbnail key={name + i} name={name} onClick={onItemClick} size={isCrest ? 6 : 5} />
         })}
       </div>
       <div className='build-params'>

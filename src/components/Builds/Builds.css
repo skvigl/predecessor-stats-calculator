@@ -1,10 +1,11 @@
 .build {
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 .build-items {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
   gap: 0.25rem;
   cursor: pointer;
 }
@@ -44,4 +45,10 @@
   width: 50px;
   height: 1px;
   background-color: #cdc2a4;
+}
+
+@media screen and (min-width: 769px) {
+  .build {
+    padding: 1rem;
+  }
 }
