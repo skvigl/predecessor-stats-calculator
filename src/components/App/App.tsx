@@ -152,7 +152,7 @@ export const App = () => {
               <Builds build={inventory} onItemClick={handleInventoryItemClick} />
             </Panel>
           )}
-          {isMobile && activePanelId === PanelEnum.item && (
+          {activePanelId === PanelEnum.item && (
             <Panel onClose={handleClosePanel}>
               {!activeItem && <h3 style={{ padding: '1rem' }}>Select item from list</h3>}
               {activeItem && <ItemDetails item={activeItem} />}

@@ -1,6 +1,7 @@
 import { IItem } from '../../types'
 import { getImageSrc } from '../../utils'
 import { Ability } from '../Ability'
+import { ItemEvolution } from '../ItemEvolution'
 import { Param } from '../Param'
 import './ItemDetails.css'
 
@@ -35,6 +36,8 @@ export const ItemDetails: React.FC<ItemDetailsProps> = ({ item }) => {
           })}
         </div>
       )}
+
+      <ItemEvolution name={item.name} />
     </div>
   )
 }
