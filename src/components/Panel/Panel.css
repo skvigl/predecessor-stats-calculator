@@ -3,8 +3,28 @@
   top: 0;
   bottom: 40px;
   left: 0;
+  right: 0;
   z-index: 990;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 980;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.panel-body {
+  position: relative;
+  z-index: 990;
+  width: 800px;
+  height: 100%;
   overflow-y: auto;
   background-color: #282c34;
 }
@@ -24,4 +44,16 @@
   background-color: transparent;
   border: none;
   font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+  .panel {
+    bottom: 0;
+    padding: 2rem;
+  }
+
+  .panel-body {
+    height: auto;
+  }
 }
