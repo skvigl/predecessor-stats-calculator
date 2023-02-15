@@ -6,10 +6,7 @@ import { HomePage } from './pages/HomePage'
 import { ComparePage } from './pages/ComparePage'
 import { SharePage } from './pages/SharePage'
 
-import 'tippy.js/dist/tippy.css'
-
 import './styles/normalize.css'
-import './styles/Tippy.css'
 import './styles/index.css'
 import './fontawesome/css/fontawesome.css'
 import './fontawesome/css/brands.css'
