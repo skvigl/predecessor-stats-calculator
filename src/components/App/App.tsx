@@ -73,6 +73,12 @@ export const App = () => {
     setInventory(heroBuildsService.removeItem(activeBuild, itemId))
   }
 
+  const handleItemEvolutionClick = (itemName: string) => {
+    const item = _.find(items, { name: itemName })
+
+    setActiveItem(item)
+  }
+
   const handleToolbarClick = useCallback(
     (panelId: PanelEnum | null) => {
       setActivePanelId(panelId === activePanelId ? null : panelId)
@@ -155,7 +161,7 @@ export const App = () => {
           {activePanelId === PanelEnum.item && (
             <Panel onClose={handleClosePanel}>
               {!activeItem && <h3 style={{ padding: '1rem' }}>Select item from list</h3>}
-              {activeItem && <ItemDetails item={activeItem} />}
+              {activeItem && <ItemDetails item={activeItem} onItemEvoultionClick={handleItemEvolutionClick} />}
             </Panel>
           )}
           {isMobile && activePanelId === PanelEnum.filter && (

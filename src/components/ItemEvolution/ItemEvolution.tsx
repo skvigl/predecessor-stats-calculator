@@ -8,12 +8,11 @@ import './ItemEvolution.css'
 
 interface ItemEvolutionProps {
   name: IItem['name']
+  onItemClick: (itemName: string) => void
 }
 
-export const ItemEvolution: React.FC<ItemEvolutionProps> = ({ name }) => {
+export const ItemEvolution: React.FC<ItemEvolutionProps> = ({ name, onItemClick }) => {
   const itemEvolution = itemsEvolution[name]
-
-  console.log('itemEvolution', itemEvolution)
 
   if (!itemEvolution) return null
 
@@ -22,7 +21,7 @@ export const ItemEvolution: React.FC<ItemEvolutionProps> = ({ name }) => {
       const hadChildren = _.size(itemsEvolution[name]?.components) > 0
       return (
         <div key={name + i} className='item-evolution-column'>
-          <Thumbnail name={name} size={5} />
+          <Thumbnail name={name} size={5} onClick={() => onItemClick(name)}/>
           {hadChildren && (
             <>
               <ItemEvoultionLine isOnlyChild={_.size(itemsEvolution[name]?.components) === 1} />
@@ -43,8 +42,8 @@ export const ItemEvolution: React.FC<ItemEvolutionProps> = ({ name }) => {
     <div className='item-evolution'>
       {hasGrowTo && (
         <div className='item-evolution-grow'>
-          {_.map(itemEvolution.growTo, (itemName) => {
-            return <Thumbnail key={name} name={itemName} />
+          {_.map(itemEvolution.growTo, (growToName) => {
+            return <Thumbnail key={growToName} name={growToName} onClick={() => onItemClick(growToName)} />
           })}
           <ItemEvoultionLine />
         </div>

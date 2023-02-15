@@ -7,9 +7,10 @@ import './ItemDetails.css'
 
 interface ItemDetailsProps {
   item: IItem
+  onItemEvoultionClick: (itemName: string) => void
 }
 
-export const ItemDetails: React.FC<ItemDetailsProps> = ({ item }) => {
+export const ItemDetails: React.FC<ItemDetailsProps> = ({ item, onItemEvoultionClick }) => {
   const { name } = item
 
   return (
@@ -37,7 +38,7 @@ export const ItemDetails: React.FC<ItemDetailsProps> = ({ item }) => {
         </div>
       )}
 
-      <ItemEvolution name={item.name} />
+      <ItemEvolution name={item.name} onItemClick={onItemEvoultionClick} />
     </div>
   )
 }

@@ -55,5 +55,6 @@
 
   .panel-body {
     height: auto;
+    max-height: 100%;
   }
 }
